@@ -1,0 +1,116 @@
+﻿<Window x:Class="RestaurantOrderingSystem_481.Cart"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:RestaurantOrderingSystem_481"
+        mc:Ignorable="d"
+        Title="Cart" Height="600" Width="400">
+    <Grid Background="MediumPurple">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="20" />
+            <ColumnDefinition Width="auto"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="100"/>
+            <ColumnDefinition Width="auto"/>
+            <ColumnDefinition Width="auto"/>
+            <ColumnDefinition Width="auto"/>
+            <ColumnDefinition Width="10"/>
+            <ColumnDefinition Width="20" />
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="20" />
+            <RowDefinition Height="50" />
+            <RowDefinition Height="30" />
+            <RowDefinition Height="auto" />
+            <RowDefinition Height="auto" />
+            <RowDefinition Height="auto" />
+            <RowDefinition Height="auto" />
+            <RowDefinition Height="auto" />
+            <RowDefinition Height="auto" />
+            <RowDefinition Height="auto" />
+            <RowDefinition Height="auto" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="auto" />
+            <!-- 11 -->
+            <RowDefinition Height="20" />
+        </Grid.RowDefinitions>
+
+        <!-- Rectangles for Color-->
+        <Rectangle Grid.Row="2" Grid.Column="1"
+                   Grid.ColumnSpan="7" Grid.RowSpan="11"
+                   Fill="LightBlue"/>
+        <Rectangle Grid.Row="5" Grid.Column="2" Grid.ColumnSpan="3"
+                   Fill="Blue" Height="2"/>
+        <Rectangle Grid.Row="8" Grid.Column="2" Grid.ColumnSpan="3"
+                   Fill="Blue" Height="2"/>
+        <Rectangle Grid.Row="1" Grid.Column="1" Grid.ColumnSpan="7"
+                   Fill="Purple" RadiusX="10" RadiusY="10"
+                   Margin="0,0,0,5"/>
+        <!-- Back Thing -->
+        <Button Grid.Row="2" Grid.Column="1" Grid.ColumnSpan="7" Margin="0,5,0,5">
+            <Image Source=""></Image>
+        </Button>
+        <!-- Quesadilla -->
+        <TextBlock Grid.Column="1" Grid.Row="1" Grid.ColumnSpan="7"
+                   FontWeight="Bold" TextAlignment="Center" VerticalAlignment="Center"
+                   Text="Restaurant Name + Logo"/>
+        <Image Name="Trash" Grid.Column="1" Grid.Row="3" Grid.RowSpan="2"
+               Source="" Margin="5"/>
+        <TextBlock Grid.Column="2" Grid.Row="3" Grid.ColumnSpan="2" FontWeight="Light"
+                   TextAlignment="Center" Text="Quesadilla"/>
+        <TextBlock Grid.Column="2" Grid.Row="4" Grid.ColumnSpan="2"
+                   FontWeight="Light" TextAlignment="Center" TextWrapping="Wrap"
+                   Text="Pork, Beans and Cheese" FontStyle="Italic"/>
+        <Button Grid.Column="4" Grid.Row="4" Content="-" Width="20" Height="20"/>
+        <TextBlock Grid.Column="5" Grid.Row="3" FontWeight="Light"
+                   TextAlignment="Center" Text="$8.99"/>
+        <TextBlock Grid.Column="5" Grid.Row="4" FontWeight="Light"
+                   TextAlignment="Center" Text="1"/>
+        <Button Grid.Column="6" Grid.Row="4" Content="+" Width="20" Height="20"/>
+
+        <!-- Item Break -->
+        <TextBlock Grid.Column="1" Grid.Row="5" Height="20"/>
+        <!-- Pork Chop -->
+        <Image Name="Trash2" Grid.Column="1" Grid.Row="6" Grid.RowSpan="2"
+               Source="" Margin="5"/>
+        <TextBlock Grid.Column="2" Grid.Row="6" Grid.ColumnSpan="2" FontWeight="Light"
+                   TextAlignment="Center" Text="Pork Chop"/>
+        <TextBlock Grid.Column="2" Grid.Row="7" Grid.ColumnSpan="2"
+                   FontWeight="Light" TextAlignment="Center" TextWrapping="Wrap"
+                   Text="Cooked to perfection, marinated" FontStyle="Italic"/>
+        <Button Grid.Column="4" Grid.Row="7" Content="-" Width="20" Height="20"/>
+        <TextBlock Grid.Column="5" Grid.Row="6" FontWeight="Light"
+                   TextAlignment="Center" Text="$25.99"/>
+        <TextBlock Grid.Column="5" Grid.Row="7" FontWeight="Light"
+                   TextAlignment="Center" Text="1"/>
+        <Button Grid.Column="6" Grid.Row="7" Content="+" Width="20" Height="20"/>
+        <!-- Item Break -->
+        <TextBlock Grid.Column="1" Grid.Row="7" Height="20"/>
+        <!-- Pizza -->
+        <Image Name="Trash3" Grid.Column="1" Grid.Row="9" Grid.RowSpan="2"
+               Source="" Margin="5"/>
+        <TextBlock Grid.Column="2" Grid.Row="9" Grid.ColumnSpan="2" FontWeight="Light"
+                   TextAlignment="Center" Text="Pizza"/>
+        <TextBlock Grid.Column="2" Grid.Row="10" Grid.ColumnSpan="2"
+                   FontWeight="Light" TextAlignment="Center" TextWrapping="Wrap"
+                   Text="Margarita, topped with basil, tomato and mozzerella"
+                    FontStyle="Italic"/>
+        <Button Grid.Column="4" Grid.Row="10" Content="+" Width="20" Height="20"/>
+        <TextBlock Grid.Column="5" Grid.Row="9" FontWeight="Light"
+                   TextAlignment="Center" Text="$12.99"/>
+        <TextBlock Grid.Column="5" Grid.Row="10" FontWeight="Light"
+                   TextAlignment="Center" Text="1"/>
+        <Button Grid.Column="6" Grid.Row="10" Content="+" Width="20" Height="20"/>
+
+        <!-- Total Cost -->
+        <TextBlock Grid.Column="2" Grid.Row="12" Text="Total: $49.97"
+                   Width="80"  TextAlignment="Center"
+                   VerticalAlignment="Center"/>
+
+        <!-- Checkout -->
+        <Button Grid.Column="3" Grid.ColumnSpan="4" Margin="10"
+                Grid.Row="12" Content="Checkout"/>
+
+    </Grid>
+</Window>
