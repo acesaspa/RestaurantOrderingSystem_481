@@ -24,7 +24,7 @@ namespace RestaurantOrderingSystem_481
         {
             InitializeComponent();
             Switcher.pageSwitcher = this;
-            Switcher.Switch(new MainMenu());
+            //Switcher.Switch(new MainMenu());
         }
 
         public void Navigate(UserControl nextPage)

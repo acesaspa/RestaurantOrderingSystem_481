@@ -8,6 +8,7 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
+using System.Windows.Navigation;
 using System.Windows.Shapes;
 
 namespace RestaurantOrderingSystem_481
@@ -15,7 +16,7 @@ namespace RestaurantOrderingSystem_481
     /// <summary>
     /// Interaction logic for MenuFilter.xaml
     /// </summary>
-    public partial class MenuFilter : Window
+    public partial class MenuFilter : UserControl
     {
         public MenuFilter()
         {

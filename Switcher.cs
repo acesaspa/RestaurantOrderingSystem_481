@@ -8,7 +8,7 @@ namespace RestaurantOrderingSystem_481
     {
         public static MainWindow pageSwitcher;
 
-        public static void Switch(UserControl newPage)
+        public static void Switch(UserControl1 newPage)
         {
 
         }
