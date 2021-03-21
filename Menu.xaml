@@ -1,11 +1,11 @@
-﻿<Window x:Class="RestaurantOrderingSystem_481.Menu"
+﻿<UserControl x:Class="RestaurantOrderingSystem_481.Menu"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
-        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
         xmlns:local="clr-namespace:RestaurantOrderingSystem_481"
-        mc:Ignorable="d"
-        Title="Menu" Height="600" Width="400" Background="MediumPurple" FontFamily="Arial">
+        mc:Ignorable="d" Background="MediumPurple"
+        d:DesignHeight="600" d:DesignWidth="400">
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="20"/>
@@ -156,4 +156,4 @@
         <ScrollBar Grid.Column="8" Grid.Row="3" Grid.RowSpan="13"/>
 
     </Grid>
-</Window>
+</UserControl>
