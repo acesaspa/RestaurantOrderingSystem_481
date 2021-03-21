@@ -15,7 +15,7 @@ namespace RestaurantOrderingSystem_481
     /// <summary>
     /// Interaction logic for Cart.xaml
     /// </summary>
-    public partial class Cart : Window
+    public partial class Cart : UserControl
     {
         public Cart()
         {

@@ -15,7 +15,7 @@ namespace RestaurantOrderingSystem_481
     /// <summary>
     /// Interaction logic for AddingItem.xaml
     /// </summary>
-    public partial class AddingItem : Window
+    public partial class AddingItem : UserControl
     {
         public AddingItem()
         {

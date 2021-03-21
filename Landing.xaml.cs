@@ -15,7 +15,7 @@ namespace RestaurantOrderingSystem_481
     /// <summary>
     /// Interaction logic for Landing.xaml
     /// </summary>
-    public partial class Landing : Window
+    public partial class Landing : UserControl
     {
         public Landing()
         {

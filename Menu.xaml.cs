@@ -15,7 +15,7 @@ namespace RestaurantOrderingSystem_481
     /// <summary>
     /// Interaction logic for Menu.xaml
     /// </summary>
-    public partial class Menu : Window
+    public partial class Menu : UserControl
     {
         public Menu()
         {

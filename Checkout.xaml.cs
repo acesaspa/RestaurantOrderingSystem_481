@@ -15,7 +15,7 @@ namespace RestaurantOrderingSystem_481
     /// <summary>
     /// Interaction logic for Checkout.xaml
     /// </summary>
-    public partial class Checkout : Window
+    public partial class Checkout : UserControl
     {
         public Checkout()
         {
