@@ -35,10 +35,6 @@ namespace RestaurantOrderingSystem_481
         {
             this.Content = nextPage;
         }
-        //Button to Open up Menu
-        private void Button_Click(object sender, RoutedEventArgs e)
-        {
-            Switcher.Switch(new Menu());
-        }
+
     }
 }

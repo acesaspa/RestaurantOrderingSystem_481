@@ -17,9 +17,16 @@ namespace RestaurantOrderingSystem_481
     /// </summary>
     public partial class Landing : UserControl
     {
+
         public Landing()
         {
             InitializeComponent();
+        }
+        //Button to Open up Menu
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            Switcher.Switch(new Menu());
+            //MessageBox.Show("Hello, world!");
         }
     }
 }
