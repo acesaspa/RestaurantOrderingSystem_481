@@ -1,0 +1,44 @@
+﻿<Window x:Class="RestaurantOrderingSystem_481.Landing"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:RestaurantOrderingSystem_481"
+        mc:Ignorable="d"
+        Title="Landing" Height="600" Width="400">
+    <Grid Background="IndianRed">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="20"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="20" />
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="20" />
+            <RowDefinition Height="200" />
+            <RowDefinition Height="auto" />
+            <RowDefinition Height="20" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="auto" />
+            <RowDefinition Height="auto" />
+            <RowDefinition Height="20" />
+            <!-- 7 -->
+        </Grid.RowDefinitions>
+
+        <TextBlock Grid.Column="1" Grid.Row="1" FontWeight="Bold"
+                   TextAlignment="Center"
+                   Text="Restaurant Name + Logo"/>
+        <TextBlock Grid.Column="1" Grid.Row="2" FontWeight="Light"
+                   TextAlignment="Center" Margin="20"
+                   Text="Table Number:"/>
+        <TextBox x:Name="tableNumber" Grid.Column="1" Grid.Row="3"
+                 Width="100"/>
+        <Button Grid.Column="1" Grid.Row="4" Content="Run"
+                Margin="20" Height="20" Width="100"/>
+        <Button Grid.Column="1" Grid.Row="6" Content="English"
+                HorizontalAlignment="Left" Width="100"/>
+        <Button Grid.Column="1" Grid.Row="7" Content="Espanol"
+                HorizontalAlignment="Left" Width="100"/>
+    </Grid>
+
+</Window>
