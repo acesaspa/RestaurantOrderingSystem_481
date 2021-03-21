@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
+using System.Windows.Controls;
 
 namespace RestaurantOrderingSystem_481
 {
@@ -8,9 +9,9 @@ namespace RestaurantOrderingSystem_481
     {
         public static MainWindow pageSwitcher;
 
-        public static void Switch(UserControl1 newPage)
+        public static void Switch(UserControl newPage)
         {
-
+            pageSwitcher.Navigate(newPage);
         }
     }
 }

@@ -33,7 +33,7 @@
                    Text="Table Number:"/>
         <TextBox x:Name="tableNumber" Grid.Column="1" Grid.Row="3"
                  Width="100"/>
-        <Button Grid.Column="1" Grid.Row="4" Content="Run"
+        <Button Grid.Column="1" Grid.Row="4" Content="Run" Name="landingRun"
                 Margin="20" Height="20" Width="100"/>
         <Button Grid.Column="1" Grid.Row="6" Content="English"
                 HorizontalAlignment="Left" Width="100"/>

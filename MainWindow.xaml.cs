@@ -20,16 +20,25 @@ namespace RestaurantOrderingSystem_481
     /// </summary>
     public partial class MainWindow : Window
     {
+        //Initialize User Controls
+        Landing _landing = new Landing();
+        Menu _menu = new Menu();
+
         public MainWindow()
         {
             InitializeComponent();
             Switcher.pageSwitcher = this;
-            //Switcher.Switch(new MainMenu());
+            Switcher.Switch(new Landing());
         }
 
         public void Navigate(UserControl nextPage)
         {
             this.Content = nextPage;
+        }
+        //Button to Open up Menu
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            Switcher.Switch(new Menu());
         }
     }
 }
