@@ -1,0 +1,119 @@
+﻿<Window x:Class="RestaurantOrderingSystem_481.FinalizePage"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:RestaurantOrderingSystem_481"
+        mc:Ignorable="d"
+        Title="FinalizePage" Height="600" Width="400">
+    <Grid Background="MediumPurple">
+        <Grid.ColumnDefinitions>
+            <!--Margin-->
+            <ColumnDefinition Width="20" />
+
+            <!--Restuarant Name/Logo-->
+            <ColumnDefinition Width="20" />
+
+            <!--Subtext-->
+            <ColumnDefinition Width="30" />
+
+            <!--Boxes-->
+            <ColumnDefinition Width="30" />
+
+            <!--Box Split-->
+            <ColumnDefinition Width="100" />
+
+            <!--Fill space between content-->
+            <ColumnDefinition Width="*"/>
+
+            <!--Boxes-->
+            <ColumnDefinition Width="30" />
+
+            <!--ETA Box-->
+            <ColumnDefinition Width="30" />
+
+            <!--Subtext-->
+            <ColumnDefinition Width="30" />
+
+            <!--Restuarant Name/Logo-->
+            <ColumnDefinition Width="20" />
+
+            <!--Margin-->
+            <ColumnDefinition Width="20" />
+
+        </Grid.ColumnDefinitions>
+
+        <Grid.RowDefinitions>
+
+            <!--Margin-->
+            <RowDefinition Height="20" />
+
+            <!--Restuarant name/logo and ETA-->
+            <RowDefinition Height="50" />
+
+            <!--ETA Box-->
+            <RowDefinition Height="40" />
+
+            <!--Congragulations-->
+            <RowDefinition Height="60" />
+
+            <!--Subtext-->
+            <RowDefinition Height="60" />
+
+            <!--Spacing-->
+            <RowDefinition Height="20" />
+
+            <!--Box Row 1-->
+            <RowDefinition Height="40" />
+
+            <!--Box Row 2-->
+            <RowDefinition Height="40" />
+
+            <!--Box Row 3-->
+            <RowDefinition Height="40" />
+
+            <!--Fill space between content-->
+            <RowDefinition Height="*" />
+
+            <!--Margin-->
+            <RowDefinition Height="20" />
+
+        </Grid.RowDefinitions>
+
+        <!--Adding the restuarant name/logo rectangle-->
+        <Rectangle Grid.Row="1" Grid.Column="2" Grid.ColumnSpan="7" Fill="Purple" RadiusX="10" RadiusY="10" Margin="0,0,0,5"/>
+        <TextBlock Grid.Row="1" Grid.Column="2" Grid.ColumnSpan="7" HorizontalAlignment="Center" FontWeight="Bold"  VerticalAlignment="Center" Text="Restaurant Name/Logo" />
+
+        <!--Adding the ETA-->
+        <Rectangle Grid.Row="2" Grid.Column="6" Grid.ColumnSpan="3" Fill="LightBlue" />
+        <TextBlock Grid.Row="2" Grid.Column="6" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="13" TextWrapping="Wrap" Text="ETA:" />
+        <TextBlock Grid.Row="2" Grid.Column="7" Grid.ColumnSpan="2" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="13" TextWrapping="Wrap" Text="20 - 30 Minutes" />
+
+        <!--Adding congrats text-->
+        <TextBlock Grid.Row="3" Grid.Column="2" Grid.ColumnSpan="7" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="22" FontWeight="Bold" Text="Congratulations!" />
+
+        <!--Adding subtext to congrats text-->
+        <TextBlock Grid.Row="4" Grid.Column="3" Grid.ColumnSpan="5" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="14" TextWrapping="Wrap" Text="Your order has been confirmed and the kitchen will begin preparing it shortly." />
+
+        <!--Adding buttons-->
+        <Button Grid.Row="6" Grid.Column="4" Background="LightBlue"/>
+        <TextBlock Grid.Row="6" Grid.Column="4"  HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="12" TextWrapping="Wrap" Text="Review Your Order" />
+
+
+        <Button Grid.Row="6" Grid.Column="5" Grid.ColumnSpan="2" Background="LightBlue"/>
+        <TextBlock Grid.Row="6" Grid.Column="5" Grid.ColumnSpan="2" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="12" TextWrapping="Wrap" Text="Order More" />
+
+
+        <Button Grid.Row="7" Grid.Column="4" Background="LightBlue"/>
+        <TextBlock Grid.Row="7" Grid.Column="4" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="12" TextWrapping="Wrap" Text="Request Takeout Boxes" />
+
+        <Button Grid.Row="7" Grid.Column="5" Grid.ColumnSpan="2" Background="LightBlue"/>
+        <TextBlock Grid.Row="7" Grid.Column="5" Grid.ColumnSpan="2" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="12" TextWrapping="Wrap" Text="Request Condiments" />
+
+        <Button Grid.Row="8" Grid.Column="4" Grid.ColumnSpan="3" Background="LightBlue"/>
+        <TextBlock Grid.Row="8" Grid.Column="4" Grid.ColumnSpan="3" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="12" TextWrapping="Wrap" Text="Feel Free To Leave Us A Review!" />
+
+
+
+    </Grid>
+</Window>

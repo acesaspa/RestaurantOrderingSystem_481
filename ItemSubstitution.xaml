@@ -1,0 +1,64 @@
+﻿<Window x:Class="RestaurantOrderingSystem_481.ItemSubstitution"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:RestaurantOrderingSystem_481"
+        mc:Ignorable="d"
+       Title="ItemSubstitution" Height="600" Width="400" Background="MediumPurple">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="1*"/>
+            <ColumnDefinition Width="1*"/>
+            <ColumnDefinition Width="1*"/>
+            <ColumnDefinition Width="1*"/>
+            <ColumnDefinition Width="1*"/>
+            <ColumnDefinition Width="1*"/>
+            <ColumnDefinition Width="1*"/>
+            <ColumnDefinition Width="1*"/>
+            <ColumnDefinition Width="1*"/>
+            <ColumnDefinition Width="1*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="100"/>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="20"/>
+        </Grid.RowDefinitions>
+        <Rectangle Grid.Column="1" Grid.Row="1" Grid.ColumnSpan="8" Grid.RowSpan="11" Fill="LightYellow"></Rectangle>
+        <TextBlock Grid.Column="1" Grid.Row="1" HorizontalAlignment="Left" VerticalAlignment="Center" Grid.ColumnSpan="7" FontSize="25">Cowboy Burger</TextBlock>
+        <Button Grid.Column="8" Grid.Row="1">X</Button>
+        <TextBlock Grid.Column="2" Grid.Row="2" Grid.ColumnSpan="6">Two buns, meat patty, bacon lettuce and <LineBreak/> some god damned chipotle sauce.</TextBlock>
+        <TextBlock Grid.Column="1" Grid.Row="3" Grid.ColumnSpan="4" >Please choose your side:</TextBlock>
+        <TextBlock Grid.Column="1" Grid.Row="4" Grid.ColumnSpan="4" HorizontalAlignment="Center" VerticalAlignment="Top">Sweet potato fries (2.99$):</TextBlock>
+        <TextBlock Grid.Column="1" Grid.Row="5" Grid.ColumnSpan="4" HorizontalAlignment="Center" VerticalAlignment="Top">Crinkle Cut Fries:</TextBlock>
+        <TextBlock Grid.Column="1" Grid.Row="6" Grid.ColumnSpan="4" HorizontalAlignment="Center" VerticalAlignment="Top">Mixed Green Salad:</TextBlock>
+        <TextBlock Grid.Column="1" Grid.Row="7" Grid.ColumnSpan="4" HorizontalAlignment="Center" VerticalAlignment="Top">Coleslaw:</TextBlock>
+
+        <TextBlock Grid.Column="1" Grid.Row="8" Grid.ColumnSpan="4" HorizontalAlignment="Left" VerticalAlignment="Center">Optional:</TextBlock>
+        <TextBlock Grid.Column="1" Grid.Row="9" Grid.ColumnSpan="4" HorizontalAlignment="Center" VerticalAlignment="Top">Halal meat (4.99$):</TextBlock>
+
+        <Button Grid.Column="2" Grid.Row="10" Grid.ColumnSpan="6">Special Requests?</Button>
+        <Button Grid.Column="6" Grid.Row="11" FontSize="20">+</Button>
+        <Button Grid.Column="3" Grid.Row="11" FontSize="20">-</Button>
+        <TextBlock Grid.Column="4" Grid.Row="11" Grid.ColumnSpan="2" HorizontalAlignment="Center" FontSize="25" >2</TextBlock>
+
+        <RadioButton Grid.Column="7" HorizontalAlignment="Center" Grid.Row="4" VerticalAlignment="Center"/>
+        <RadioButton Grid.Column="7" HorizontalAlignment="Center" Grid.Row="5" VerticalAlignment="Center"/>
+        <RadioButton Grid.Column="7" HorizontalAlignment="Center" Grid.Row="6" VerticalAlignment="Center"/>
+        <RadioButton Grid.Column="7" HorizontalAlignment="Center" Grid.Row="7" VerticalAlignment="Center"/>
+
+        <RadioButton Grid.Column="7" HorizontalAlignment="Center" Grid.Row="9" VerticalAlignment="Center"/>
+
+    </Grid>
+</Window>
