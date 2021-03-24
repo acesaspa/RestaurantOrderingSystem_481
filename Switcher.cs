@@ -26,6 +26,21 @@ namespace RestaurantOrderingSystem_481
             return _menu;
         }
 
+        public static Cart GetCart()
+        {
+            return _cart;
+        }
+
+        public static Checkout getCheckout()
+        {
+            return _checkout;
+        }
+
+        public static FinalizePage GetFinalize()
+        {
+            return _finalize;
+        }
+
         public static void Switch(UserControl newPage)
         {
             pageSwitcher.Navigate(newPage);
