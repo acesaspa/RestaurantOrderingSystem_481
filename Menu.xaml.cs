@@ -17,6 +17,12 @@ namespace RestaurantOrderingSystem_481
     /// </summary>
     public partial class Menu : UserControl
     {
+        //Button to Open up Menu
+        private void Open_Cart(object sender, RoutedEventArgs e)
+        {
+            Switcher.Switch(new Cart());
+        }
+
         public Menu()
         {
             InitializeComponent();

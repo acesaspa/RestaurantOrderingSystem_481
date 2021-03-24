@@ -23,10 +23,16 @@ namespace RestaurantOrderingSystem_481
             InitializeComponent();
         }
         //Button to Open up Menu
-        private void Button_Click(object sender, RoutedEventArgs e)
+        private void Open_Menu(object sender, RoutedEventArgs e)
         {
             Switcher.Switch(new Menu());
             //MessageBox.Show("Hello, world!");
+        }
+
+        //Change Language
+        private void Change_Language(object sender, RoutedEventArgs e)
+        {
+            MessageBox.Show("You changed your Language!");
         }
     }
 }

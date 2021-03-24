@@ -23,6 +23,9 @@ namespace RestaurantOrderingSystem_481
         //Initialize User Controls
         Landing _landing = new Landing();
         Menu _menu = new Menu();
+        Cart _cart = new Cart();
+        Checkout _checkout = new Checkout();
+        FinalizePage _finalize = new FinalizePage();
 
         public MainWindow()
         {

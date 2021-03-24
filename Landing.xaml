@@ -33,11 +33,11 @@
                    Text="Table Number:"/>
         <TextBox x:Name="tableNumber" Grid.Column="1" Grid.Row="3"
                  Width="100"/>
-        <Button Grid.Column="1" Grid.Row="4" Content="Run" Click="Button_Click"
+        <Button Grid.Column="1" Grid.Row="4" Content="Run" Click="Open_Menu"
                 Margin="20" Height="20" Width="100"/>
-        <Button Grid.Column="1" Grid.Row="6" Content="English"
+        <Button Grid.Column="1" Grid.Row="6" Content="English" Click="Change_Language"
                 HorizontalAlignment="Left" Width="100"/>
-        <Button Grid.Column="1" Grid.Row="7" Content="Espanol"
+        <Button Grid.Column="1" Grid.Row="7" Content="Espanol" Click="Change_Language"
                 HorizontalAlignment="Left" Width="100"/>
     </Grid>
 
