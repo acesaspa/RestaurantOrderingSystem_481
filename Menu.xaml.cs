@@ -17,10 +17,28 @@ namespace RestaurantOrderingSystem_481
     /// </summary>
     public partial class Menu : UserControl
     {
-        //Button to Open up Menu
+        //Button to Open up Cart
         private void Open_Cart(object sender, RoutedEventArgs e)
         {
-            Switcher.Switch(new Cart());
+            Switcher.Switch(Switcher.GetCart());
+        }
+
+        //Button to Open up Checkout
+        private void Open_Checkout(object sender, RoutedEventArgs e)
+        {
+            Switcher.Switch(Switcher.getCheckout());
+        }
+
+        //Button to Review Order
+        private void Open_ReviewOrder(object sender, RoutedEventArgs e)
+        {
+            
+        }
+
+        //Button to Change Table Number
+        private void Open_ChangeTable(object sender, RoutedEventArgs e)
+        {
+
         }
 
         public Menu()

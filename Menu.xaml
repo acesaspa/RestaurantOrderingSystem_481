@@ -148,7 +148,7 @@
         </Button>
 
         <!--Checkout Button-->
-        <Button Grid.Column="7" Grid.Row="17" Margin="7,5">
+        <Button Grid.Column="7" Grid.Row="17" Margin="7,5" Click="Open_Checkout">
             Checkout
         </Button>
 
