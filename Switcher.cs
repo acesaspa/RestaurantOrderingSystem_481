@@ -53,6 +53,36 @@ namespace RestaurantOrderingSystem_481
             return _changeTable;
         }
 
+        public static MenuFilter GetMenuFilter()
+        {
+            return _menuFilter;
+        }
+
+        public static MenuFilter2 GetMenuFilter2()
+        {
+            return _menuFilter2;
+        }
+
+        public static OrderConfirm GetOrderConfirm()
+        {
+            return _orderConfirm;
+        }
+
+        public static SuccessNotification GetSuccessNotification()
+        {
+            return _successNotification;
+        }
+
+        public static ItemDelete GetItemDelete()
+        {
+            return _itemDelete;
+        }
+
+        public static ItemSubstitution GetItemSubstitution()
+        {
+            return _itemSubstitution;
+        }
+
         public static void Switch(UserControl newPage)
         {
             pageSwitcher.Navigate(newPage);
