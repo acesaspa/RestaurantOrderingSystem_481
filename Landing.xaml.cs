@@ -25,7 +25,7 @@ namespace RestaurantOrderingSystem_481
         //Button to Open up Menu
         private void Open_Menu(object sender, RoutedEventArgs e)
         {
-            Switcher.Switch(new Menu());
+            Switcher.Switch(Switcher.GetMenu());
             //MessageBox.Show("Hello, world!");
         }
 
