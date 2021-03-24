@@ -99,23 +99,23 @@
         <!--Adding buttons-->
 
         <!--Review Button-->
-        <Button Grid.Row="6" Grid.Column="4" Background="LightBlue" Click="OrderMore"/>
+        <Button Grid.Row="6" Grid.Column="4" Background="LightBlue" Click="ReviewOrder"/>
         <TextBlock Grid.Row="6" Grid.Column="4"  HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="12" TextWrapping="Wrap" Text="Review Your Order"/>
 
         <!--Order More button-->
-        <Button Grid.Row="6" Grid.Column="5" Grid.ColumnSpan="2" Background="LightBlue"/>
+        <Button Grid.Row="6" Grid.Column="5" Grid.ColumnSpan="2" Background="LightBlue" Click="OrderMore"/>
         <TextBlock Grid.Row="6" Grid.Column="5" Grid.ColumnSpan="2" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="12" TextWrapping="Wrap" Text="Order More" />
 
         <!--Request Takeout button-->
-        <Button Grid.Row="7" Grid.Column="4" Background="LightBlue"/>
+        <Button Grid.Row="7" Grid.Column="4" Background="LightBlue" Click="Takeout"/>
         <TextBlock Grid.Row="7" Grid.Column="4" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="12" TextWrapping="Wrap" Text="Request Takeout Boxes" />
 
         <!--Request Condiments button-->
-        <Button Grid.Row="7" Grid.Column="5" Grid.ColumnSpan="2" Background="LightBlue"/>
+        <Button Grid.Row="7" Grid.Column="5" Grid.ColumnSpan="2" Background="LightBlue" Click="Condiments"/>
         <TextBlock Grid.Row="7" Grid.Column="5" Grid.ColumnSpan="2" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="12" TextWrapping="Wrap" Text="Request Condiments" />
 
         <!--Review button-->
-        <Button Grid.Row="8" Grid.Column="4" Grid.ColumnSpan="3" Background="LightBlue"/>
+        <Button Grid.Row="8" Grid.Column="4" Grid.ColumnSpan="3" Background="LightBlue" Click="Review"/>
         <TextBlock Grid.Row="8" Grid.Column="4" Grid.ColumnSpan="3" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="12" TextWrapping="Wrap" Text="Feel Free To Leave Us A Review!" />
 
 

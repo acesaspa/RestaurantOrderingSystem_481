@@ -22,9 +22,29 @@ namespace RestaurantOrderingSystem_481
             InitializeComponent();
         }
 
+        private void ReviewOrder(object sender, RoutedEventArgs e)
+        {
+            
+        }
+
         private void OrderMore(object sender, RoutedEventArgs e)
         {
             Switcher.Switch(Switcher.GetMenu());
+        }
+
+        private void Takeout(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void Condiments(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void Review(object sender, RoutedEventArgs e)
+        {
+
         }
 
 
