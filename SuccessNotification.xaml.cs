@@ -8,16 +8,17 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
+using System.Windows.Navigation;
 using System.Windows.Shapes;
 
 namespace RestaurantOrderingSystem_481
 {
     /// <summary>
-    /// Interaction logic for FinalizePage.xaml
+    /// Interaction logic for SuccessNotification.xaml
     /// </summary>
-    public partial class FinalizePage : UserControl
+    public partial class SuccessNotification : UserControl
     {
-        public FinalizePage()
+        public SuccessNotification()
         {
             InitializeComponent();
         }
