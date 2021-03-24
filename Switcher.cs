@@ -16,6 +16,12 @@ namespace RestaurantOrderingSystem_481
         static Checkout _checkout = new Checkout();
         static FinalizePage _finalize = new FinalizePage();
         static ChangeTable _changeTable = new ChangeTable();
+        static MenuFilter _menuFilter = new MenuFilter();
+        static MenuFilter2 _menuFilter2 = new MenuFilter2();
+        static OrderConfirm _orderConfirm = new OrderConfirm();
+        static SuccessNotification _successNotification = new SuccessNotification();
+        static ItemDelete _itemDelete = new ItemDelete();
+        static ItemSubstitution _itemSubstitution = new ItemSubstitution();
 
         public static Landing GetLanding()
         {
