@@ -60,7 +60,7 @@
         <TextBlock Grid.Column="4" Grid.Row="3" Text="Filters:" HorizontalAlignment="Left" VerticalAlignment="Center" TextWrapping="Wrap"/>
 
         <!--Review Order-->
-        <Button Grid.Column="6" Grid.Row="2" Grid.ColumnSpan="2" HorizontalAlignment="Right">
+        <Button Grid.Column="6" Grid.Row="2" Grid.ColumnSpan="2" HorizontalAlignment="Right" Click="Open_ReviewOrder">
             Previous Order
         </Button>
 

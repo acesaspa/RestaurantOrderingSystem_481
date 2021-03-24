@@ -32,7 +32,7 @@ namespace RestaurantOrderingSystem_481
         //Button to Review Order
         private void Open_ReviewOrder(object sender, RoutedEventArgs e)
         {
-            
+            Switcher.Switch(Switcher.GetFinalize());
         }
 
         //Button to Change Table Number
