@@ -38,7 +38,13 @@ namespace RestaurantOrderingSystem_481
         //Button to Change Table Number
         private void Open_ChangeTable(object sender, RoutedEventArgs e)
         {
+            Window window = new Window
+            {
+                Title = "Change Table",
+                Content = Switcher.GetChangeTable()
+            };
 
+            window.ShowDialog();
         }
 
         public Menu()
