@@ -32,13 +32,19 @@ namespace RestaurantOrderingSystem_481
         //Button to Review Order
         private void Open_ReviewOrder(object sender, RoutedEventArgs e)
         {
-            
+            Switcher.Switch(Switcher.GetFinalize());
         }
 
         //Button to Change Table Number
         private void Open_ChangeTable(object sender, RoutedEventArgs e)
         {
+            Window window = new Window
+            {
+                Title = "Change Table",
+                Content = Switcher.GetChangeTable()
+            };
 
+            window.ShowDialog();
         }
 
         public Menu()

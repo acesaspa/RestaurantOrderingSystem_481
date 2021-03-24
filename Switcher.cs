@@ -15,6 +15,7 @@ namespace RestaurantOrderingSystem_481
         static Cart _cart = new Cart();
         static Checkout _checkout = new Checkout();
         static FinalizePage _finalize = new FinalizePage();
+        static ChangeTable _changeTable = new ChangeTable();
 
         public static Landing GetLanding()
         {
@@ -39,6 +40,11 @@ namespace RestaurantOrderingSystem_481
         public static FinalizePage GetFinalize()
         {
             return _finalize;
+        }
+
+        public static ChangeTable GetChangeTable()
+        {
+            return _changeTable;
         }
 
         public static void Switch(UserControl newPage)
