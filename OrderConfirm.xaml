@@ -1,11 +1,11 @@
-﻿<Window x:Class="RestaurantOrderingSystem_481.OrderConfirm"
-        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
-        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
-        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:local="clr-namespace:RestaurantOrderingSystem_481"
-        mc:Ignorable="d"
-        Title="OrderConfirm" Height="300" Width="400">
+﻿<UserControl x:Class="RestaurantOrderingSystem_481.OrderConfirm"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:RestaurantOrderingSystem_481"
+             mc:Ignorable="d" 
+             Height="300" Width="400">
     <Grid Background="#dfed9f">
         <Grid.RowDefinitions>
             <RowDefinition Height="20" />
@@ -33,4 +33,4 @@
         <TextBox Grid.Column="1" Grid.Row="2" HorizontalAlignment="Center" Margin="0,10,0,10"
                  Text="Enter Verification Number:" />
     </Grid>
-</Window>
+</UserControl>

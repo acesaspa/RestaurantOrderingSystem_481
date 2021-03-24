@@ -15,7 +15,7 @@ namespace RestaurantOrderingSystem_481
     /// <summary>
     /// Interaction logic for ItemDelete.xaml
     /// </summary>
-    public partial class ItemDelete : Window
+    public partial class ItemDelete : UserControl
     {
         public ItemDelete()
         {

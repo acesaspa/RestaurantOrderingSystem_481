@@ -15,7 +15,7 @@ namespace RestaurantOrderingSystem_481
     /// <summary>
     /// Interaction logic for OrderConfirm.xaml
     /// </summary>
-    public partial class OrderConfirm : Window
+    public partial class OrderConfirm : UserControl
     {
         public OrderConfirm()
         {

@@ -15,7 +15,7 @@ namespace RestaurantOrderingSystem_481
     /// <summary>
     /// Interaction logic for MenuFilter2.xaml
     /// </summary>
-    public partial class MenuFilter2 : Window
+    public partial class MenuFilter2 : UserControl
     {
         public MenuFilter2()
         {

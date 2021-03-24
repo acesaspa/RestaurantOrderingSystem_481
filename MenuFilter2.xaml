@@ -1,11 +1,11 @@
-﻿<Window x:Class="RestaurantOrderingSystem_481.MenuFilter2"
-        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
-        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
-        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:local="clr-namespace:RestaurantOrderingSystem_481"
-        mc:Ignorable="d"
-        Title="MenuFilter2" Height="360" Width="160">
+﻿<UserControl x:Class="RestaurantOrderingSystem_481.MenuFilter2"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:RestaurantOrderingSystem_481"
+             mc:Ignorable="d" 
+             Height="360" Width="160">
     <Grid Background="LightSalmon">
 
         <Grid.ColumnDefinitions>
@@ -132,4 +132,4 @@
         <Image Source="Resources/sidesIcon.png" Grid.Row="12" Grid.Column="1" />
 
     </Grid>
-</Window>
+</UserControl>
