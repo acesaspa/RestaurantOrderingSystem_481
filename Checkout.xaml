@@ -5,7 +5,7 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
         xmlns:local="clr-namespace:RestaurantOrderingSystem_481"
         mc:Ignorable="d"
-        d:DesignHeight="600" d:DesignWidth="400">
+        d:DesignHeight="600" d:DesignWidth="400" Background="MediumPurple">
     <Grid>
         <!--Grid of items-->
         <Grid.ColumnDefinitions>
@@ -40,7 +40,7 @@
                    RadiusX="10" RadiusY="10"/>
         <TextBlock Grid.Column="2" Grid.Row="2" Grid.ColumnSpan="5" HorizontalAlignment="Center"> Restaurant Name/Logo</TextBlock>
         <!--Back button -->
-        <Button Grid.Column="1" Grid.Row="4" FontSize="20" Grid.ColumnSpan="2">Back</Button>
+        <Button Grid.Column="1" Grid.Row="4" FontSize="20" Grid.ColumnSpan="2" Click="Open_Menu">Back</Button>
         <!--ETA -->
         <Rectangle Grid.Column="6" Grid.Row="4" Grid.ColumnSpan="2" Fill="LightBlue"/>
         <TextBlock Grid.Column="6" Grid.Row="4" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="25" >ETA:</TextBlock>

@@ -26,7 +26,7 @@ namespace RestaurantOrderingSystem_481
         //Button to Open up Checkout
         private void Open_Checkout(object sender, RoutedEventArgs e)
         {
-            Switcher.Switch(Switcher.getCheckout());
+            Switcher.Switch(Switcher.GetCheckout());
         }
 
         //Button to Review Order

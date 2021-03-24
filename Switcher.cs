@@ -31,7 +31,7 @@ namespace RestaurantOrderingSystem_481
             return _cart;
         }
 
-        public static Checkout getCheckout()
+        public static Checkout GetCheckout()
         {
             return _checkout;
         }

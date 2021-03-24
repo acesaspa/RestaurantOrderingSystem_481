@@ -21,5 +21,10 @@ namespace RestaurantOrderingSystem_481
         {
             InitializeComponent();
         }
+
+        private void Open_Menu(object sender, RoutedEventArgs e)
+        {
+            Switcher.Switch(Switcher.GetMenu());
+        }
     }
 }
