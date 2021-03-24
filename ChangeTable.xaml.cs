@@ -18,6 +18,19 @@ namespace RestaurantOrderingSystem_481
     /// </summary>
     public partial class ChangeTable : UserControl
     {
+
+        //Button to Close ChangeTable
+        private void Close_ChangeTable(object sender, RoutedEventArgs e)
+        {
+            var parent = this.Parent as Window;
+            if (parent != null)
+            {
+                parent.DialogResult = true;
+                parent.Close();
+            }
+        }
+
+
         public ChangeTable()
         {
             InitializeComponent();
