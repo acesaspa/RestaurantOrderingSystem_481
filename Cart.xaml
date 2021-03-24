@@ -48,7 +48,7 @@
                    Fill="Purple" RadiusX="10" RadiusY="10"
                    Margin="0,0,0,5"/>
         <!-- Back Thing -->
-        <Button Grid.Row="2" Grid.Column="1" Grid.ColumnSpan="7" Margin="0,5,0,5">
+        <Button Grid.Row="2" Grid.Column="1" Grid.ColumnSpan="7" Margin="0,5,0,5" Click="Open_Menu">
             <Image Source=""></Image>
         </Button>
         <!-- Quesadilla -->
@@ -109,8 +109,6 @@
                    VerticalAlignment="Center"/>
 
         <!-- Checkout -->
-        <Button Grid.Column="3" Grid.ColumnSpan="4" Margin="10"
-                Grid.Row="12" Content="Checkout"/>
-
+        <Button Grid.Column="3" Grid.ColumnSpan="4" Margin="10" Grid.Row="12" Click="Open_Checkout" >Checkout</Button>
     </Grid>
 </UserControl>
