@@ -15,7 +15,7 @@ namespace RestaurantOrderingSystem_481
     /// <summary>
     /// Interaction logic for ItemSubstitution.xaml
     /// </summary>
-    public partial class ItemSubstitution : Window
+    public partial class ItemSubstitution : UserControl
     {
         public ItemSubstitution()
         {
