@@ -24,10 +24,14 @@ namespace RestaurantOrderingSystem_481
 
         private void ReviewOrder(object sender, RoutedEventArgs e)
         {
-            
-        }
+            Window window = new Window
+            {
+                Title = "Review Order",
+                Content = Switcher.GetReviewOrder()
+            };
 
-        
+            window.ShowDialog();
+        }
 
         private void OrderMore(object sender, RoutedEventArgs e)
         {
