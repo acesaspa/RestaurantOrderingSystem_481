@@ -9,15 +9,16 @@
     <Grid Background="#dfed9f">
         <Grid.RowDefinitions>
             <RowDefinition/>
-            <RowDefinition/>
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
             <ColumnDefinition/>
             <ColumnDefinition/>
         </Grid.ColumnDefinitions>
 
-        <Label Grid.Column="0" Grid.Row="0" Name="ItemName"
+        <Label Grid.Column="0" Grid.Row="0" Name="Name"
                    Content="Item Name" VerticalAlignment="Center"/>
+        <Image Grid.Column="1" Grid.Row="0" HorizontalAlignment="Right" Source="Resources/AppetizerIcon.png" Height="100" Width="100"/>
+
 
     </Grid>
 </UserControl>
