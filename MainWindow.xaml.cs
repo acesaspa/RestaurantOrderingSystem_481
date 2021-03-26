@@ -25,6 +25,10 @@ namespace RestaurantOrderingSystem_481
         {
             InitializeComponent();
 
+            CategoryDivider divider = new CategoryDivider();
+            divider.Name.Content = "~ Appetizer ~";
+            Switcher.GetMenu().MenuItemList.Children.Add(divider);
+
             //Adding Our Items
             for(int i = 0; i < 15; i++)
             {
