@@ -31,6 +31,9 @@ namespace RestaurantOrderingSystem_481
         // Item Description
         public string item_description;
 
+        // Item Price
+        public float item_price;
+
         // Item Characteristics
         public bool item_spicy;
         public bool item_peanut;
@@ -71,6 +74,19 @@ namespace RestaurantOrderingSystem_481
                 this.ItemDescription.Content = this.item_description;
             }
         
+        }
+
+        // Item Price
+        public string Item_price
+        {
+            get { return item_price; }
+
+            set
+            {
+                item_price = value;
+                this.ItemPrice.Content = this.item_price;
+            }
+
         }
 
 
