@@ -22,6 +22,7 @@ namespace RestaurantOrderingSystem_481
         static SuccessNotification _successNotification = new SuccessNotification();
         static ItemDelete _itemDelete = new ItemDelete();
         static ItemSubstitution _itemSubstitution = new ItemSubstitution();
+        static ReviewOrder _reviewOrder = new ReviewOrder();
 
         public static Landing GetLanding()
         {
@@ -81,6 +82,10 @@ namespace RestaurantOrderingSystem_481
         public static ItemSubstitution GetItemSubstitution()
         {
             return _itemSubstitution;
+        }
+        public static ReviewOrder GetReviewOrder()
+        {
+            return _reviewOrder;
         }
 
         public static void Switch(UserControl newPage)
