@@ -27,8 +27,12 @@ namespace RestaurantOrderingSystem_481
             
         }
 
+        
+
         private void OrderMore(object sender, RoutedEventArgs e)
         {
+            
+            
             Switcher.Switch(Switcher.GetMenu());
         }
 
