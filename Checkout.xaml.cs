@@ -26,5 +26,9 @@ namespace RestaurantOrderingSystem_481
         {
             Switcher.Switch(Switcher.GetMenu());
         }
+        private void Open_Finalized(object sender, RoutedEventArgs e)
+        {
+            Switcher.Switch(Switcher.GetFinalize());
+        }
     }
 }
