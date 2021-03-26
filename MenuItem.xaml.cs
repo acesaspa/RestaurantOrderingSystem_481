@@ -32,7 +32,7 @@ namespace RestaurantOrderingSystem_481
         public string item_description;
 
         // Item Price
-        public float item_price;
+        //public float item_price;
 
         // Item Characteristics
         public bool item_spicy;
@@ -77,17 +77,17 @@ namespace RestaurantOrderingSystem_481
         }
 
         // Item Price
-        public string Item_price
-        {
-            get { return item_price; }
+        //public string Item_price
+        //{
+            //get { return item_price; }
 
-            set
-            {
-                item_price = value;
-                this.ItemPrice.Content = this.item_price;
-            }
+            //set
+            //{
+                //item_price = float;
+                //this.ItemPrice.Content = this.item_price;
+            //}
 
-        }
+        //}
 
 
         // Item Characteristics:
