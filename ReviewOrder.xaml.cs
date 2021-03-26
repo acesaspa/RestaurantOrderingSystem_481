@@ -22,5 +22,15 @@ namespace RestaurantOrderingSystem_481
         {
             InitializeComponent();
         }
+        private void Close_Page(object sender, RoutedEventArgs e)
+        {
+            var parent = this.Parent as Window;
+            if (parent != null)
+            {
+                parent.DialogResult = true;
+                parent.Close();
+            }
+        }
+
     }
 }
