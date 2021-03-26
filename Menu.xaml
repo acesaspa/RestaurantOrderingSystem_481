@@ -23,23 +23,8 @@
             <RowDefinition Height="auto"/>
             <!--1-->
             <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
             <!--2-->
-            <RowDefinition Height="auto"/>
-            <!--3-->
-            <RowDefinition Height="auto"/>
-            <!--4-->
-            <RowDefinition Height="auto"/>
-            <RowDefinition Height="auto"/>
-            <RowDefinition Height="auto"/>
-            <RowDefinition Height="auto"/>
-            <RowDefinition Height="auto"/>
-            <RowDefinition Height="auto"/>
-            <RowDefinition Height="auto"/>
-            <!--11-->
-            <RowDefinition Height="auto"/>
-            <RowDefinition Height="auto"/>
-            <RowDefinition Height="auto"/>
-            <RowDefinition Height="auto"/>
             <RowDefinition Height="*"/>
             <RowDefinition Height="30"/>
             <!--17-->
@@ -55,7 +40,6 @@
         <Button Grid.Column="1" Grid.Row="2" Grid.ColumnSpan="3" Width="65" Height="24" Content="Table #" Click="Open_ChangeTable"
                 HorizontalAlignment="Left" VerticalAlignment="Top" />
 
-
         <!--Filter-->
         <TextBlock Grid.Column="4" Grid.Row="3" Text="Filters:" HorizontalAlignment="Left" VerticalAlignment="Center" TextWrapping="Wrap"/>
 
@@ -66,20 +50,24 @@
 
 
         <!--Menu Items-->
-        <StackPanel Grid.Row="4" Grid.Column="1" Name="testStackPanel"/>
+        <ScrollViewer Grid.Row="4" Grid.Column="1" Grid.ColumnSpan="7">
+            <StackPanel Name="MenuItemList"/>
+        </ScrollViewer>
+        
 
+        
         <!--Total-->
-        <Rectangle Grid.Column="1" Grid.Row="17" Grid.ColumnSpan="7" Height="30" Width="360" Fill="LightBlue" HorizontalAlignment="Left" VerticalAlignment="Top"/>
-        <TextBlock Grid.Column="1" Grid.Row="17" Text="Total: " Width="32" HorizontalAlignment="Left" VerticalAlignment="Center"/>
-        <TextBox Grid.Column="2" Grid.Row="17" Grid.ColumnSpan="2" Text="$0.00" Margin="0,5" HorizontalAlignment="Left"/>
+        <Rectangle Grid.Column="1" Grid.Row="5" Grid.ColumnSpan="7" Height="30" Width="360" Fill="LightBlue" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+        <TextBlock Grid.Column="1" Grid.Row="5" Text="Total: " Width="32" HorizontalAlignment="Left" VerticalAlignment="Center"/>
+        <TextBox Grid.Column="2" Grid.Row="5" Grid.ColumnSpan="2" Text="$0.00" Margin="0,5" HorizontalAlignment="Left"/>
 
         <!--Cart-->
-        <Button Grid.Column="4" Grid.Row="17" Grid.ColumnSpan="2" Margin="0,5" Click="Open_Cart">
+        <Button Grid.Column="4" Grid.Row="5" Grid.ColumnSpan="2" Margin="0,5" Click="Open_Cart">
             Cart
         </Button>
 
         <!--Checkout Button-->
-        <Button Grid.Column="7" Grid.Row="17" Margin="7,5" Click="Open_Checkout">
+        <Button Grid.Column="7" Grid.Row="5" Margin="7,5" Click="Open_Checkout">
             Checkout
         </Button>
 

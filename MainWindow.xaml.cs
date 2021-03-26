@@ -24,6 +24,17 @@ namespace RestaurantOrderingSystem_481
         public MainWindow()
         {
             InitializeComponent();
+
+            //Adding Our Items
+            for(int i = 0; i < 15; i++)
+            {
+                MenuItem menuItem = new MenuItem();
+                menuItem.ItemName.Content = "Item: " + i.ToString();
+                menuItem.ItemDescription.Content = "ItemDescription: " + i.ToString();
+                Switcher.GetMenu().MenuItemList.Children.Add(menuItem);
+            }
+
+
             Switcher.pageSwitcher = this;
             Switcher.Switch(Switcher.GetLanding());
 

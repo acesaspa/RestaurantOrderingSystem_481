@@ -24,10 +24,24 @@ namespace RestaurantOrderingSystem_481
             get { return item_name; }
             set
             {
-                //item_name = value;
-                //this.item_nameText.Content = this.item_name;
+                item_name = value;
+                this.ItemName.Content = this.item_name;
             }
         }
+
+        public string item_description;
+
+        public string Item_description
+        {
+            get { return item_description; }
+            set
+            {
+                item_description = value;
+                this.ItemDescription.Content = this.item_description;
+            }
+        }
+
+
         public MenuItem()
         {
             InitializeComponent();
