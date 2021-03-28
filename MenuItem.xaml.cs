@@ -51,7 +51,7 @@ namespace RestaurantOrderingSystem_481
 
         ***************************/
 
-        // Item Name
+        // Item Name (ItemName)
         public string Item_name
         {
             get { return item_name; }

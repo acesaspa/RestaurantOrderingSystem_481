@@ -29,6 +29,11 @@ namespace RestaurantOrderingSystem_481
             divider.Name.Content = "~ Appetizer ~";
             Switcher.GetMenu().MenuItemList.Children.Add(divider);
 
+            //All our menu items
+            List<MenuItem> FullMenu = new List<MenuItem>();
+            MenuItem test = new MenuItem();
+            FullMenu.Add(test);
+
             //Adding Our Items
             for(int i = 0; i < 15; i++)
             {
@@ -36,6 +41,24 @@ namespace RestaurantOrderingSystem_481
                 menuItem.ItemName.Content = "Item: " + i.ToString();
                 menuItem.ItemDescription.Content = "ItemDescription: " + i.ToString();
                 Switcher.GetMenu().MenuItemList.Children.Add(menuItem);
+            }
+
+
+            //Checkout Items
+            List<CheckoutItem> FullCheckout = new List<CheckoutItem>();
+            CheckoutItem testCO = new CheckoutItem();
+            FullCheckout.Add(testCO);
+
+            //Testing adding to checkout
+            for (int i = 0; i < 4; i++)
+            {
+                CheckoutItem checkoutItem = new CheckoutItem();
+                checkoutItem.CheckoutItemName.Content = "Spaghetti Rigatoni Davinci " + i.ToString();
+                checkoutItem.CheckoutItemQuantity.Content = "1";
+                checkoutItem.CheckoutItemPrice.Content = "$5.99";
+                Switcher.GetCheckout().CheckoutItemList.Children.Add(checkoutItem);
+
+
             }
 
 
