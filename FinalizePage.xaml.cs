@@ -43,7 +43,9 @@ namespace RestaurantOrderingSystem_481
             Window window = new Window
             {
                 Title = "Takeout",
-                Content = Switcher.GetTakeout()
+                Content = Switcher.GetTakeout(),
+                Height=200,
+                Width=200
             };
 
             window.ShowDialog();
@@ -55,7 +57,9 @@ namespace RestaurantOrderingSystem_481
             Window window = new Window
             {
                 Title = "Review",
-                Content = Switcher.GetReview()
+                Content = Switcher.GetReview(),
+                Height=350,
+                Width=300
             };
 
             window.ShowDialog();
