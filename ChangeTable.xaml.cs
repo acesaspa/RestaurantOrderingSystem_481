@@ -30,6 +30,34 @@ namespace RestaurantOrderingSystem_481
             }
         }
 
+        //Button to Change Table Number
+        private void Change_TableNumber(object sender, RoutedEventArgs e)
+        {
+            string changedNumber = Switcher.GetChangeTable().ChangeTableTextBox.Text;
+            if(changedNumber != null)
+            {
+                try
+                {
+                    int result = Int32.Parse(changedNumber);
+                    if(result < 0 || result > 100)
+                    {
+
+                    }
+                    else
+                    {
+                        MainWindow.TableNumber = result;
+                        Switcher.GetMenu().DisplayTableNumber.Content = "Table #" + result.ToString();
+                    }
+                }
+                catch (FormatException)
+                {
+                    Console.WriteLine($"Cannot Parse, not a number!");
+                }
+            }
+
+            Close_ChangeTable(sender, e);
+        }
+
 
         public ChangeTable()
         {

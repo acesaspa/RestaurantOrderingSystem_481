@@ -21,12 +21,19 @@ namespace RestaurantOrderingSystem_481
     public partial class MainWindow : Window
     {
 
+        /***************************
+            Variable Declarations:
+        ***************************/
+
+        public static int TableNumber;
+
         public MainWindow()
         {
+
             InitializeComponent();
 
             CategoryDivider divider = new CategoryDivider();
-            divider.Name.Content = "~ Appetizer ~";
+            divider.TabName.Content = "~ Appetizer ~";
             Switcher.GetMenu().MenuItemList.Children.Add(divider);
 
             //All our menu items
@@ -59,13 +66,27 @@ namespace RestaurantOrderingSystem_481
                 Switcher.GetCheckout().CheckoutItemList.Children.Add(checkoutItem);
             }
 
+            //Cart Items
+            List<CartItem> FullCart = new List<CartItem>();
+            CartItem testCI = new CartItem();
+            FullCart.Add(testCI);
+
+            //Testing adding to Cart
+            for (int i = 0; i < 4; i++)
+            {
+                CartItem cartItem = new CartItem();
+                cartItem.ItemName.Content = "Spaghetti Rigatoni Davinci " + i.ToString();
+                cartItem.ItemQuantity.Content = "1";
+                cartItem.ItemPrice.Content = "$5.99";
+                Switcher.GetCart().CartItemList.Children.Add(cartItem);
+            }
 
             //Review Order Items
             List<ReviewOrderItem> FullReview = new List<ReviewOrderItem>();
             ReviewOrderItem testRO = new ReviewOrderItem();
             FullReview.Add(testRO);
 
-            //Testing adding to checkout
+            //Testing adding to Review Order
             for (int i = 0; i < 4; i++)
             {
                 ReviewOrderItem reviewOrderItem = new ReviewOrderItem();
