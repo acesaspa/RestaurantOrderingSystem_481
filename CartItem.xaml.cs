@@ -14,24 +14,13 @@ using System.Windows.Shapes;
 namespace RestaurantOrderingSystem_481
 {
     /// <summary>
-    /// Interaction logic for ReviewOrder.xaml
+    /// Interaction logic for CartItem.xaml
     /// </summary>
-    public partial class ReviewOrder : UserControl
+    public partial class CartItem : UserControl
     {
-
-        public ReviewOrder()
+        public CartItem()
         {
             InitializeComponent();
         }
-        private void Close_Page(object sender, RoutedEventArgs e)
-        {
-            var parent = this.Parent as Window;
-            if (parent != null)
-            {
-                parent.DialogResult = true;
-                parent.Close();
-            }
-        }
-
     }
 }

@@ -10,10 +10,9 @@
         <!--6 columns-->
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="20" />
-            <ColumnDefinition Width="106*" />
-            <ColumnDefinition Width="90*" />
-            <ColumnDefinition Width="40*" />
-            <ColumnDefinition Width="20*" />
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="60" />
+            <ColumnDefinition Width="60" />
             <ColumnDefinition Width="20" />
         </Grid.ColumnDefinitions>
 
@@ -21,52 +20,40 @@
         <Grid.RowDefinitions>
             <RowDefinition Height="20" />
             <RowDefinition Height="20" />
-            <RowDefinition Height="2*" />
-            <RowDefinition Height="2*" />
-            <RowDefinition Height="2*" />
-            <RowDefinition Height="2*" />
-            <RowDefinition Height="1*" />
-            <RowDefinition Height="1*" />
-            <RowDefinition Height="1*" />
-            <RowDefinition Height="1*" />
+            <RowDefinition Height="40" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="20" />
+            <RowDefinition Height="50" />
+            <RowDefinition Height="20" />
         </Grid.RowDefinitions>
 
         <!--Your Order review-->
         <TextBlock Grid.Column="1" VerticalAlignment="Center" FontSize="20" Grid.ColumnSpan="3" Grid.RowSpan="2" Height="26" Width="158">Your order review:</TextBlock>
-        <Button Grid.Column="4" VerticalAlignment="Center" HorizontalAlignment="Left" Grid.RowSpan="2" FontSize="25" Width="40" Grid.ColumnSpan="2" Height="38" Click="Close_Page">X</Button>
+        <Button Grid.Column="3" VerticalAlignment="Center" HorizontalAlignment="Right" Grid.RowSpan="2" FontSize="25" Width="40" Grid.ColumnSpan="2" Height="38" Click="Close_Page">X</Button>
 
         <!--Changes table color to blue-->
-        <Rectangle Grid.Column="1" Grid.Row="2" Grid.ColumnSpan="4" Grid.RowSpan="4" Fill="LightBlue" RadiusX="10" RadiusY="10" Margin="0,0,0,5"/>
+        <Rectangle Grid.Column="1" Grid.Row="2" Grid.ColumnSpan="3" Grid.RowSpan="2" Fill="LightBlue" RadiusX="10" RadiusY="10"/>
 
         <!--Table titles for each column-->
         <TextBlock Grid.Column="1" Grid.Row="2" VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="15" TextWrapping="Wrap">Menu Items</TextBlock>
         <TextBlock Grid.Column="2" Grid.Row="2" VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="15" TextWrapping="Wrap">Quantity</TextBlock>
-        <TextBlock Grid.Column="3" Grid.Row="2" VerticalAlignment="Center" HorizontalAlignment="Center" Grid.ColumnSpan="2" FontSize="15" TextWrapping="Wrap">Price</TextBlock>
-        
-        <!--Item 1-->
-        <TextBlock Grid.Column="1" Grid.Row="3" VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="12" TextWrapping="Wrap">Mixed Green Salad</TextBlock>
-        <TextBlock Grid.Column="2" Grid.Row="3" VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="12" TextWrapping="Wrap">1</TextBlock>
-        <TextBlock Grid.Column="3" Grid.Row="3" VerticalAlignment="Center" HorizontalAlignment="Center" Grid.ColumnSpan="2" FontSize="12" TextWrapping="Wrap">$8.99</TextBlock>
-        
-        <!--Item 2-->
-        <TextBlock Grid.Column="1" Grid.Row="4" VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="12" TextWrapping="Wrap">Spring Rolls</TextBlock>
-        <TextBlock Grid.Column="2" Grid.Row="4" VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="12" TextWrapping="Wrap">1</TextBlock>
-        <TextBlock Grid.Column="3" Grid.Row="4" VerticalAlignment="Center" HorizontalAlignment="Center" Grid.ColumnSpan="2" FontSize="12" TextWrapping="Wrap">$8.99</TextBlock>
-
-        <!--Item 3-->
-        <TextBlock Grid.Column="1" Grid.Row="5" VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="12" TextWrapping="Wrap">Red Wine</TextBlock>
-        <TextBlock Grid.Column="2" Grid.Row="5" VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="12" TextWrapping="Wrap">2</TextBlock>
-        <TextBlock Grid.Column="3" Grid.Row="5" VerticalAlignment="Center" HorizontalAlignment="Center" Grid.ColumnSpan="2" FontSize="12" TextWrapping="Wrap">$15.98</TextBlock>
+        <TextBlock Grid.Column="3" Grid.Row="2" VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="15" TextWrapping="Wrap">Price</TextBlock>
 
         <!--Price Categories-->
-        <TextBlock Grid.Column="1" Grid.Row="6" VerticalAlignment="Bottom" HorizontalAlignment="Right">Subtotal:</TextBlock>
-        <TextBlock Grid.Column="1" Grid.Row="7" VerticalAlignment="Center" HorizontalAlignment="Right">GST:</TextBlock>
-        <TextBlock Grid.Column="1" Grid.Row="8" VerticalAlignment="Top" HorizontalAlignment="Right">Total:</TextBlock>
+        <TextBlock Grid.Column="1" Grid.Row="5" VerticalAlignment="Top" HorizontalAlignment="Right">Subtotal:</TextBlock>
+        <TextBlock Grid.Column="1" Grid.Row="5" VerticalAlignment="Center" HorizontalAlignment="Right">GST:</TextBlock>
+        <TextBlock Grid.Column="1" Grid.Row="5" VerticalAlignment="Bottom" HorizontalAlignment="Right">Total:</TextBlock>
 
+        <!-- StackPanel -->
+        <ScrollViewer Grid.Row="3" Grid.Column="1" Grid.ColumnSpan="3">
+            <StackPanel Name="ReviewItemList"/>
+        </ScrollViewer>
+        
+        
         <!--Sum-->
-        <TextBlock Grid.Column="2" Grid.Row="6" VerticalAlignment="Bottom" HorizontalAlignment="Center">$33.96</TextBlock>
-        <TextBlock Grid.Column="2" Grid.Row="7" VerticalAlignment="Center" HorizontalAlignment="Center">$1.70</TextBlock>
-        <TextBlock Grid.Column="2" Grid.Row="8" VerticalAlignment="Top" HorizontalAlignment="Center">$35.66</TextBlock>
+        <TextBlock Grid.Column="2" Grid.Row="5" VerticalAlignment="Top" HorizontalAlignment="Center">$33.96</TextBlock>
+        <TextBlock Grid.Column="2" Grid.Row="5" VerticalAlignment="Center" HorizontalAlignment="Center">$1.70</TextBlock>
+        <TextBlock Grid.Column="2" Grid.Row="5" VerticalAlignment="Bottom" HorizontalAlignment="Center">$35.66</TextBlock>
 
     </Grid>
 </UserControl>

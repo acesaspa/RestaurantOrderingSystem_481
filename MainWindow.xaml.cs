@@ -29,7 +29,12 @@ namespace RestaurantOrderingSystem_481
             divider.Name.Content = "~ Appetizer ~";
             Switcher.GetMenu().MenuItemList.Children.Add(divider);
 
-            //Adding Our Items
+            //All our menu items
+            List<MenuItem> FullMenu = new List<MenuItem>();
+            MenuItem test = new MenuItem();
+            FullMenu.Add(test);
+
+            //Testing Adding Our Items
             for(int i = 0; i < 15; i++)
             {
                 MenuItem menuItem = new MenuItem();
@@ -38,6 +43,37 @@ namespace RestaurantOrderingSystem_481
                 Switcher.GetMenu().MenuItemList.Children.Add(menuItem);
             }
 
+
+            //Checkout Items
+            List<CheckoutItem> FullCheckout = new List<CheckoutItem>();
+            CheckoutItem testCO = new CheckoutItem();
+            FullCheckout.Add(testCO);
+
+            //Testing adding to checkout
+            for (int i = 0; i < 4; i++)
+            {
+                CheckoutItem checkoutItem = new CheckoutItem();
+                checkoutItem.CheckoutItemName.Content = "Spaghetti Rigatoni Davinci " + i.ToString();
+                checkoutItem.CheckoutItemQuantity.Content = "1";
+                checkoutItem.CheckoutItemPrice.Content = "$5.99";
+                Switcher.GetCheckout().CheckoutItemList.Children.Add(checkoutItem);
+            }
+
+
+            //Review Order Items
+            List<ReviewOrderItem> FullReview = new List<ReviewOrderItem>();
+            ReviewOrderItem testRO = new ReviewOrderItem();
+            FullReview.Add(testRO);
+
+            //Testing adding to checkout
+            for (int i = 0; i < 4; i++)
+            {
+                ReviewOrderItem reviewOrderItem = new ReviewOrderItem();
+                reviewOrderItem.ReviewOrderItemName.Content = "Spaghetti Rigatoni Davinci " + i.ToString();
+                reviewOrderItem.ReviewOrderItemQuantity.Content = "1";
+                reviewOrderItem.ReviewOrderItemPrice.Content = "$5.99";
+                Switcher.GetReviewOrder().ReviewItemList.Children.Add(reviewOrderItem);
+            }
 
             Switcher.pageSwitcher = this;
             Switcher.Switch(Switcher.GetLanding());
