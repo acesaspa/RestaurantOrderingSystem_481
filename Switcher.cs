@@ -23,6 +23,8 @@ namespace RestaurantOrderingSystem_481
         static ItemDelete _itemDelete = new ItemDelete();
         static ItemSubstitution _itemSubstitution = new ItemSubstitution();
         static ReviewOrder _reviewOrder = new ReviewOrder();
+        static Takeout _takeout = new Takeout();
+        static Review _review = new Review();
 
         public static Landing GetLanding()
         {
@@ -86,6 +88,16 @@ namespace RestaurantOrderingSystem_481
         public static ReviewOrder GetReviewOrder()
         {
             return _reviewOrder;
+        }
+
+        public static Review GetReview()
+        {
+            return _review;
+        }
+
+        public static Takeout GetTakeout()
+        {
+            return _takeout;
         }
 
         public static void Switch(UserControl newPage)

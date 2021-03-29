@@ -35,24 +35,30 @@ namespace RestaurantOrderingSystem_481
 
         private void OrderMore(object sender, RoutedEventArgs e)
         {
-            
-            
             Switcher.Switch(Switcher.GetMenu());
         }
 
         private void Takeout(object sender, RoutedEventArgs e)
         {
+            Window window = new Window
+            {
+                Title = "Takeout",
+                Content = Switcher.GetTakeout()
+            };
 
-        }
-
-        private void Condiments(object sender, RoutedEventArgs e)
-        {
-
+            window.ShowDialog();
         }
 
         private void Review(object sender, RoutedEventArgs e)
         {
+            
+            Window window = new Window
+            {
+                Title = "Review",
+                Content = Switcher.GetReview()
+            };
 
+            window.ShowDialog();
         }
 
 
