@@ -24,5 +24,18 @@ namespace RestaurantOrderingSystem_481
             InitializeComponent();
         }
 
+        private void SuccessNotification(object sender, RoutedEventArgs e)
+        {
+
+            Window window = new Window
+            {
+                Title = "Review",
+                Content = Switcher.GetSuccessNotification(),
+                Height = 100,
+                Width = 200
+            };
+
+            window.ShowDialog();
+        }
     }
 }

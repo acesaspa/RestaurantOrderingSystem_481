@@ -25,8 +25,29 @@ namespace RestaurantOrderingSystem_481
         //Button to Open up Menu
         private void Open_Menu(object sender, RoutedEventArgs e)
         {
-            Switcher.Switch(Switcher.GetNewMenu());
-
+            string changedNumber = Switcher.GetLanding().tableNumber.Text;
+            if (changedNumber != null)
+            {
+                try
+                {
+                    int result = Int32.Parse(changedNumber);
+                    if (result < 0 || result > 100)
+                    {
+                        MessageBox.Show("Invalid input.");
+                    }
+                    else
+                    {
+                        MainWindow.TableNumber = result;
+                        Switcher.GetMenu().DisplayTableNumber.Content = "Table #" + result.ToString();
+                        Switcher.Switch(Switcher.GetMenu());
+                    }
+                }
+                catch (FormatException)
+                {
+                    Console.WriteLine($"Cannot Parse, not a number!");
+                    MessageBox.Show("Invald input.");
+                }
+            }
         }
 
         //Change Language

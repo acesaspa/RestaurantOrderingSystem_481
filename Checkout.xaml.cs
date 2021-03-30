@@ -30,5 +30,23 @@ namespace RestaurantOrderingSystem_481
         {
             Switcher.Switch(Switcher.GetFinalize());
         }
+
+        private void Update_Values(object sender, RoutedEventArgs e)
+        {
+            //var subtotal = 0;
+            foreach(object child in CheckoutItemList.Children)
+            {
+                string childname = null;
+                if (child is FrameworkElement)
+                {
+                    childname = (child as FrameworkElement).Name;
+                }
+
+                if(childname != null)
+                {
+
+                }
+            }
+        }
     }
 }

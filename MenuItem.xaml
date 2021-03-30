@@ -19,10 +19,12 @@
         <Image HorizontalAlignment="Left" Source="Resources/stockSalad.jpg" Grid.RowSpan="2"/>
         <Label Grid.Column="1" Grid.Row="0" Name="ItemName"
                    Content="Item Name"/>
-        <Label Grid.Column="1" Grid.Row="1" Name="ItemDescription"
+        <Label Grid.Column="1" Grid.Row="1" Grid.ColumnSpan="2" Name="ItemDescription"
                    Content="Item Description"/>
         <Label Grid.Column="2" Grid.Row="0" Name="ItemPrice"
                Content="Item Price"/>
+        <Button Grid.Row="0" Grid.Column="0" Grid.RowSpan="2" Grid.ColumnSpan="3"
+                Name="OrderItem" Background="{x:Null}"/>
     </Grid>
 
 

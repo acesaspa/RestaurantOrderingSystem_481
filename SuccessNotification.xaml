@@ -5,13 +5,21 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:RestaurantOrderingSystem_481"
              mc:Ignorable="d" 
-             d:DesignHeight="45" d:DesignWidth="90">
-            
-    
-    <Grid Background="LightGreen">
-            
-        
-        
+             d:DesignHeight="50" d:DesignWidth="90">
+
+
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="1*" />
+        </Grid.ColumnDefinitions>
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="1*" />
+        </Grid.RowDefinitions>
+
+        <Rectangle Fill="LightGreen" Grid.RowSpan="2"/>
+
+        <TextBlock VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="20" >Success!</TextBlock>
     </Grid>
     
     

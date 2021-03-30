@@ -27,9 +27,10 @@ namespace RestaurantOrderingSystem_481
             Window window = new Window
             {
                 Title = "Review Order",
-                Content = Switcher.GetReviewOrder()
+                Content = Switcher.GetReviewOrder(),
+                Height = 400,
+                Width = 300
             };
-
             window.ShowDialog();
         }
 

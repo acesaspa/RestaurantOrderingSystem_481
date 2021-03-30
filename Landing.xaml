@@ -31,7 +31,7 @@
         <TextBlock Grid.Column="1" Grid.Row="2" FontWeight="Light"
                    TextAlignment="Center" Margin="20"
                    Text="Table Number:"/>
-        <TextBox x:Name="tableNumber" Grid.Column="1" Grid.Row="3"
+        <TextBox Name="tableNumber" Grid.Column="1" Grid.Row="3"
                  Width="100"/>
         <Button Grid.Column="1" Grid.Row="4" Content="Run" Click="Open_Menu"
                 Margin="20" Height="20" Width="100"/>
