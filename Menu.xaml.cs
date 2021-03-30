@@ -8,15 +8,17 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
+using System.Windows.Navigation;
 using System.Windows.Shapes;
 
 namespace RestaurantOrderingSystem_481
 {
     /// <summary>
-    /// Interaction logic for Menu.xaml
+    /// Interaction logic for NewMenu.xaml
     /// </summary>
-    public partial class Menu : UserControl
+    public partial class NewMenu : UserControl
     {
+
         //Button to Open up Cart
         private void Open_Cart(object sender, RoutedEventArgs e)
         {
@@ -42,14 +44,14 @@ namespace RestaurantOrderingSystem_481
             {
                 Title = "Change Table",
                 Content = Switcher.GetChangeTable(),
-                Height=200,
-                Width=200
+                Height = 200,
+                Width = 200
             };
 
             window.ShowDialog();
         }
 
-        public Menu()
+        public NewMenu()
         {
             InitializeComponent();
         }
