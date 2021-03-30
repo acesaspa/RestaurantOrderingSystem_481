@@ -43,6 +43,15 @@ namespace RestaurantOrderingSystem_481
                 Switcher.GetMenu().MenuItemList.Children.Add(menuItem);
             }
 
+            //New Menu Appetisers
+            for (int i = 0; i < 15; i++)
+            {
+                MenuItem menuItem = new MenuItem();
+                menuItem.ItemName.Content = "Item: " + i.ToString();
+                menuItem.ItemDescription.Content = "ItemDescription: " + i.ToString();
+                Switcher.GetNewMenu().AppetisersList.Children.Add(menuItem);
+            }
+
 
             //Checkout Items
             List<CheckoutItem> FullCheckout = new List<CheckoutItem>();

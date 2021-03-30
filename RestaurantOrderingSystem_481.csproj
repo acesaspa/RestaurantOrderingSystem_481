@@ -9,13 +9,18 @@
   <ItemGroup>
     <None Remove="Resources\AppetizerIcon.png" />
     <None Remove="Resources\CarrotIcon.png" />
+    <None Remove="Resources\Cart.png" />
+    <None Remove="Resources\cart2.png" />
     <None Remove="Resources\DinnerIcon.png" />
     <None Remove="Resources\EntreeIcon.png" />
+    <None Remove="Resources\gluten.png" />
     <None Remove="Resources\GlutenFree.jpg" />
     <None Remove="Resources\Halal.png" />
     <None Remove="Resources\Koshur.jpg" />
     <None Remove="Resources\MagnifyingGlassIcon.png" />
     <None Remove="Resources\NoNuts.png" />
+    <None Remove="Resources\Peanut.png" />
+    <None Remove="Resources\Pencil.png" />
     <None Remove="Resources\PepperIcon.png" />
     <None Remove="Resources\stockSalad.jpg" />
     <None Remove="Resources\trash.png" />
@@ -30,10 +35,19 @@
     <Resource Include="Resources\CarrotIcon.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Resource>
+    <Resource Include="Resources\Cart.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Resources\cart2.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
     <Resource Include="Resources\DinnerIcon.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Resource>
     <Resource Include="Resources\EntreeIcon.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Resources\gluten.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Resource>
     <Resource Include="Resources\GlutenFree.jpg">
@@ -49,6 +63,12 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Resource>
     <Resource Include="Resources\NoNuts.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Resources\Peanut.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Resources\Pencil.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Resource>
     <Resource Include="Resources\PepperIcon.png">

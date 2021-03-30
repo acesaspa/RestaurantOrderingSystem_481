@@ -43,7 +43,9 @@ namespace RestaurantOrderingSystem_481
             Window window = new Window
             {
                 Title = "Change Table",
-                Content = Switcher.GetChangeTable()
+                Content = Switcher.GetChangeTable(),
+                Height = 200,
+                Width = 200
             };
 
             window.ShowDialog();

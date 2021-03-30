@@ -38,11 +38,13 @@
 
         <Grid.RowDefinitions>
 
+            <!--Must total to 580. 20 required for conversion from user control to window-->
+
             <!--Margin-->
             <RowDefinition Height="20"/>
 
             <!--Spacing-->
-            <RowDefinition Height="80"/>
+            <RowDefinition Height="60"/>
 
             <!--Menu-->
             <RowDefinition Height="180"/>
@@ -53,17 +55,26 @@
             <!--Spacing-->
             <RowDefinition Height="30"/>
 
-            <!--Legend-->
-            <RowDefinition Height="40"/>
+            <!--Spicy-->
+            <RowDefinition Height="35"/>
+
+            <!--Peanut-->
+            <RowDefinition Height="35"/>
+
+            <!--Gluten-->
+            <RowDefinition Height="35"/>
+
+            <!--Vegetarian-->
+            <RowDefinition Height="35"/>
 
             <!--Filler-->
-            <RowDefinition Height="*"/>
+            <RowDefinition Height="20"/>
 
-            <!--Spacing-->
+            <!--Checkout-->
             <RowDefinition Height="50"/>
 
             <!--Spacing-->
-            <RowDefinition Height="20"/>
+            <RowDefinition Height="*"/>
 
             <!--Margin-->
             <RowDefinition Height="20"/>
@@ -71,7 +82,47 @@
 
         </Grid.RowDefinitions>
 
-        <TabControl TabStripPlacement="Left" Grid.Column="1" Grid.Row="2" Grid.ColumnSpan="5" Grid.RowSpan="3">
+        <!--Table Number-->
+        <Button Grid.Row="1" Grid.Column="1" Grid.ColumnSpan="2" Margin="10,10" Click="Open_ChangeTable" Background="Cyan">
+
+            <Grid Margin="0,0">
+
+                <Grid.ColumnDefinitions>
+
+                    <ColumnDefinition Width="55"/>
+
+                    <ColumnDefinition Width="*" />
+
+                    <ColumnDefinition Width="60"/>
+
+                </Grid.ColumnDefinitions>
+
+                <Grid.RowDefinitions>
+
+                    <RowDefinition />
+
+                </Grid.RowDefinitions>
+
+                <TextBlock Grid.Column="0" Grid.Row="0" Text="Table:" FontSize="16"  Margin="5,0" HorizontalAlignment="Left" VerticalAlignment="Center" />
+
+                <Image Grid.Column="2" Grid.Row="0" Source="Resources/Pencil.png" HorizontalAlignment="Right" Margin="7"/>
+
+            </Grid>
+
+
+
+        </Button>
+
+        <!--Previous Order-->
+        <Button Grid.Row="1" Grid.Column="4" Grid.ColumnSpan="2" Margin="10,10" Click="Open_ReviewOrder" Background="Cyan">
+
+            <TextBlock Grid.Column="0" Grid.Row="0" Text="Previous Order" FontSize="16"  Margin="5,0" HorizontalAlignment="Center" VerticalAlignment="Center" />
+
+        </Button>
+
+
+        <!--Menu Tab Control-->
+        <TabControl TabStripPlacement="Left" Grid.Column="1" Grid.Row="2" Grid.ColumnSpan="5" Grid.RowSpan="7">
 
             <!--Appetisers Tab-->
             <TabItem Header="Appetisers" Width="70" Height="30" FontSize="12" VerticalAlignment="Center" HorizontalAlignment="Center" Background="LightBlue">
@@ -141,28 +192,28 @@
         <Button Grid.Column="1" Grid.Row="3" Content="Call Server" Background="PaleVioletRed"/>
 
         <!--Legend-->
-        <Rectangle Grid.Column="2" Grid.Row="5" Grid.ColumnSpan="4" Fill="DarkGray"/>
+        <Rectangle Grid.Column="1" Grid.Row="5" Grid.RowSpan="4" Fill="DarkGray"/>
 
         <!--SpicyLegend-->
-        <TextBlock Grid.Column="2" Grid.Row="5" Text="Spicy:" VerticalAlignment="Top" HorizontalAlignment="Center"/>
-        <Image Grid.Column="2" Grid.Row="5" HorizontalAlignment="Center" VerticalAlignment="Bottom" Source="Resources/PepperIcon.png" Height="20" Width="20"/>
+        <TextBlock Grid.Column="1" Grid.Row="5" Text=" Spicy:" VerticalAlignment="Top" HorizontalAlignment="Left"/>
+        <Image Grid.Column="1" Grid.Row="5" VerticalAlignment="Bottom" HorizontalAlignment="Center" Source="Resources/PepperIcon.png" Height="20" Width="20"/>
 
         <!--PeanutLegend-->
-        <TextBlock Grid.Column="3" Grid.Row="5" Text="Peanut-free:" VerticalAlignment="Top" HorizontalAlignment="Center"/>
-        <Image Grid.Column="3" Grid.Row="5" HorizontalAlignment="Center" VerticalAlignment="Bottom" Source="Resources/NoNuts.png" Height="20" Width="20"/>
+        <TextBlock Grid.Column="1" Grid.Row="6" Text="Peanut-free:" VerticalAlignment="Top" HorizontalAlignment="Center"/>
+        <Image Grid.Column="1" Grid.Row="6" VerticalAlignment="Bottom" HorizontalAlignment="Center" Source="Resources/Peanut.png" Height="20" Width="20"/>
 
         <!--GlutenLegend-->
-        <TextBlock Grid.Column="4" Grid.Row="5" Text="Gluten-free:" VerticalAlignment="Top" HorizontalAlignment="Center"/>
-        <Image Grid.Column="4" Grid.Row="5" HorizontalAlignment="Center" VerticalAlignment="Bottom" Source="Resources/GlutenFree.jpg" Height="20" Width="20"/>
+        <TextBlock Grid.Column="1" Grid.Row="7" Text="Gluten-free:" VerticalAlignment="Top" HorizontalAlignment="Center"/>
+        <Image Grid.Column="1" Grid.Row="7" VerticalAlignment="Bottom" HorizontalAlignment="Center" Source="Resources/gluten.png" Height="20" Width="20"/>
 
         <!--VegetarianLegend-->
-        <TextBlock Grid.Column="5" Grid.Row="5" Text="Vegetarian:" VerticalAlignment="Top" HorizontalAlignment="Center"/>
-        <Image Grid.Column="5" Grid.Row="5" HorizontalAlignment="Center" VerticalAlignment="Bottom" Source="Resources/CarrotIcon.png" Height="20" Width="20"/>
+        <TextBlock Grid.Column="1" Grid.Row="8" Text="Vegetarian:" VerticalAlignment="Top" HorizontalAlignment="Center"/>
+        <Image Grid.Column="1" Grid.Row="8" VerticalAlignment="Bottom" HorizontalAlignment="Center" Source="Resources/CarrotIcon.png" Height="20" Width="20"/>
 
 
         <!--Temporary Cart:-->
 
-        <Grid Grid.Column="1" Grid.Row="7" Grid.ColumnSpan="5" Background="LightBlue">
+        <Grid Grid.Column="1" Grid.Row="10" Grid.ColumnSpan="5" Background="LightBlue">
 
             <Grid.ColumnDefinitions>
 
@@ -185,13 +236,13 @@
             <TextBlock Grid.Column="0" Grid.Row="0" Grid.ColumnSpan="2" Text="$0.00" Margin="0,5" HorizontalAlignment="Center" VerticalAlignment="Center"/>
 
             <!--Cart-->
-            <Button Grid.Column="0" Grid.Row="0" Grid.ColumnSpan="4" Margin="130,10" Content="Cart"  Click="Open_Cart" >
+            <Button Grid.Column="0" Grid.Row="0" Grid.ColumnSpan="4" Margin="130,10" Click="Open_Cart" >
 
-                <Button.Background>
+                <Grid>
 
-                    <ImageBrush ImageSource="Resources/triangle.png"/>
+                    <Image Source="Resources/cart2.png" />
 
-                </Button.Background>
+                </Grid>
 
             </Button>
 
@@ -200,17 +251,6 @@
 
         </Grid>
 
-
-
-
-
     </Grid>
-
-
-
-
-
-
-
 
 </UserControl>
