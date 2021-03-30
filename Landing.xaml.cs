@@ -38,8 +38,8 @@ namespace RestaurantOrderingSystem_481
                     else
                     {
                         MainWindow.TableNumber = result;
-                        Switcher.GetMenu().DisplayTableNumber.Content = "Table #" + result.ToString();
-                        Switcher.Switch(Switcher.GetMenu());
+                        Switcher.GetNewMenu().DisplayTableNumber.Text = "Table #" + result.ToString();
+                        Switcher.Switch(Switcher.GetNewMenu());
                     }
                 }
                 catch (FormatException)
