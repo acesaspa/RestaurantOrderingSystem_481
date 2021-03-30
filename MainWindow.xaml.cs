@@ -27,6 +27,12 @@ namespace RestaurantOrderingSystem_481
 
         public static int TableNumber;
 
+        /***************************
+            Big Data:
+        ***************************/
+
+        String[] MenuNames = { "Hello", "Test", "Spaget" };
+
         public MainWindow()
         {
 

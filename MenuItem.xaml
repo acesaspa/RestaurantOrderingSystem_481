@@ -23,6 +23,8 @@
                    Content="Item Description"/>
         <Label Grid.Column="2" Grid.Row="0" Name="ItemPrice"
                Content="Item Price"/>
+        <Button Grid.Row="0" Grid.Column="0" Grid.RowSpan="2" Grid.ColumnSpan="3"
+                Name="OrderItem" Background="{x:Null}"/>
     </Grid>
 
 
