@@ -27,14 +27,6 @@ namespace RestaurantOrderingSystem_481
 
         public static int TableNumber;
 
-        /***************************
-            Big Data: 15 Items
-        ***************************/
-
-        MenuItem item1 = new MenuItem( "Spaghetti", "Pasta with sauce", 2.99f);
-        MenuItem item2 = new MenuItem( "Sandwhich", "Bacon, Eggs, Lettuce", 5.99f);
-        MenuItem item3 = new MenuItem( "Fries", "No Sauce", 1.99f);
-
         public MainWindow()
         {
 
@@ -52,11 +44,22 @@ namespace RestaurantOrderingSystem_481
             //New Menu Appetisers
             //for (int i = 0; i < 15; i++)
             //{
-                //Switcher.GetNewMenu().AppetisersList.Children.Add(menuItem);
+            //Switcher.GetNewMenu().AppetisersList.Children.Add(menuItem);
             //}
 
+            /***************************
+                Big Data: 15 Items
+            ***************************/
+
+            MenuItem item1 = new MenuItem("Spaghetti", "Pasta with sauce", 2.99f);
+            item1.ItemName.Content = item1.item_name;
+            MenuItem item2 = new MenuItem("Sandwhich", "Bacon, Eggs, Lettuce", 5.99f);
+            MenuItem item3 = new MenuItem("Fries", "No Sauce", 1.99f);
+
             //Working Menu
-            //for ()
+            Switcher.GetNewMenu().AppetisersList.Children.Add(item1);
+            Switcher.GetNewMenu().AppetisersList.Children.Add(item2);
+            Switcher.GetNewMenu().AppetisersList.Children.Add(item3);
 
 
             //Checkout Items

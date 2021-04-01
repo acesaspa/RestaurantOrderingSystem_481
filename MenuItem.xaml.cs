@@ -160,7 +160,21 @@ namespace RestaurantOrderingSystem_481
             item_name = name;
             item_description = desc;
             item_price = price;
-            
+            InitializeComponent();
+
+            MenuItemUC();
+        }
+
+        //Set all the Data for User Control
+        public void MenuItemUC()
+        {
+            this.ItemName.Content = item_name;
+            this.ItemDescription.Content = item_description;
+            this.ItemPrice.Content = item_price;
+        }
+
+        public MenuItem()
+        {
             InitializeComponent();
         }
     }
