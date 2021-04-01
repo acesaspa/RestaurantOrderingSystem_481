@@ -36,7 +36,7 @@ namespace RestaurantOrderingSystem_481
 
         private void OrderMore(object sender, RoutedEventArgs e)
         {
-            Switcher.Switch(Switcher.GetMenu());
+            Switcher.Switch(Switcher.GetNewMenu());
         }
 
         private void Takeout(object sender, RoutedEventArgs e)

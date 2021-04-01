@@ -89,11 +89,11 @@
 
                 <Grid.ColumnDefinitions>
 
-                    <ColumnDefinition Width="55"/>
+                    <ColumnDefinition Width="75"/>
 
                     <ColumnDefinition Width="*" />
 
-                    <ColumnDefinition Width="60"/>
+                    <ColumnDefinition Width="40"/>
 
                 </Grid.ColumnDefinitions>
 
@@ -103,7 +103,7 @@
 
                 </Grid.RowDefinitions>
 
-                <TextBlock Grid.Column="0" Grid.Row="0" Text="Table:" FontSize="16"  Margin="5,0" HorizontalAlignment="Left" VerticalAlignment="Center" />
+                <TextBlock Grid.Column="0" Grid.Row="0" Name="DisplayTableNumber" Text="Table:" FontSize="16"  Margin="5,0" HorizontalAlignment="Left" VerticalAlignment="Center" />
 
                 <Image Grid.Column="2" Grid.Row="0" Source="Resources/Pencil.png" HorizontalAlignment="Right" Margin="7"/>
 
