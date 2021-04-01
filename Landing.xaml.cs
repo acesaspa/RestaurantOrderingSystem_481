@@ -38,7 +38,7 @@ namespace RestaurantOrderingSystem_481
                     else
                     {
                         MainWindow.TableNumber = result;
-                        Switcher.GetNewMenu().DisplayTableNumber.Text = "Table #" + result.ToString();
+                        Switcher.GetNewMenu().DisplayTableNumber.Text = "Table: " + result.ToString();
                         Switcher.Switch(Switcher.GetNewMenu());
                     }
                 }

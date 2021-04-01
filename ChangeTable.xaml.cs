@@ -46,7 +46,7 @@ namespace RestaurantOrderingSystem_481
                     else
                     {
                         MainWindow.TableNumber = result;
-                        Switcher.GetMenu().DisplayTableNumber.Content = "Table #" + result.ToString();
+                        Switcher.GetNewMenu().DisplayTableNumber.Text = "Table: " + result.ToString();
                     }
                 }
                 catch (FormatException)

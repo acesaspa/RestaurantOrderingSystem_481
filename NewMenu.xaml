@@ -89,11 +89,11 @@
 
                 <Grid.ColumnDefinitions>
 
-                    <ColumnDefinition Width="55"/>
+                    <ColumnDefinition Width="75"/>
 
                     <ColumnDefinition Width="*" />
 
-                    <ColumnDefinition Width="60"/>
+                    <ColumnDefinition Width="40"/>
 
                 </Grid.ColumnDefinitions>
 
