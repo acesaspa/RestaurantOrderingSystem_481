@@ -28,48 +28,41 @@ namespace RestaurantOrderingSystem_481
         public static int TableNumber;
 
         /***************************
-            Big Data:
+            Big Data: 15 Items
         ***************************/
 
-        String[] MenuNames = { "Hello", "Test", "Spaget" };
+        MenuItem item1 = new MenuItem( "Spaghetti", "Pasta with sauce", 2.99f);
+        MenuItem item2 = new MenuItem( "Sandwhich", "Bacon, Eggs, Lettuce", 5.99f);
+        MenuItem item3 = new MenuItem( "Fries", "No Sauce", 1.99f);
 
         public MainWindow()
         {
 
             InitializeComponent();
 
-            CategoryDivider divider = new CategoryDivider();
-            divider.TabName.Content = "~ Appetizer ~";
-            Switcher.GetMenu().MenuItemList.Children.Add(divider);
+            //CategoryDivider divider = new CategoryDivider();
+            //divider.TabName.Content = "~ Appetizer ~";
+            //Switcher.GetMenu().MenuItemList.Children.Add(divider);
 
             //All our menu items
-            List<MenuItem> FullMenu = new List<MenuItem>();
-            MenuItem test = new MenuItem();
-            FullMenu.Add(test);
-
-            //Testing Adding Our Items
-            for(int i = 0; i < 15; i++)
-            {
-                MenuItem menuItem = new MenuItem();
-                menuItem.ItemName.Content = "Item: " + i.ToString();
-                menuItem.ItemDescription.Content = "ItemDescription: " + i.ToString();
-                Switcher.GetMenu().MenuItemList.Children.Add(menuItem);
-            }
+            //List<MenuItem> FullMenu = new List<MenuItem>();
+            //MenuItem test = new MenuItem();
+            //FullMenu.Add(test);
 
             //New Menu Appetisers
-            for (int i = 0; i < 15; i++)
-            {
-                MenuItem menuItem = new MenuItem();
-                menuItem.ItemName.Content = "Item: " + i.ToString();
-                menuItem.ItemDescription.Content = "ItemDescription: " + i.ToString();
-                Switcher.GetNewMenu().AppetisersList.Children.Add(menuItem);
-            }
+            //for (int i = 0; i < 15; i++)
+            //{
+                //Switcher.GetNewMenu().AppetisersList.Children.Add(menuItem);
+            //}
+
+            //Working Menu
+            //for ()
 
 
             //Checkout Items
-            List<CheckoutItem> FullCheckout = new List<CheckoutItem>();
+            //List<CheckoutItem> FullCheckout = new List<CheckoutItem>();
             CheckoutItem testCO = new CheckoutItem();
-            FullCheckout.Add(testCO);
+            //FullCheckout.Add(testCO);
 
             //Testing adding to checkout
             for (int i = 0; i < 4; i++)
