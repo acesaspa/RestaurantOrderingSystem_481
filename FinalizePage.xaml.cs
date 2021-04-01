@@ -65,8 +65,5 @@ namespace RestaurantOrderingSystem_481
 
             window.ShowDialog();
         }
-
-
-
     }
 }

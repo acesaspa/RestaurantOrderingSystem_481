@@ -29,13 +29,22 @@ namespace RestaurantOrderingSystem_481
 
             Window window = new Window
             {
-                Title = "Review",
+                Title = "Success",
                 Content = Switcher.GetSuccessNotification(),
                 Height = 100,
                 Width = 200
             };
-
             window.ShowDialog();
+        }
+
+        private void CloseTakeout(object sender, RoutedEventArgs e)
+        {
+            var parent = this.Parent as Window;
+            if (parent != null)
+            {
+                parent.DialogResult = true;
+                parent.Close();
+            }
         }
     }
 }

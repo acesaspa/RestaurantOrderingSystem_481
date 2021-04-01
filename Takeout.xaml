@@ -8,7 +8,8 @@
              d:DesignHeight="300" d:DesignWidth="300">
     <Grid>
         <Grid.RowDefinitions>
-            <RowDefinition Height="100*"/>
+            <RowDefinition Height="50*"/>
+            <RowDefinition Height="50*"/>
             <RowDefinition Height="17*"/>
             <RowDefinition Height="50*"/>
             <RowDefinition Height="17*"/>
@@ -26,18 +27,19 @@
             <ColumnDefinition Width="33*"/>
         </Grid.ColumnDefinitions>
 
-        <Rectangle Fill="Green" Grid.ColumnSpan="7" Grid.RowSpan="6" RadiusX="10" RadiusY="10"/>
+        <Rectangle Fill="Orange" Grid.ColumnSpan="7" Grid.RowSpan="7" RadiusX="10" RadiusY="10"/>
 
-        <TextBlock Grid.ColumnSpan="7" VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="15" TextWrapping="Wrap">How many takeout boxes would you like?</TextBlock>
-
-        <Button Grid.Row="2" Grid.Column="2" FontSize="35"></Button>
-        <Button Grid.Row="2" Grid.Column="4" FontSize="25"></Button>
-
-        <TextBlock Grid.Row="2" Grid.Column="2" FontSize="35" VerticalAlignment="Center" HorizontalAlignment="Center" >-</TextBlock>
-        <TextBlock Grid.Row="2" Grid.Column="4" FontSize="25" VerticalAlignment="Center" HorizontalAlignment="Center" >+</TextBlock>
+        <TextBlock Grid.ColumnSpan="5" VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="15" TextWrapping="Wrap">How many takeout boxes would you like?</TextBlock>
+        <Button Grid.Column="5" Grid.ColumnSpan="2" FontSize="25" Click="CloseTakeout" >X</Button>
         
-        <TextBlock Grid.Row="2" Grid.Column="3" VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="35" >1</TextBlock>
+        <Button Grid.Row="3" Grid.Column="2" FontSize="35"></Button>
+        <Button Grid.Row="3" Grid.Column="4" FontSize="25"></Button>
 
-        <Button Grid.Row="5" Grid.Column="1" Grid.ColumnSpan="5" FontSize="20" Click="SuccessNotification" >Submit</Button>
+        <TextBlock Grid.Row="3" Grid.Column="2" FontSize="35" VerticalAlignment="Center" HorizontalAlignment="Center" >-</TextBlock>
+        <TextBlock Grid.Row="3" Grid.Column="4" FontSize="25" VerticalAlignment="Center" HorizontalAlignment="Center" >+</TextBlock>
+        
+        <TextBlock Grid.Row="3" Grid.Column="3" VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="35" >1</TextBlock>
+
+        <Button Grid.Row="6" Grid.Column="1" Grid.ColumnSpan="5" FontSize="20" Click="SuccessNotification" >Submit</Button>
     </Grid>
 </UserControl>
