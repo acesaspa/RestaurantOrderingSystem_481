@@ -45,8 +45,8 @@ namespace RestaurantOrderingSystem_481
             {
                 Title = "Takeout",
                 Content = Switcher.GetTakeout(),
-                Height=200,
-                Width=200
+                Height=300,
+                Width=300
             };
 
             window.ShowDialog();
