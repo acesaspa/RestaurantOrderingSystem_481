@@ -34,6 +34,9 @@ namespace RestaurantOrderingSystem_481
         // Item Price
         public float item_price;
 
+        // Item Image Location
+        public string item_image;        
+
         // Item Characteristics
         public bool item_spicy;
         public bool item_peanutfree;
@@ -71,6 +74,20 @@ namespace RestaurantOrderingSystem_481
                 this.ItemDescription.Text = this.item_description;
             }
         
+        }
+        //item6.ItemImage.Source = new BitmapImage(new Uri(@"/Resources/trash.png", UriKind.Relative));
+        // Item Image
+        public string Item_image
+        {
+            get { return item_image; }
+
+            set
+            {
+                item_image = value;
+                this.ItemImage.Source = new BitmapImage(new Uri(@"" + this.item_image, UriKind.Relative));
+                
+            }
+
         }
 
         //Item Price
@@ -126,11 +143,12 @@ namespace RestaurantOrderingSystem_481
 
         }
 
-        public MenuItem(string name, string desc, float price)
+        public MenuItem(string name, string desc, float price, string image)
         {
             item_name = name;
             item_description = desc;
             item_price = price;
+            item_image = image;
             InitializeComponent();
 
             MenuItemUC();
@@ -142,6 +160,7 @@ namespace RestaurantOrderingSystem_481
             this.ItemName.Text = item_name;
             this.ItemDescription.Text = item_description;
             this.ItemPrice.Text = item_price.ToString();
+            this.ItemImage.Source = new BitmapImage(new Uri(@"" + item_image, UriKind.Relative));
         }
 
         public MenuItem()
