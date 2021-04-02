@@ -26,6 +26,7 @@
     <None Remove="Resources\trash.png" />
     <None Remove="Resources\triangle.png" />
     <None Remove="Resources\Vegan.jpg" />
+    <None Remove="Resources\waiter.png" />
   </ItemGroup>
 
   <ItemGroup>
@@ -84,6 +85,9 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Resource>
     <Resource Include="Resources\Vegan.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Resources\waiter.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Resource>
   </ItemGroup>

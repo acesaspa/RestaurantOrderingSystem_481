@@ -26,6 +26,13 @@ namespace RestaurantOrderingSystem_481
         static Takeout _takeout = new Takeout();
         static Review _review = new Review();
         static NewMenu _newMenu = new NewMenu();
+        static SuccessServer _sucessServer = new SuccessServer();
+
+        public static SuccessServer GetSuccessServer() {
+
+            return _sucessServer;
+
+        }
 
         public static NewMenu GetNewMenu()
         {

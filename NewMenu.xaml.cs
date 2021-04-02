@@ -10,6 +10,8 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using System.Threading.Tasks;
+using System.Threading;
 
 namespace RestaurantOrderingSystem_481
 {
@@ -49,7 +51,37 @@ namespace RestaurantOrderingSystem_481
             };
 
             window.ShowDialog();
+
         }
+
+        // Button to call server
+        async public void Open_CallServer(object sender, RoutedEventArgs e)
+        {
+
+            Window window = new Window
+            {
+                Title = "Call Server",
+                Content = Switcher.GetSuccessServer(),
+                Height = 200,
+                Width = 200
+            };
+
+            //this.IsEnabled = false;
+
+            window.Show();
+
+            await Task.Run(() =>
+            {
+
+                Thread.Sleep(4000);
+
+            });
+
+            window.Close();
+            //this.IsEnabled = true;
+
+        }
+
 
         public NewMenu()
         {

@@ -189,7 +189,18 @@
         </TabControl>
 
         <!--Call Server Button-->
-        <Button Grid.Column="1" Grid.Row="3" Content="Call Server" Background="PaleVioletRed"/>
+        <Button Grid.Column="1" Grid.Row="3" Background="PaleVioletRed" Click="Open_CallServer">
+
+            <Grid>
+
+                <TextBlock Text="Call Server" VerticalAlignment="Top" HorizontalAlignment="Center"/>
+
+                <Image Source="Resources/waiter.png" Margin = "0,15,0,0" VerticalAlignment="Top" HorizontalAlignment="Center"/>
+
+            </Grid>
+
+
+        </Button>
 
         <!--Legend-->
         <Rectangle Grid.Column="1" Grid.Row="5" Grid.RowSpan="4" Fill="DarkGray"/>
