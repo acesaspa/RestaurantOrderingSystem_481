@@ -51,16 +51,17 @@ namespace RestaurantOrderingSystem_481
                 Big Data: 15 Items
             ***************************/
 
-            MenuItem item1 = new MenuItem("Spaghetti", "Pasta with sauce", 200.99f);
-            MenuItem item2 = new MenuItem("Sandwhich", "Bacon, Eggs, Lettuce", 5.99f);
+            MenuItem item1 = new MenuItem("Spaghetti", "Pasta with sauce", 200.99f, "/Resources/trash.png");
+            MenuItem item2 = new MenuItem("Sandwhich", "Bacon, Eggs, Lettuce", 5.99f, "/Resources/trash.png");
 
-            MenuItem item3 = new MenuItem("Black Coffee", "", 1.99f);
-            MenuItem item4 = new MenuItem("Capuccino", "", 3.99f);
-            MenuItem item5 = new MenuItem("Rum", "2 ounce", 4.99f);
+            MenuItem item3 = new MenuItem("Black Coffee", "", 1.99f, "/Resources/trash.png");
+            MenuItem item4 = new MenuItem("Capuccino", "", 3.99f, "/Resources/trash.png");
+            MenuItem item5 = new MenuItem("Rum", "2 ounce", 4.99f, "/Resources/trash.png");
 
-            MenuItem item6 = new MenuItem("Fries", "No Sauce", 1.99f);
-            MenuItem item7 = new MenuItem("Edamame", "", 2.99f);
-            MenuItem item8 = new MenuItem("Soup", "Carrot, Beetroot, and Celery, just want to add more!", 3.99f);
+            MenuItem item6 = new MenuItem("Fries", "No Sauce", 1.99f, "/Resources/trash.png");
+            MenuItem item7 = new MenuItem("Edamame", "", 2.99f, "/Resources/trash.png");
+            MenuItem item8 = new MenuItem("Soup", "Carrot, Beetroot, and Celery, just want to add more! And " +
+                "now I want to add Even more!!! then from here on out all we want is just 2 items!", 3.99f, "/Resources/trash.png");
 
             //Working Menu
             Switcher.GetNewMenu().AppetisersList.Children.Add(item6);
@@ -74,7 +75,9 @@ namespace RestaurantOrderingSystem_481
             Switcher.GetNewMenu().DrinksList.Children.Add(item4);
             Switcher.GetNewMenu().DrinksList.Children.Add(item5);
 
-            
+            //Source="Resources/stockSalad.jpg" 
+            //Testing Switching the Image
+            //item6.ItemImage.Source = new BitmapImage(new Uri(@"/Resources/trash.png", UriKind.Relative));
 
             //Checkout Items
             //List<CheckoutItem> FullCheckout = new List<CheckoutItem>();
