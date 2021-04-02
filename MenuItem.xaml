@@ -11,20 +11,22 @@
         <Button Name="OrderItem" Background="{x:Null}" HorizontalContentAlignment="Stretch" VerticalContentAlignment="Stretch">
             <Grid>
                 <Grid.RowDefinitions>
-                    <!--"Auto" adjusts the height based on how much text is in Name and Description-->
+                    <!--"Auto" adjusts the height based on how much text is in Name and Description, I think-->
                     <RowDefinition Height="Auto"/>
                     <RowDefinition Height="Auto"/>
                 </Grid.RowDefinitions>
                 <Grid.ColumnDefinitions>
                     <!--the '*' allows the width ratio with respect to the DesignWidth to remain the same, even if the window size changes-->
-                    <ColumnDefinition Width="200*"/>
-                    <ColumnDefinition Width="300*"/>
-                    <ColumnDefinition Width="100*"/>
+                    <ColumnDefinition Width="190*"/>
+                    <ColumnDefinition Width="10*"/>
+                    <ColumnDefinition Width="275*"/>
+                    <ColumnDefinition Width="120*"/>
+                    <ColumnDefinition Width="5*"/>
                 </Grid.ColumnDefinitions>
                 <Image HorizontalAlignment="Left" VerticalAlignment="Top" Source="Resources/stockSalad.jpg" Grid.RowSpan="2" Name="ItemImage"/>
-                <TextBlock Grid.Column="1" Grid.Row="0" Name="ItemName" Text="Item Name" TextWrapping="Wrap"/>
-                <TextBlock Grid.Column="1" Grid.Row="1" Grid.ColumnSpan="2" Name="ItemDescription" Text="Item Description" TextWrapping="Wrap"/>
-                <TextBlock Grid.Column="2" Grid.Row="0" Grid.ColumnSpan="2" Name="ItemPrice" Text="Item Price" HorizontalAlignment="Right" TextWrapping="Wrap"/>
+                <TextBlock Grid.Column="2" Grid.Row="0" Name="ItemName" Text="Item Name" TextWrapping="Wrap" FontWeight="Bold"/>
+                <TextBlock Grid.Column="2" Grid.Row="1" Grid.ColumnSpan="2" Name="ItemDescription" Text="Item Description" TextWrapping="Wrap"/>
+                <TextBlock Grid.Column="3" Grid.Row="0" Name="ItemPrice" Text="Item Price" HorizontalAlignment="Right" TextWrapping="Wrap"/>
             </Grid>
 
         </Button>
