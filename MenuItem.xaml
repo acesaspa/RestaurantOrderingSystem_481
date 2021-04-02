@@ -5,28 +5,28 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:RestaurantOrderingSystem_481"
              mc:Ignorable="d" 
-             d:DesignHeight="450" d:DesignWidth="800">
-    <Grid Background="#dfed9f">
+             d:DesignHeight="300" d:DesignWidth="600">
+    <Grid Background="#dfed9f" Name="a">
 
-        <Button Name="OrderItem" Background="{x:Null}" >
-            <Grid >
+        <Button Name="OrderItem" Background="{x:Null}" HorizontalContentAlignment="Stretch" VerticalContentAlignment="Stretch">
+            <Grid>
                 <Grid.RowDefinitions>
-                    <RowDefinition/>
-                    <RowDefinition/>
+                    <!--"Auto" adjusts the height based on how much text is in Name and Description-->
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
                 </Grid.RowDefinitions>
                 <Grid.ColumnDefinitions>
-                    <ColumnDefinition/>
-                    <ColumnDefinition Width="Auto"/>
-                    <ColumnDefinition Width="Auto"/>
+                    <!--the '*' allows the width ratio with respect to the DesignWidth to remain the same, even if the window size changes-->
+                    <ColumnDefinition Width="200*"/>
+                    <ColumnDefinition Width="300*"/>
+                    <ColumnDefinition Width="100*"/>
                 </Grid.ColumnDefinitions>
-                <Image HorizontalAlignment="Left" Source="Resources/stockSalad.jpg" Grid.RowSpan="2"/>
-                <Label Grid.Column="1" Grid.Row="0" Name="ItemName"
-                   Content="Item Name"/>
-                <Label Grid.Column="1" Grid.Row="1" Grid.ColumnSpan="2" Name="ItemDescription"
-                   Content="Item Description"/>
-                <Label Grid.Column="2" Grid.Row="0" Name="ItemPrice"
-               Content="Item Price"/>
+                <Image HorizontalAlignment="Left" VerticalAlignment="Top" Source="Resources/stockSalad.jpg" Grid.RowSpan="2" Name="ItemImage"/>
+                <Label Grid.Column="1" Grid.Row="0" Name="ItemName" Content="Item Name"/>
+                <Label Grid.Column="1" Grid.Row="1" Grid.ColumnSpan="2" Name="ItemDescription" Content="Item Description"/>
+                <Label Grid.Column="2" Grid.Row="0" Grid.ColumnSpan="2" Name="ItemPrice" Content="Item Price" HorizontalAlignment="Right"/>
             </Grid>
+
         </Button>
     </Grid>
 
