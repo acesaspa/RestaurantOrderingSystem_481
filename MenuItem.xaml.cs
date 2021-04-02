@@ -55,7 +55,7 @@ namespace RestaurantOrderingSystem_481
             set
             {
                 item_name = value;
-                this.ItemName.Content = this.item_name;
+                this.ItemName.Text = this.item_name;
             }
         }
 
@@ -68,7 +68,7 @@ namespace RestaurantOrderingSystem_481
             set
             {
                 item_description = value;
-                this.ItemDescription.Content = this.item_description;
+                this.ItemDescription.Text = this.item_description;
             }
         
         }
@@ -81,7 +81,7 @@ namespace RestaurantOrderingSystem_481
             set
             {
                 item_price = value;
-                this.ItemPrice.Content = this.item_price;
+                this.ItemPrice.Text = this.item_price.ToString();
             }
 
         }
@@ -139,9 +139,9 @@ namespace RestaurantOrderingSystem_481
         //Set all the Data for User Control
         public void MenuItemUC()
         {
-            this.ItemName.Content = item_name;
-            this.ItemDescription.Content = item_description;
-            this.ItemPrice.Content = item_price;
+            this.ItemName.Text = item_name;
+            this.ItemDescription.Text = item_description;
+            this.ItemPrice.Text = item_price.ToString();
         }
 
         public MenuItem()

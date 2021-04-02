@@ -60,7 +60,7 @@ namespace RestaurantOrderingSystem_481
 
             MenuItem item6 = new MenuItem("Fries", "No Sauce", 1.99f);
             MenuItem item7 = new MenuItem("Edamame", "", 2.99f);
-            MenuItem item8 = new MenuItem("Soup", "Carrot, Beetroot, and Celery", 3.99f);
+            MenuItem item8 = new MenuItem("Soup", "Carrot, Beetroot, and Celery, just want to add more!", 3.99f);
 
             //Working Menu
             Switcher.GetNewMenu().AppetisersList.Children.Add(item6);
