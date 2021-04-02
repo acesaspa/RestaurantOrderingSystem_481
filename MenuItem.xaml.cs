@@ -36,12 +36,9 @@ namespace RestaurantOrderingSystem_481
 
         // Item Characteristics
         public bool item_spicy;
-        public bool item_peanut;
-        public bool item_gluten;
+        public bool item_peanutfree;
         public bool item_vegetarian;
-        public bool item_vegan;
-        public bool item_halal;
-        public bool item_koshur;
+        public bool item_glutenfree;
 
 
 
@@ -100,23 +97,25 @@ namespace RestaurantOrderingSystem_481
 
         }
 
-        public bool Item_peanut
+        public bool Item_peanutfree
         {
 
-            get { return item_peanut; }
+            get { return item_peanutfree; }
 
-            set{ item_peanut = false; }
+            set{ item_peanutfree = false; }
 
         }
 
-        public bool Item_gluten
+        public bool Item_glutenfree
         {
 
-            get { return item_gluten; }
+            get { return item_glutenfree; }
 
-            set { item_gluten = false; }
+            set { item_glutenfree = false; }
 
         }
+
+        
 
         public bool Item_vegetarian
         {
@@ -126,34 +125,6 @@ namespace RestaurantOrderingSystem_481
             set { item_vegetarian = false; }
 
         }
-
-        public bool Item_vegan
-        {
-
-            get { return item_vegan; }
-
-            set { item_vegan = false; }
-
-        }
-
-        public bool Item_halal
-        {
-
-            get { return item_halal; }
-
-            set { item_halal = false; }
-
-        }
-
-        public bool Item_koshur
-        {
-
-            get { return item_koshur; }
-
-            set { item_koshur = false; }
-
-        }
-
 
         public MenuItem(string name, string desc, float price)
         {

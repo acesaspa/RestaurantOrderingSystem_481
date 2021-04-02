@@ -51,16 +51,30 @@ namespace RestaurantOrderingSystem_481
                 Big Data: 15 Items
             ***************************/
 
-            MenuItem item1 = new MenuItem("Spaghetti", "Pasta with sauce", 2.99f);
-            item1.ItemName.Content = item1.item_name;
+            MenuItem item1 = new MenuItem("Spaghetti", "Pasta with sauce", 200.99f);
             MenuItem item2 = new MenuItem("Sandwhich", "Bacon, Eggs, Lettuce", 5.99f);
-            MenuItem item3 = new MenuItem("Fries", "No Sauce", 1.99f);
+
+            MenuItem item3 = new MenuItem("Black Coffee", "", 1.99f);
+            MenuItem item4 = new MenuItem("Capuccino", "", 3.99f);
+            MenuItem item5 = new MenuItem("Rum", "2 ounce", 4.99f);
+
+            MenuItem item6 = new MenuItem("Fries", "No Sauce", 1.99f);
+            MenuItem item7 = new MenuItem("Edamame", "", 2.99f);
+            MenuItem item8 = new MenuItem("Soup", "Carrot, Beetroot, and Celery", 3.99f);
 
             //Working Menu
-            Switcher.GetNewMenu().AppetisersList.Children.Add(item1);
-            Switcher.GetNewMenu().AppetisersList.Children.Add(item2);
-            Switcher.GetNewMenu().AppetisersList.Children.Add(item3);
+            Switcher.GetNewMenu().AppetisersList.Children.Add(item6);
+            Switcher.GetNewMenu().AppetisersList.Children.Add(item7);
+            Switcher.GetNewMenu().AppetisersList.Children.Add(item8);
 
+            Switcher.GetNewMenu().EntreesList.Children.Add(item1);
+            Switcher.GetNewMenu().EntreesList.Children.Add(item2);
+
+            Switcher.GetNewMenu().DrinksList.Children.Add(item3);
+            Switcher.GetNewMenu().DrinksList.Children.Add(item4);
+            Switcher.GetNewMenu().DrinksList.Children.Add(item5);
+
+            
 
             //Checkout Items
             //List<CheckoutItem> FullCheckout = new List<CheckoutItem>();
