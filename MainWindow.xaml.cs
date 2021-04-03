@@ -51,29 +51,54 @@ namespace RestaurantOrderingSystem_481
                 Big Data: 15 Items
             ***************************/
 
-            MenuItem item1 = new MenuItem("Spaghetti", "Pasta with sauce", 200.99f, "/Resources/trash.png");
-            MenuItem item2 = new MenuItem("Sandwhich", "Bacon, Eggs, Lettuce", 5.99f, "/Resources/trash.png");
+            /* 
+             * Items from:
+             * https://littlecaesars.ca/en-ca/order/pickup/stores/4047/menu
+             * https://orderve.menu/menu/una-pizza-17th-1607978767006x175589733865881600?view=cat&menu=1607979445096x703551211714641900
+             */
 
-            MenuItem item3 = new MenuItem("Black Coffee", "", 1.99f, "/Resources/trash.png");
-            MenuItem item4 = new MenuItem("Capuccino", "", 3.99f, "/Resources/trash.png");
-            MenuItem item5 = new MenuItem("Rum", "2 ounce", 4.99f, "/Resources/trash.png");
+            MenuItem crazybreadItem = new MenuItem("Crazy Bread", "Greasy Bread", 5.99f, "/Resources/crazybread.jpg");
+            MenuItem stuffedcrazybreadItem = new MenuItem("Stuffed Crazy Bread", "", 6.99f, "/Resources/stuffedcrazybread.jpg");
 
-            MenuItem item6 = new MenuItem("Fries", "No Sauce", 1.99f, "/Resources/trash.png");
-            MenuItem item7 = new MenuItem("Edamame", "", 2.99f, "/Resources/trash.png");
-            MenuItem item8 = new MenuItem("Soup", "Carrot, Beetroot, and Celery, just want to add more! And " +
-                "now I want to add Even more!!! then from here on out all we want is just 2 items!", 3.99f, "/Resources/trash.png");
+            MenuItem hawaiianItem = new MenuItem("Hawaiian Pizza", "Pineapple, Cheese, Tomato Sauce", 11.99f, "/Resources/hawaiian.jpg");
+            MenuItem bbqChickenItem = new MenuItem("BBQ Chicken Pizza", "Chicken, Cheese, Tomato Sauce", 14.99f, "/Resources/bbqchicken.jpg");
+            MenuItem meat3Item = new MenuItem("3 Meat Pizza", "Meat", 14.99f, "/Resources/3meat.jpg");
+            MenuItem canadianItem = new MenuItem("Canadian Pizza", "Mushrooms", 13.99f, "/Resources/canadian.jpg");
+            MenuItem ultimateItem = new MenuItem("Ultimate Supreme Pizza", "Supreme.. enough said", 199.99f, "/Resources/ultimatesupreme.jpg");
+            MenuItem veggieItem = new MenuItem("Veggie Pizza", "Cow Food", 1.99f, "/Resources/veggie.jpg");
+            MenuItem pepperoniItem = new MenuItem("Pepperoni Pizza", "Pepperoni", 12.99f, "/Resources/pepperoni.jpg");
+            MenuItem cheeseItem = new MenuItem("Cheese Pizza", "Cheese", 10.99f, "/Resources/cheese.jpg");
+
+            MenuItem pottedvanillacheesecakeItem = new MenuItem("Potted Vanilla Cheesecake", "Coconut sponge toffee + seed crust, raspberry compote", 9.99f, "/Resources/pottedvanillacheesecake.png");
+
+            MenuItem waterItem = new MenuItem("Water", "Water", 0.99f, "Resources/water.jpg");
+
+            MenuItem spicycheddardipItem = new MenuItem("Spicy Cheddar Dip", "", 1.99f, "/Resources/spicycheddardip.jpg");
+            MenuItem bbqranchdipItem = new MenuItem("BBQ Ranch Dip", "", 1.99f, "/Resources/bbqranchdip.jpg");
+            MenuItem creamygarlicdipItem = new MenuItem("Creamy Garlic Dip", "", 1.99f, "/Resources/creamygarlicdip.jpg");
+            MenuItem ranchDipItem = new MenuItem("Ranch Dip", "", 1.99f, "/Resources/ranchdip.jpg");
 
             //Working Menu
-            Switcher.GetNewMenu().AppetisersList.Children.Add(item6);
-            Switcher.GetNewMenu().AppetisersList.Children.Add(item7);
-            Switcher.GetNewMenu().AppetisersList.Children.Add(item8);
+            Switcher.GetNewMenu().AppetisersList.Children.Add(crazybreadItem);
+            Switcher.GetNewMenu().AppetisersList.Children.Add(stuffedcrazybreadItem);
 
-            Switcher.GetNewMenu().EntreesList.Children.Add(item1);
-            Switcher.GetNewMenu().EntreesList.Children.Add(item2);
+            Switcher.GetNewMenu().EntreesList.Children.Add(hawaiianItem);
+            Switcher.GetNewMenu().EntreesList.Children.Add(bbqChickenItem);
+            Switcher.GetNewMenu().EntreesList.Children.Add(meat3Item);
+            Switcher.GetNewMenu().EntreesList.Children.Add(canadianItem);
+            Switcher.GetNewMenu().EntreesList.Children.Add(ultimateItem);
+            Switcher.GetNewMenu().EntreesList.Children.Add(veggieItem);
+            Switcher.GetNewMenu().EntreesList.Children.Add(pepperoniItem);
+            Switcher.GetNewMenu().EntreesList.Children.Add(cheeseItem);
 
-            Switcher.GetNewMenu().DrinksList.Children.Add(item3);
-            Switcher.GetNewMenu().DrinksList.Children.Add(item4);
-            Switcher.GetNewMenu().DrinksList.Children.Add(item5);
+            Switcher.GetNewMenu().DessertsList.Children.Add(pottedvanillacheesecakeItem);
+
+            Switcher.GetNewMenu().DrinksList.Children.Add(waterItem);
+
+            Switcher.GetNewMenu().SidesList.Children.Add(spicycheddardipItem);
+            Switcher.GetNewMenu().SidesList.Children.Add(bbqranchdipItem);
+            Switcher.GetNewMenu().SidesList.Children.Add(creamygarlicdipItem);
+            Switcher.GetNewMenu().SidesList.Children.Add(ranchDipItem);
 
             //Source="Resources/stockSalad.jpg" 
             //Testing Switching the Image

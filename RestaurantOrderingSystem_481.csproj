@@ -7,30 +7,68 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="Resources\3meat.jpg" />
     <None Remove="Resources\AppetizerIcon.png" />
+    <None Remove="Resources\bbqchicken.jpg" />
+    <None Remove="Resources\bbqranchdip.jpg" />
+    <None Remove="Resources\bbqwings.jpg" />
+    <None Remove="Resources\buffalohotwings.jpg" />
+    <None Remove="Resources\canadian.jpg" />
     <None Remove="Resources\CarrotIcon.png" />
     <None Remove="Resources\Cart.png" />
     <None Remove="Resources\cart2.png" />
+    <None Remove="Resources\cheese.jpg" />
+    <None Remove="Resources\crazybread.jpg" />
+    <None Remove="Resources\creamygarlicdip.jpg" />
     <None Remove="Resources\DinnerIcon.png" />
     <None Remove="Resources\EntreeIcon.png" />
     <None Remove="Resources\gluten.png" />
     <None Remove="Resources\GlutenFree.jpg" />
     <None Remove="Resources\Halal.png" />
+    <None Remove="Resources\hawaiian.jpg" />
+    <None Remove="Resources\honeygarlicwings.jpg" />
     <None Remove="Resources\Koshur.jpg" />
     <None Remove="Resources\MagnifyingGlassIcon.png" />
     <None Remove="Resources\NoNuts.png" />
+    <None Remove="Resources\ovenroastedwings.jpg" />
     <None Remove="Resources\Peanut.png" />
     <None Remove="Resources\Pencil.png" />
     <None Remove="Resources\PepperIcon.png" />
+    <None Remove="Resources\pepperoni.jpg" />
+    <None Remove="Resources\pottedvanillacheesecake.png" />
+    <None Remove="Resources\ranchdip.jpg" />
+    <None Remove="Resources\spicycheddardip.jpg" />
     <None Remove="Resources\stockSalad.jpg" />
+    <None Remove="Resources\stuffedcrazybread.jpg" />
     <None Remove="Resources\trash.png" />
     <None Remove="Resources\triangle.png" />
+    <None Remove="Resources\ultimatesupreme.jpg" />
     <None Remove="Resources\Vegan.jpg" />
+    <None Remove="Resources\veggie.jpg" />
     <None Remove="Resources\waiter.png" />
+    <None Remove="Resources\water.jpg" />
   </ItemGroup>
 
   <ItemGroup>
+    <Resource Include="Resources\3meat.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
     <Resource Include="Resources\AppetizerIcon.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Resources\bbqchicken.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Resources\bbqranchdip.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Resources\bbqwings.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Resources\buffalohotwings.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Resources\canadian.jpg">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Resource>
     <Resource Include="Resources\CarrotIcon.png">
@@ -40,6 +78,15 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Resource>
     <Resource Include="Resources\cart2.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Resources\cheese.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Resources\crazybread.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Resources\creamygarlicdip.jpg">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Resource>
     <Resource Include="Resources\DinnerIcon.png">
@@ -57,6 +104,12 @@
     <Resource Include="Resources\Halal.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Resource>
+    <Resource Include="Resources\hawaiian.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Resources\honeygarlicwings.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
     <Resource Include="Resources\Koshur.jpg">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Resource>
@@ -64,6 +117,9 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Resource>
     <Resource Include="Resources\NoNuts.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Resources\ovenroastedwings.jpg">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Resource>
     <Resource Include="Resources\Peanut.png">
@@ -75,7 +131,22 @@
     <Resource Include="Resources\PepperIcon.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Resource>
+    <Resource Include="Resources\pepperoni.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Resources\pottedvanillacheesecake.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Resources\ranchdip.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Resources\spicycheddardip.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
     <Resource Include="Resources\stockSalad.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Resources\stuffedcrazybread.jpg">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Resource>
     <Resource Include="Resources\trash.png">
@@ -84,10 +155,19 @@
     <Resource Include="Resources\triangle.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Resource>
+    <Resource Include="Resources\ultimatesupreme.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
     <Resource Include="Resources\Vegan.jpg">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Resource>
+    <Resource Include="Resources\veggie.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
     <Resource Include="Resources\waiter.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Resources\water.jpg">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Resource>
   </ItemGroup>
