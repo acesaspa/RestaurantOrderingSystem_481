@@ -143,6 +143,36 @@ namespace RestaurantOrderingSystem_481
 
         }
 
+        //private void ReviewOrder(object sender, RoutedEventArgs e)
+        //{
+        //    Window window = new Window
+        //    {
+        //        Title = "Review Order",
+        //        Content = Switcher.GetReviewOrder(),
+        //        Height = 400,
+        //        Width = 300
+        //    };
+        //    window.ShowDialog();
+        //}
+
+        //Item Select
+        public void ItemSelect(object sender, RoutedEventArgs e)
+        {
+            ItemAddition showItem = new ItemAddition();
+            showItem.DisplayItemName.Text = this.ItemName.Text;
+            showItem.DisplayItemDescription.Text = this.ItemDescription.Text;
+
+            Window window = new Window
+            {
+                Title = "Item Select",
+                Content = showItem,
+                Height = 400,
+                Width = 300
+            };
+
+            window.ShowDialog();
+        }
+
         public MenuItem(string name, string desc, float price, string image)
         {
             item_name = name;

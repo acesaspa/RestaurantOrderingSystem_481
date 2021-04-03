@@ -8,7 +8,8 @@
              d:DesignHeight="300" d:DesignWidth="600">
     <Grid Background="#dfed9f" Name="a">
 
-        <Button Name="OrderItem" Background="{x:Null}" HorizontalContentAlignment="Stretch" VerticalContentAlignment="Stretch">
+        <Button Name="OrderItem" Background="{x:Null}" HorizontalContentAlignment="Stretch"
+                VerticalContentAlignment="Stretch" Click="ItemSelect">
             <Grid>
                 <Grid.RowDefinitions>
                     <!--"Auto" adjusts the height based on how much text is in Name and Description, I think-->
