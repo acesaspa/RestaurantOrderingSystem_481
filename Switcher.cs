@@ -26,6 +26,7 @@ namespace RestaurantOrderingSystem_481
         static Takeout _takeout = new Takeout();
         static Review _review = new Review();
         static NewMenu _newMenu = new NewMenu();
+        static ItemAddition _itemAddition = new ItemAddition();
         static SuccessServer _sucessServer = new SuccessServer();
 
         public static SuccessServer GetSuccessServer() {
@@ -57,6 +58,11 @@ namespace RestaurantOrderingSystem_481
         public static Checkout GetCheckout()
         {
             return _checkout;
+        }
+
+        public static ItemAddition GetItemAddition()
+        {
+            return _itemAddition;
         }
 
         public static FinalizePage GetFinalize()

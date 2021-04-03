@@ -29,8 +29,10 @@
         <Button Grid.Column="1" Grid.Row="5" Grid.ColumnSpan="5" FontSize="20">Add to Cart</Button>
         <Button Grid.Column="5" Grid.Row="1" FontSize="20">X</Button>
 
-        <TextBlock Grid.Column="1" Grid.Row="1" Grid.ColumnSpan="4" HorizontalAlignment="Left" VerticalAlignment="Center" FontSize="25">Spring Rolls 2pc</TextBlock>
-        <TextBlock Grid.Column="1" Grid.Row="2" Grid.ColumnSpan="3" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="15">Deep fried vegetable and <LineBreak/> pork spring rolls. Served <LineBreak/> with soy sauce</TextBlock>
+        <TextBlock Grid.Column="1" Grid.Row="1" Grid.ColumnSpan="4" HorizontalAlignment="Left" VerticalAlignment="Center" FontSize="25"
+                   Name="DisplayItemName" Text="Spring Rolls 2pc"></TextBlock>
+        <TextBlock Grid.Column="1" Grid.Row="2" Grid.ColumnSpan="3" Text="Item Descriptionnnn!"
+                   Name="DisplayItemDescription" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="15"></TextBlock>
 
         <Button Grid.Column="2" Grid.Row="3" Grid.ColumnSpan="3" FontSize="20">Special Request?</Button>
         <Button Grid.Column="4" Grid.Row="4" FontSize="25">+</Button>
