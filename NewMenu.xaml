@@ -109,8 +109,6 @@
 
             </Grid>
 
-
-
         </Button>
 
         <!--Previous Order-->
@@ -151,7 +149,6 @@
             <!--Desserts Tab-->
             <TabItem Header="Desserts" Width="70" Height="30"  FontSize="12" VerticalAlignment="Center" HorizontalAlignment="Center" Background="LightBlue">
 
-
                 <ScrollViewer>
 
                     <StackPanel Name="DessertsList"/>
@@ -163,7 +160,6 @@
 
             <!--Drinks Tab-->
             <TabItem Header="Drinks" Width="70" Height="30"  FontSize="12" VerticalAlignment="Center" HorizontalAlignment="Center" Background="LightBlue">
-
 
                 <ScrollViewer>
 
