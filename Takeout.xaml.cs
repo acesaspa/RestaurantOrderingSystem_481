@@ -29,7 +29,12 @@ namespace RestaurantOrderingSystem_481
             try
             {
                 int current = Int32.Parse(DisplayQuantity.Text);
-                DisplayQuantity.Text = (current + 1).ToString();
+                current += 1;
+                if (current > 0)
+                {
+                    DecreaseButton.Opacity = 100;
+                }
+                DisplayQuantity.Text = (current).ToString();
             }
             catch (Exception)
             {
@@ -50,6 +55,11 @@ namespace RestaurantOrderingSystem_481
                 else
                 {
                     current = 0;
+                }
+
+                if (current == 0) 
+                {
+                    DecreaseButton.Opacity = 0;
                 }
 
                 DisplayQuantity.Text = (current).ToString();
