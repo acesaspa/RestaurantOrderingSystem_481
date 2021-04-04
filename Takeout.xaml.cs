@@ -24,6 +24,42 @@ namespace RestaurantOrderingSystem_481
             InitializeComponent();
         }
 
+        public void Increase(object sender, RoutedEventArgs e)
+        {
+            try
+            {
+                int current = Int32.Parse(DisplayQuantity.Text);
+                DisplayQuantity.Text = (current + 1).ToString();
+            }
+            catch (Exception)
+            {
+                Console.WriteLine("broken");
+            }
+        }
+
+        public void Decrease(object sender, RoutedEventArgs e)
+        {
+            try
+            {
+                int current = Int32.Parse(DisplayQuantity.Text);
+
+                if (current > 0)
+                {
+                    current -= 1;
+                }
+                else
+                {
+                    current = 0;
+                }
+
+                DisplayQuantity.Text = (current).ToString();
+            }
+            catch (Exception)
+            {
+                Console.WriteLine("broken");
+            }
+        }
+
         private void SuccessNotification(object sender, RoutedEventArgs e)
         {
 
@@ -35,6 +71,12 @@ namespace RestaurantOrderingSystem_481
                 Width = 200
             };
             window.ShowDialog();
+            var parent = this.Parent as Window;
+            if (parent != null)
+            {
+                parent.DialogResult = true;
+                parent.Close();
+            }
         }
 
         private void CloseTakeout(object sender, RoutedEventArgs e)
