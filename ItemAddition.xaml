@@ -26,17 +26,21 @@
             <RowDefinition Height="143*"/>
         </Grid.RowDefinitions>
         <Rectangle Grid.Column="1" Grid.Row="1" Grid.RowSpan="4" Grid.ColumnSpan="5" Fill="LightYellow"/>
-        <Button Grid.Column="1" Grid.Row="5" Grid.ColumnSpan="5" FontSize="20">Add to Cart</Button>
-        <Button Grid.Column="5" Grid.Row="1" FontSize="20">X</Button>
+        <Button Grid.Column="1" Grid.Row="5" Grid.ColumnSpan="5" FontSize="20" Click="AddToCart">Add to Cart</Button>
+        <Button Grid.Column="5" Grid.Row="1" FontSize="20" Click="Close_ItemAddition">X</Button>
 
         <TextBlock Grid.Column="1" Grid.Row="1" Grid.ColumnSpan="4" HorizontalAlignment="Left" VerticalAlignment="Center" FontSize="25"
                    Name="DisplayItemName" Text="Spring Rolls 2pc"></TextBlock>
         <TextBlock Grid.Column="1" Grid.Row="2" Grid.ColumnSpan="3" Text="Item Descriptionnnn!"
                    Name="DisplayItemDescription" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="15"></TextBlock>
 
+        <TextBlock Grid.Column="4" Grid.Row="2" Name="DisplayItemPrice"/>
+
         <Button Grid.Column="2" Grid.Row="3" Grid.ColumnSpan="3" FontSize="20">Special Request?</Button>
-        <Button Grid.Column="4" Grid.Row="4" FontSize="25">+</Button>
-        <TextBlock Grid.Column="3" Grid.Row="4" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="25">1</TextBlock>
+        <Button Grid.Column="4" Grid.Row="4" FontSize="25" Click="IncreaseQuantity">+</Button>
+        <Button Grid.Column="2" Grid.Row="4" FontSize="25" Click="DecreaseQuantity">-</Button>
+        <TextBlock Grid.Column="3" Grid.Row="4" HorizontalAlignment="Center"
+                   Name="DisplayItemQuantity" VerticalAlignment="Center" FontSize="25" Text="1"></TextBlock>
     </Grid>
 
 </UserControl>

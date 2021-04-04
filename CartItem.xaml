@@ -20,14 +20,14 @@
         </Grid.ColumnDefinitions>
         <Image HorizontalAlignment="Left" Source="Resources/trash.png"
                Grid.RowSpan="2"/>
-        <Label Grid.Column="1" Grid.Row="0" Name="ItemName"
-                   Content="Item Name"/>
-        <Label Grid.Column="1" Grid.Row="1" Name="ItemDescription"
-                   Content="Item Description"/>
-        <Label Grid.Column="2" Grid.Row="0" Grid.ColumnSpan="3"
-               Name="ItemPrice" HorizontalContentAlignment="Center" Content="Item Price"/>
+        <TextBlock Grid.Column="1" Grid.Row="0" Name="ItemName"
+                   Text="Item Name"/>
+        <TextBlock Grid.Column="1" Grid.Row="1" Name="ItemDescription"
+                   Text="Item Description"/>
+        <TextBlock Grid.Column="2" Grid.Row="0" Grid.ColumnSpan="3"
+               Name="ItemPrice" Text="Item Price"/>
         <Button Grid.Row="1" Grid.Column="2" Content="-" Height="20"/>
-        <Label Grid.Column="3" Grid.Row="2" Name="ItemQuantity"/>
+        <TextBlock Grid.Column="3" Grid.Row="2" Name="ItemQuantity"/>
         <Button Grid.Row="1" Grid.Column="4" Content="+" Height="20"/>
     </Grid>
 </UserControl>

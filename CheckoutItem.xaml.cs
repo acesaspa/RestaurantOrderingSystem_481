@@ -44,7 +44,7 @@ namespace RestaurantOrderingSystem_481
             set
             {
                 checkout_item_name = value;
-                this.CheckoutItemName.Content = this.checkout_item_name;
+                this.CheckoutItemName.Text = this.checkout_item_name;
             }
         }
 
@@ -56,7 +56,7 @@ namespace RestaurantOrderingSystem_481
             set
             {
                 checkout_item_quantity = value;
-                this.CheckoutItemQuantity.Content = this.checkout_item_quantity;
+                this.CheckoutItemQuantity.Text = this.checkout_item_quantity;
             }
         }
 
@@ -68,10 +68,14 @@ namespace RestaurantOrderingSystem_481
             set
             {
                 checkout_item_price = value;
-                this.CheckoutItemPrice.Content = this.checkout_item_price;
+                this.CheckoutItemPrice.Text = this.checkout_item_price;
             }
         }
 
+        public CheckoutItem(CartItem cartItem)
+        {
+
+        }
 
         public CheckoutItem()
         {

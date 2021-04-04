@@ -159,6 +159,7 @@ namespace RestaurantOrderingSystem_481
             ItemAddition showItem = new ItemAddition();
             showItem.DisplayItemName.Text = this.ItemName.Text;
             showItem.DisplayItemDescription.Text = this.ItemDescription.Text;
+            showItem.DisplayItemPrice.Text = this.ItemPrice.Text;
 
             Window window = new Window
             {

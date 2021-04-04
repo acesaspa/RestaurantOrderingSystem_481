@@ -26,6 +26,7 @@ namespace RestaurantOrderingSystem_481
         ***************************/
 
         public static int TableNumber;
+        public static float CartTotal = 0;
 
         public MainWindow()
         {
@@ -40,12 +41,6 @@ namespace RestaurantOrderingSystem_481
             //List<MenuItem> FullMenu = new List<MenuItem>();
             //MenuItem test = new MenuItem();
             //FullMenu.Add(test);
-
-            //New Menu Appetisers
-            //for (int i = 0; i < 15; i++)
-            //{
-            //Switcher.GetNewMenu().AppetisersList.Children.Add(menuItem);
-            //}
 
             /***************************
                 Big Data: 15 Items
@@ -102,39 +97,31 @@ namespace RestaurantOrderingSystem_481
             Switcher.GetNewMenu().SidesList.Children.Add(creamygarlicdipItem);
             Switcher.GetNewMenu().SidesList.Children.Add(ranchDipItem);
 
-            //Source="Resources/stockSalad.jpg" 
-            //Testing Switching the Image
-            //item6.ItemImage.Source = new BitmapImage(new Uri(@"/Resources/trash.png", UriKind.Relative));
-
             //Checkout Items
-            //List<CheckoutItem> FullCheckout = new List<CheckoutItem>();
-            CheckoutItem testCO = new CheckoutItem();
-            //FullCheckout.Add(testCO);
-
-            //Testing adding to checkout
-            for (int i = 0; i < 4; i++)
-            {
-                CheckoutItem checkoutItem = new CheckoutItem();
-                checkoutItem.CheckoutItemName.Content = "Spaghetti Rigatoni Davinci " + i.ToString();
-                checkoutItem.CheckoutItemQuantity.Content = "1";
-                checkoutItem.CheckoutItemPrice.Content = "$5.99";
-                Switcher.GetCheckout().CheckoutItemList.Children.Add(checkoutItem);
-            }
+            List<CheckoutItem> FullCheckout = new List<CheckoutItem>();
 
             //Cart Items
             List<CartItem> FullCart = new List<CartItem>();
-            CartItem testCI = new CartItem();
-            FullCart.Add(testCI);
+
+            //Testing adding to checkout
+            //for (int i = 0; i < 4; i++)
+            //{
+            //    CheckoutItem checkoutItem = new CheckoutItem();
+            //    checkoutItem.CheckoutItemName.Content = "Spaghetti Rigatoni Davinci " + i.ToString();
+            //    checkoutItem.CheckoutItemQuantity.Content = "1";
+            //    checkoutItem.CheckoutItemPrice.Content = "$5.99";
+            //    Switcher.GetCheckout().CheckoutItemList.Children.Add(checkoutItem);
+            //}
 
             //Testing adding to Cart
-            for (int i = 0; i < 4; i++)
-            {
-                CartItem cartItem = new CartItem();
-                cartItem.ItemName.Content = "Spaghetti Rigatoni Davinci " + i.ToString();
-                cartItem.ItemQuantity.Content = "1";
-                cartItem.ItemPrice.Content = "$5.99";
-                Switcher.GetCart().CartItemList.Children.Add(cartItem);
-            }
+            //for (int i = 0; i < 4; i++)
+            //{
+            //    CartItem cartItem = new CartItem();
+            //    cartItem.ItemName.Content = "Spaghetti Rigatoni Davinci " + i.ToString();
+            //    cartItem.ItemQuantity.Content = "1";
+            //    cartItem.ItemPrice.Content = "$5.99";
+            //    Switcher.GetCart().CartItemList.Children.Add(cartItem);
+            //}
 
             //Review Order Items
             List<ReviewOrderItem> FullReview = new List<ReviewOrderItem>();
