@@ -29,5 +29,22 @@ namespace RestaurantOrderingSystem_481
         {
             Switcher.Switch(Switcher.GetNewMenu());
         }
+        private void Open_ChangeTable(object sender, RoutedEventArgs e)
+        {
+            Window window = new Window
+            {
+                Title = "Change Table",
+                Content = Switcher.GetChangeTable(),
+                Height = 200,
+                Width = 200
+            };
+
+            window.ShowDialog();
+
+        }
+        private void Open_ReviewOrder(object sender, RoutedEventArgs e)
+        {
+            Switcher.Switch(Switcher.GetFinalize());
+        }
     }
 }

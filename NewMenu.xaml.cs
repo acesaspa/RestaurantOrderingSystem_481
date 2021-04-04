@@ -24,6 +24,7 @@ namespace RestaurantOrderingSystem_481
         //Button to Open up Cart
         private void Open_Cart(object sender, RoutedEventArgs e)
         {
+            string changedNumber = Switcher.GetChangeTable().ChangeTableTextBox.Text;
             Switcher.Switch(Switcher.GetCart());
         }
 

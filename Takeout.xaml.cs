@@ -11,6 +11,8 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 using System.Windows.Threading;
+using System.Threading.Tasks;
+using System.Threading;
 
 namespace RestaurantOrderingSystem_481
 {
@@ -29,7 +31,12 @@ namespace RestaurantOrderingSystem_481
             try
             {
                 int current = Int32.Parse(DisplayQuantity.Text);
-                DisplayQuantity.Text = (current + 1).ToString();
+                current += 1;
+                if (current > 0)
+                {
+                    DecreaseButton.Opacity = 100;
+                }
+                DisplayQuantity.Text = (current).ToString();
             }
             catch (Exception)
             {
@@ -52,6 +59,11 @@ namespace RestaurantOrderingSystem_481
                     current = 0;
                 }
 
+                if (current == 0) 
+                {
+                    DecreaseButton.Opacity = 0;
+                }
+
                 DisplayQuantity.Text = (current).ToString();
             }
             catch (Exception)
@@ -60,7 +72,7 @@ namespace RestaurantOrderingSystem_481
             }
         }
 
-        private void SuccessNotification(object sender, RoutedEventArgs e)
+        async private void SuccessNotification(object sender, RoutedEventArgs e)
         {
 
             Window window = new Window
@@ -70,7 +82,16 @@ namespace RestaurantOrderingSystem_481
                 Height = 100,
                 Width = 200
             };
-            window.ShowDialog();
+            window.Show();
+
+            await Task.Run(() =>
+            {
+
+                Thread.Sleep(2000);
+
+            });
+
+            window.Close();
             var parent = this.Parent as Window;
             if (parent != null)
             {

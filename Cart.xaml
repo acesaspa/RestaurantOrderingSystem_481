@@ -7,45 +7,142 @@
         mc:Ignorable="d"
         d:DesignHeight="600" d:DesignWidth="400">
     <Grid Background="MediumPurple">
-        <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="20" />
-            <ColumnDefinition Width="auto"/>
-            <ColumnDefinition Width="*"/>
-            <ColumnDefinition Width="100"/>
-            <ColumnDefinition Width="20" />
-        </Grid.ColumnDefinitions>
-        <Grid.RowDefinitions>
-            <RowDefinition Height="20" />
-            <RowDefinition Height="50" />
-            <RowDefinition Height="30" />
-            <RowDefinition />
-            <RowDefinition Height="30" />
-            <RowDefinition Height="20" />
-        </Grid.RowDefinitions>
 
+        <Grid.ColumnDefinitions>
+
+            <!--Margin-->
+            <ColumnDefinition Width="20"/>
+
+            <!--Tab1-->
+            <ColumnDefinition />
+
+            <!--Tab2-->
+            <ColumnDefinition />
+
+            <!--Tab3-->
+            <ColumnDefinition />
+
+            <!--Tab4-->
+            <ColumnDefinition />
+
+            <!--Tab5-->
+            <ColumnDefinition />
+
+            <!--Margin-->
+            <ColumnDefinition Width="20"/>
+
+        </Grid.ColumnDefinitions>
+
+
+        <Grid.RowDefinitions>
+
+            <!--Must total to 580. 20 required for conversion from user control to window-->
+
+            <!--Margin-->
+            <RowDefinition Height="20*"/>
+
+            <!--Spacing-->
+            <RowDefinition Height="60*"/>
+
+            <!--Menu-->
+            <RowDefinition Height="50*"/>
+            <RowDefinition Height="130*"/>
+
+            <!--Call Server-->
+            <RowDefinition Height="200*"/>
+
+            <!--Checkout-->
+            <RowDefinition Height="40*"/>
+
+            <!--Spacing-->
+            <RowDefinition Height="50*"/>
+
+            <!--Margin-->
+            <RowDefinition Height="20*"/>
+
+
+        </Grid.RowDefinitions>
         <!-- Rectangles for Color-->
-        <Rectangle Grid.Row="2" Grid.Column="1"
-                   Grid.ColumnSpan="3" Grid.RowSpan="3"
-                   Fill="LightBlue"/>
-        <Rectangle Grid.Row="1" Grid.Column="1" Grid.ColumnSpan="3"
-                   Fill="Purple" RadiusX="10" RadiusY="10"
-                   Margin="0,0,0,5"/>
+        <Rectangle
+            Grid.Row="2"
+            Grid.Column="1"
+            Grid.ColumnSpan="5"
+            Grid.RowSpan="4"
+            Fill="LightBlue"/>
+
+        <!--Previous Order-->
+        <Button Grid.Row="1" Grid.Column="4" Grid.ColumnSpan="2" Margin="10,10" Click="Open_ReviewOrder" Background="Cyan">
+
+            <TextBlock Grid.Column="0" Grid.Row="0" Text="Previous Order" FontSize="16"  Margin="5,0" HorizontalAlignment="Center" VerticalAlignment="Center" />
+
+        </Button>
+
+        <Button Grid.Row="1" Grid.Column="1" Grid.ColumnSpan="2" Margin="10,10" Click="Open_ChangeTable" Background="Cyan">
+
+            <Grid Margin="0,0">
+
+                <Grid.ColumnDefinitions>
+
+                    <ColumnDefinition Width="75"/>
+
+                    <ColumnDefinition Width="*" />
+
+                    <ColumnDefinition Width="40"/>
+
+                </Grid.ColumnDefinitions>
+
+                <Grid.RowDefinitions>
+
+                    <RowDefinition />
+
+                </Grid.RowDefinitions>
+
+                <TextBlock Grid.Column="0" Grid.Row="0" Name="DisplayTableNumber" Text="Table:" FontSize="16"  Margin="5,0" HorizontalAlignment="Left" VerticalAlignment="Center" />
+
+                <Image Grid.Column="2" Grid.Row="0" Source="Resources/Pencil.png" HorizontalAlignment="Right" Margin="7"/>
+
+            </Grid>
+
+
+
+        </Button>
+
         <!-- Back Thing -->
-        <Button Grid.Row="2" Grid.Column="1" Grid.ColumnSpan="3" Margin="0,5,0,5" Click="Open_Menu">
-            <Image Source=""></Image>
+        <Button Grid.Column="1" Grid.Row="2" Grid.ColumnSpan="5" Click="Open_Menu">
+            <Image Source="Resources/triangle.png" Height="29" Width="36"></Image>
         </Button>
         <!-- CartItems -->
-        <ScrollViewer Grid.Row="3" Grid.Column="1" Grid.ColumnSpan="3">
+        <ScrollViewer Grid.Column="1" Grid.Row="3" Grid.ColumnSpan="5" Grid.RowSpan="3">
             <StackPanel Name="CartItemList"/>
         </ScrollViewer>
 
         <!-- Total Cost -->
-        <TextBlock Grid.Column="2" Grid.Row="4" Text="Total: $49.97"
-                   Width="80"  TextAlignment="Center" Name="CartMenuTotal"
-                   VerticalAlignment="Center"/>
+        <!--Total-->
+        <Grid Grid.Column="1" Grid.Row="6" Grid.ColumnSpan="5" Background="LightBlue">
 
-        <!-- Checkout -->
-        <Button Grid.Column="3" Grid.Row="4" Click="Open_Checkout" Margin="7,5" 
-                >Checkout</Button>
+            <Grid.ColumnDefinitions>
+
+                <!--Total-->
+                <ColumnDefinition Width="*"/>
+
+                <!--Price-->
+                <ColumnDefinition Width="*"/>
+
+                <!--CartButton-->
+                <ColumnDefinition Width="*"/>
+
+                <!--CheckoutButton-->
+                <ColumnDefinition Width="*"/>
+
+            </Grid.ColumnDefinitions>
+
+            <!--Total-->
+            <TextBlock Grid.Column="0" Grid.Row="0" Text="Total: " Width="32" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+            <TextBlock Grid.Column="0" Grid.Row="0" Grid.ColumnSpan="2" Text="$0.00" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+
+            <!--Checkout Button-->
+            <Button Grid.Column="3" Grid.Row="0" Margin= "13,10" Content="Checkout" Click="Open_Checkout"/>
+
+        </Grid>
     </Grid>
 </UserControl>

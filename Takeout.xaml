@@ -32,7 +32,7 @@
         <TextBlock Grid.ColumnSpan="5" VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="15" TextWrapping="Wrap">How many takeout boxes would you like?</TextBlock>
         <Button Grid.Column="5" Grid.ColumnSpan="2" FontSize="25" Click="CloseTakeout" >X</Button>
         
-        <Button Grid.Row="3" Grid.Column="2" FontSize="35" Click="Decrease">
+        <Button Grid.Row="3" Grid.Column="2" FontSize="35" Click="Decrease" Name="DecreaseButton" Opacity="100">
             <TextBlock Grid.Row="3" Grid.Column="2" FontSize="35" VerticalAlignment="Center" HorizontalAlignment="Center" >-</TextBlock>
         </Button>
         <Button Grid.Row="3" Grid.Column="4" FontSize="25" Click="Increase">

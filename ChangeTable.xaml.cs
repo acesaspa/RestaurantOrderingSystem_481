@@ -46,7 +46,9 @@ namespace RestaurantOrderingSystem_481
                     else
                     {
                         MainWindow.TableNumber = result;
+                        Switcher.GetCart().DisplayTableNumber.Text = "Table: " + result.ToString();
                         Switcher.GetNewMenu().DisplayTableNumber.Text = "Table: " + result.ToString();
+                        
                     }
                 }
                 catch (FormatException)
@@ -57,7 +59,6 @@ namespace RestaurantOrderingSystem_481
 
             Close_ChangeTable(sender, e);
         }
-
 
         public ChangeTable()
         {
