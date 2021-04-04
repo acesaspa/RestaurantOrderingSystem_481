@@ -35,7 +35,7 @@ namespace RestaurantOrderingSystem_481
         public float item_price;
 
         // Item Image Location
-        public string item_image;        
+        public string item_image;
 
         // Item Characteristics
         public bool item_spicy;
@@ -67,13 +67,13 @@ namespace RestaurantOrderingSystem_481
         public string Item_description
         {
             get { return item_description; }
-            
+
             set
             {
                 item_description = value;
                 this.ItemDescription.Text = this.item_description;
             }
-        
+
         }
         //item6.ItemImage.Source = new BitmapImage(new Uri(@"/Resources/trash.png", UriKind.Relative));
         // Item Image
@@ -85,7 +85,7 @@ namespace RestaurantOrderingSystem_481
             {
                 item_image = value;
                 this.ItemImage.Source = new BitmapImage(new Uri(@"" + this.item_image, UriKind.Relative));
-                
+
             }
 
         }
@@ -110,8 +110,6 @@ namespace RestaurantOrderingSystem_481
 
             get { return item_spicy; }
 
-            set { item_spicy = false;}
-
         }
 
         public bool Item_peanutfree
@@ -119,7 +117,7 @@ namespace RestaurantOrderingSystem_481
 
             get { return item_peanutfree; }
 
-            set{ item_peanutfree = false; }
+            set { item_peanutfree = false; }
 
         }
 
@@ -132,7 +130,7 @@ namespace RestaurantOrderingSystem_481
 
         }
 
-        
+
 
         public bool Item_vegetarian
         {
@@ -173,12 +171,17 @@ namespace RestaurantOrderingSystem_481
             window.ShowDialog();
         }
 
-        public MenuItem(string name, string desc, float price, string image)
+        public MenuItem(string name, string desc, float price, string image, bool spicy, bool peanutFree, bool glutenFree, bool vegetarian)
         {
             item_name = name;
             item_description = desc;
             item_price = price;
             item_image = image;
+            item_spicy = spicy;
+            item_peanutfree = peanutFree;
+            item_glutenfree = glutenFree;
+            item_vegetarian = vegetarian;
+
             InitializeComponent();
 
             MenuItemUC();
@@ -191,6 +194,37 @@ namespace RestaurantOrderingSystem_481
             this.ItemDescription.Text = item_description;
             this.ItemPrice.Text = item_price.ToString();
             this.ItemImage.Source = new BitmapImage(new Uri(@"" + item_image, UriKind.Relative));
+
+            // If Item is spicy, add the spicy icon
+            // i.e. set the content of the SpicyImage.
+            if (this.Item_spicy)
+            {
+
+                this.SpicyImage.Source = new BitmapImage(new Uri(@"Resources/PepperIcon.png", UriKind.Relative));
+
+            }
+
+            // If Item doesn't peanuts, add the spicy icon
+            // i.e. set the content of the PeanutImage.
+            if (this.Item_peanutfree)
+            {
+                this.PeanutImage.Source = new BitmapImage(new Uri(@"Resources/Peanut.png", UriKind.Relative));
+            }
+
+            // If Item doesn't contain gluten or has gluten-free options,
+            // i.e. set the content of the Gluten.
+            if (this.Item_glutenfree)
+            {
+                this.GlutenImage.Source = new BitmapImage(new Uri(@"Resources/gluten.png", UriKind.Relative));
+            }
+
+            // If Item doesn't contain gluten or has gluten-free options,
+            // i.e. set the content of the Gluten.
+            if (this.Item_vegetarian)
+            {
+                this.VegetarianImage.Source = new BitmapImage(new Uri(@"Resources/CarrotIcon.png", UriKind.Relative));
+            }
+
         }
 
         public MenuItem()

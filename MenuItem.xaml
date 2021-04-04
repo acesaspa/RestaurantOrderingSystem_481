@@ -6,32 +6,99 @@
              xmlns:local="clr-namespace:RestaurantOrderingSystem_481"
              mc:Ignorable="d" 
              d:DesignHeight="300" d:DesignWidth="600">
+
     <Grid Background="#dfed9f" Name="a">
 
-        <Button Name="OrderItem" Background="{x:Null}" HorizontalContentAlignment="Stretch"
-                VerticalContentAlignment="Stretch" Click="ItemSelect">
+        <Button Name="OrderItem" Background="{x:Null}" HorizontalContentAlignment="Stretch" VerticalContentAlignment="Stretch" Click="ItemSelect">
             <Grid>
-                <Grid.RowDefinitions>
-                    <!--"Auto" adjusts the height based on how much text is in Name and Description, I think-->
-                    <RowDefinition Height="Auto"/>
-                    <RowDefinition Height="*"/>
-                </Grid.RowDefinitions>
+
                 <Grid.ColumnDefinitions>
+
                     <!--the '*' allows the width ratio with respect to the DesignWidth to remain the same, even if the window size changes-->
-                    <ColumnDefinition Width="190*"/>
-                    <ColumnDefinition Width="10*"/>
-                    <ColumnDefinition Width="275*"/>
-                    <ColumnDefinition Width="120*"/>
-                    <ColumnDefinition Width="5*"/>
+
+                    <!--Total Width = 288-->
+
+                    <!--Item Image-->
+                    <ColumnDefinition Width="80"/>
+
+                    <!--Spacing-->
+                    <ColumnDefinition Width="10"/>
+
+                    <!--Item Name/Description-->
+                    <ColumnDefinition Width="auto"/>
+                    
+                    <!--Filter Icon Stack Panel-->
+                    <ColumnDefinition Width="*"/>
+
+                    <!--Fill-->
+                    <ColumnDefinition Width="*"/>
+
+                    <!--Item Price-->
+                    <ColumnDefinition Width="80"/>
+
+                    <!--Spacing-->
+                    <ColumnDefinition Width="5"/>
+
                 </Grid.ColumnDefinitions>
-                <Image HorizontalAlignment="Left" VerticalAlignment="Top" Source="Resources/stockSalad.jpg" Grid.RowSpan="2" Name="ItemImage"/>
-                <TextBlock Grid.Column="2" Grid.Row="0" Name="ItemName" Text="Item Name" TextWrapping="Wrap" FontWeight="Bold" VerticalAlignment="Top"/>
-                <TextBlock Grid.Column="2" Grid.Row="1" Grid.ColumnSpan="2" Name="ItemDescription" Text="Item Description" TextWrapping="Wrap" VerticalAlignment="Top"/>
-                <TextBlock Grid.Column="3" Grid.Row="0" Name="ItemPrice" Text="Item Price" HorizontalAlignment="Right" TextWrapping="Wrap" VerticalAlignment="Top"/>
+
+                <Grid.RowDefinitions>
+
+                    <!--"Auto" adjusts the height based on how much text is in Name and Description, I think-->
+                    <RowDefinition Height="20"/>
+
+                    <!--Height of Filter Icon row-->
+                    <RowDefinition MaxHeight="20"/>
+
+                    <!--Height of Filter Icon row-->
+                    <RowDefinition Height="20"/>
+
+                    <!--Fill-->
+                    <RowDefinition Height="*"/>
+
+                    <!--Spacing-->
+                    <RowDefinition Height="10"/>
+
+                    <!--Fill-->
+                    <RowDefinition Height="*"/>
+
+                </Grid.RowDefinitions>
+
+                <!--Menu Item Image-->
+                <Image Grid.Column="0" Grid.Row="1" Grid.RowSpan="3" HorizontalAlignment="Left" VerticalAlignment="Top" Source="Resources/stockSalad.jpg" Name="ItemImage"/>
+
+                <!--Item Name-->
+                <TextBlock Grid.Column="0" Grid.Row="0" Grid.ColumnSpan="5" Text="Item Name"  FontWeight="Bold" VerticalAlignment="Top" Name="ItemName"/>
+
+                <!--Item Desciption-->
+                <TextBlock Grid.Column="2" Grid.Row="2" Grid.RowSpan="2" Grid.ColumnSpan="4" Text="Item Description" HorizontalAlignment="Left" VerticalAlignment="Top" TextWrapping="Wrap" Name="ItemDescription"/>
+
+                <!--Item Price-->
+                <TextBlock Grid.Column="5" Grid.Row="0" Text="Item Price" HorizontalAlignment="Right" TextWrapping="Wrap" VerticalAlignment="Top" Name="ItemPrice"/>
+
+                <!--Icon Stack Panel-->
+                <StackPanel Grid.Column="3" Grid.Row="1" Grid.ColumnSpan="2" Orientation="Horizontal" Name="FilterIcons">
+
+                    <!--Spicy Source="Resources/PepperIcon.png"-->
+                    <Image HorizontalAlignment="Left" VerticalAlignment="Top" MaxHeight="20" Name="SpicyImage"/>
+
+                    <!--Peanut Source="Resources/Peanut.png"-->
+                    <Image HorizontalAlignment="Left" VerticalAlignment="Top" MaxHeight="20" Name="PeanutImage"/>
+
+                    <!--Gluten Source="Resources/gluten.png"-->
+                    <Image HorizontalAlignment="Left" VerticalAlignment="Top" MaxHeight="20" Name="GlutenImage"/>
+
+                    <!--Vegetarian Source="Resources/CarrotIcon.png"-->
+                    <Image HorizontalAlignment="Left" VerticalAlignment="Top" MaxHeight="20" Name="VegetarianImage"/>
+
+
+                </StackPanel>
+
+
+
             </Grid>
 
         </Button>
-    </Grid>
 
+    </Grid>
 
 </UserControl>
