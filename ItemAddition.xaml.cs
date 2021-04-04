@@ -40,6 +40,17 @@ namespace RestaurantOrderingSystem_481
             cartItem.ItemQuantity.Text = DisplayItemQuantity.Text;
 
             Switcher.GetCart().CartItemList.Children.Add(cartItem);
+            Close_ItemAddition(sender, e);
+        }
+
+        public void Close_ItemAddition(object sender, RoutedEventArgs e)
+        {
+            var parent = this.Parent as Window;
+            if (parent != null)
+            {
+                parent.DialogResult = true;
+                parent.Close();
+            }
         }
 
 
