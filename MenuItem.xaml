@@ -19,6 +19,9 @@
                     <!--Total Width = 288-->
 
                     <!--Item Image-->
+                    <ColumnDefinition Width="5"/>
+
+                    <!--Item Image-->
                     <ColumnDefinition Width="80"/>
 
                     <!--Spacing-->
@@ -64,19 +67,19 @@
                 </Grid.RowDefinitions>
 
                 <!--Menu Item Image-->
-                <Image Grid.Column="0" Grid.Row="1" Grid.RowSpan="3" HorizontalAlignment="Left" VerticalAlignment="Top" Source="Resources/stockSalad.jpg" Name="ItemImage"/>
+                <Image Grid.Column="1" Grid.Row="1" Grid.RowSpan="3" HorizontalAlignment="Left" VerticalAlignment="Top" Source="Resources/stockSalad.jpg" Name="ItemImage"/>
 
                 <!--Item Name-->
-                <TextBlock Grid.Column="0" Grid.Row="0" Grid.ColumnSpan="5" Text="Item Name"  FontWeight="Bold" VerticalAlignment="Top" Name="ItemName"/>
+                <TextBlock Grid.Column="1" Grid.Row="0" Grid.ColumnSpan="5" Text="Item Name"  FontWeight="Bold" VerticalAlignment="Top" Name="ItemName"/>
 
                 <!--Item Desciption-->
-                <TextBlock Grid.Column="2" Grid.Row="2" Grid.RowSpan="2" Grid.ColumnSpan="4" Text="Item Description" HorizontalAlignment="Left" VerticalAlignment="Top" TextWrapping="Wrap" Name="ItemDescription"/>
+                <TextBlock Grid.Column="3" Grid.Row="2" Grid.RowSpan="2" Grid.ColumnSpan="4" Text="Item Description" HorizontalAlignment="Left" VerticalAlignment="Top" TextWrapping="Wrap" Name="ItemDescription"/>
 
                 <!--Item Price-->
-                <TextBlock Grid.Column="5" Grid.Row="0" Text="Item Price" HorizontalAlignment="Right" TextWrapping="Wrap" VerticalAlignment="Top" Name="ItemPrice"/>
+                <TextBlock Grid.Column="6" Grid.Row="0" Text="Item Price" HorizontalAlignment="Right" TextWrapping="Wrap" VerticalAlignment="Top" Name="ItemPrice"/>
 
                 <!--Icon Stack Panel-->
-                <StackPanel Grid.Column="3" Grid.Row="1" Grid.ColumnSpan="2" Orientation="Horizontal" Name="FilterIcons">
+                <StackPanel Grid.Column="4" Grid.Row="1" Grid.ColumnSpan="2" Orientation="Horizontal" Name="FilterIcons">
 
                     <!--Spicy Source="Resources/PepperIcon.png"-->
                     <Image HorizontalAlignment="Left" VerticalAlignment="Top" MaxHeight="20" Name="SpicyImage"/>
