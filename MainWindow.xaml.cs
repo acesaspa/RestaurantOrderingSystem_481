@@ -26,6 +26,7 @@ namespace RestaurantOrderingSystem_481
         ***************************/
 
         public static int TableNumber;
+        public static float CartTotal = 0;
 
         public MainWindow()
         {

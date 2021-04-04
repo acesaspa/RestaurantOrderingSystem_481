@@ -17,6 +17,16 @@ namespace RestaurantOrderingSystem_481
     /// </summary>
     public partial class ItemAddition : UserControl
     {
+
+        // Item Name
+        public string ia_item_name;
+
+        // Item Description
+        public string ia_item_description;
+
+        // Item Price
+        public float ia_item_price;
+
         //Increase Quantity
         private void IncreaseQuantity(object sender, RoutedEventArgs e)
         {
@@ -24,6 +34,24 @@ namespace RestaurantOrderingSystem_481
             {
                 int current = Int32.Parse(DisplayItemQuantity.Text);
                 DisplayItemQuantity.Text = (current + 1).ToString();
+            }
+            catch (Exception)
+            {
+                Console.WriteLine("broken");
+            }
+        }
+
+        //Increase Quantity
+        private void DecreaseQuantity(object sender, RoutedEventArgs e)
+        {
+            try
+            {
+
+                int current = Int32.Parse(DisplayItemQuantity.Text);
+                if(current != 1)
+                {
+                    DisplayItemQuantity.Text = (current - 1).ToString();
+                }
             }
             catch (Exception)
             {
@@ -40,7 +68,24 @@ namespace RestaurantOrderingSystem_481
             cartItem.ItemQuantity.Text = DisplayItemQuantity.Text;
 
             Switcher.GetCart().CartItemList.Children.Add(cartItem);
+            AddToCheckout(sender, e);
+
+            float price = float.Parse(cartItem.ItemPrice.Text);
+            float total = price * (float.Parse(cartItem.ItemQuantity.Text));
+            MainWindow.CartTotal += total;
+            Switcher.GetCart().CartMenuTotal.Text = "Total: $" + MainWindow.CartTotal.ToString();
+
             Close_ItemAddition(sender, e);
+        }
+
+        private void AddToCheckout(object sender, RoutedEventArgs e)
+        {
+            CheckoutItem checkoutItem = new CheckoutItem();
+            checkoutItem.CheckoutItemName.Text = DisplayItemName.Text;
+            checkoutItem.CheckoutItemQuantity.Text = DisplayItemQuantity.Text;
+            checkoutItem.CheckoutItemPrice.Text = DisplayItemPrice.Text;
+
+            Switcher.GetCheckout().CheckoutItemList.Children.Add(checkoutItem);
         }
 
         public void Close_ItemAddition(object sender, RoutedEventArgs e)
@@ -53,6 +98,16 @@ namespace RestaurantOrderingSystem_481
             }
         }
 
+        //public ItemAddition(MenuItem menuItem)
+        //{
+        //    this.ia_item_name = menuItem.ItemName.Text;
+        //    this.ia_item_description = menuItem.ItemDescription.Text;
+        //    this.ia_item_price = float.Parse(menuItem.ItemPrice.Text);
+        //    ItemAddition showItem = new ItemAddition(this);
+        //    showItem.DisplayItemName.Text = this.ItemName.Text;
+        //    showItem.DisplayItemDescription.Text = this.ItemDescription.Text;
+        //    showItem.DisplayItemPrice.Text = this.ItemPrice.Text;
+        //}
 
         public ItemAddition()
         {

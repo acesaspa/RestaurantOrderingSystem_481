@@ -41,7 +41,7 @@
 
         <!-- Total Cost -->
         <TextBlock Grid.Column="2" Grid.Row="4" Text="Total: $49.97"
-                   Width="80"  TextAlignment="Center"
+                   Width="80"  TextAlignment="Center" Name="CartMenuTotal"
                    VerticalAlignment="Center"/>
 
         <!-- Checkout -->
