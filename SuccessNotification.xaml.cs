@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
+using System.Threading;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Data;
@@ -21,15 +22,9 @@ namespace RestaurantOrderingSystem_481
         public SuccessNotification()
         {
             InitializeComponent();
-
-            System.Windows.Threading.DispatcherTimer dispatcherTimer = new System.Windows.Threading.DispatcherTimer();
-            dispatcherTimer.Tick += new EventHandler(dispatcherTimer_Tick);
-            dispatcherTimer.Interval = new TimeSpan(0, 0, 2);
-            dispatcherTimer.Start();
-            dispatcherTimer.Stop();
         }
 
-        private void dispatcherTimer_Tick(object sender, EventArgs e)
+        public void Close_Notification(object sender, RoutedEventArgs e)
         {
             var parent = this.Parent as Window;
             if (parent != null)
@@ -38,7 +33,6 @@ namespace RestaurantOrderingSystem_481
                 parent.Close();
             }
         }
-
 
     }
 }
