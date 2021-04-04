@@ -27,7 +27,7 @@
         </Grid.RowDefinitions>
         <Rectangle Grid.Column="1" Grid.Row="1" Grid.RowSpan="4" Grid.ColumnSpan="5" Fill="LightYellow"/>
         <Button Grid.Column="1" Grid.Row="5" Grid.ColumnSpan="5" FontSize="20" Click="AddToCart">Add to Cart</Button>
-        <Button Grid.Column="5" Grid.Row="1" FontSize="20">X</Button>
+        <Button Grid.Column="5" Grid.Row="1" FontSize="20" Click="Close_ItemAddition">X</Button>
 
         <TextBlock Grid.Column="1" Grid.Row="1" Grid.ColumnSpan="4" HorizontalAlignment="Left" VerticalAlignment="Center" FontSize="25"
                    Name="DisplayItemName" Text="Spring Rolls 2pc"></TextBlock>
