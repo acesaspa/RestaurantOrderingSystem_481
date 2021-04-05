@@ -193,7 +193,7 @@ namespace RestaurantOrderingSystem_481
         {
             this.ItemName.Text = item_name;
             this.ItemDescription.Text = item_description;
-            this.ItemPrice.Text = item_price.ToString();
+            this.ItemPrice.Text = "$" + item_price.ToString();
             this.ItemImage.Source = new BitmapImage(new Uri(@"" + item_image, UriKind.Relative));
 
             // If Item is spicy, add the spicy icon
