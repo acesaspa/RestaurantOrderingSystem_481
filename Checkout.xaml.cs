@@ -32,6 +32,27 @@ namespace RestaurantOrderingSystem_481
             Switcher.Switch(Switcher.GetFinalize());
         }
 
+        //Button to Review Order
+        private void Open_ReviewOrder(object sender, RoutedEventArgs e)
+        {
+            Switcher.Switch(Switcher.GetFinalize());
+        }
+
+        //Button to Change Table Number
+        private void Open_ChangeTable(object sender, RoutedEventArgs e)
+        {
+            Window window = new Window
+            {
+                Title = "Change Table",
+                Content = Switcher.GetChangeTable(),
+                Height = 200,
+                Width = 200
+            };
+
+            window.ShowDialog();
+
+        }
+
         private void Confirm_Order(object sender, RoutedEventArgs e)
         {
             foreach (CheckoutItem child in Switcher.GetCheckout().CheckoutItemList.Children)
