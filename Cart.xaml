@@ -115,12 +115,17 @@
         
         <!-- CartItems -->
         <ScrollViewer Grid.Column="1" Grid.Row="3" Grid.ColumnSpan="5" Grid.RowSpan="3">
+        
             <StackPanel Name="CartItemList"/>
+        
         </ScrollViewer>
 
-        <!-- Total Cost -->
-        <!--Total-->
-        <Grid Grid.Column="1" Grid.Row="6" Grid.ColumnSpan="5" Background="LightBlue">
+        <!--ICE Border Control-->
+        <Border Grid.Column="1" Grid.Row="5" Grid.ColumnSpan="5" BorderThickness="10" BorderBrush="Black"/>
+        
+        <!--Temporary Cart:-->
+
+        <Grid Grid.Column="1" Grid.Row="5" Grid.ColumnSpan="5" Background="LightBlue">
 
             <Grid.ColumnDefinitions>
 
@@ -139,13 +144,14 @@
             </Grid.ColumnDefinitions>
 
             <!--Total-->
-            
-            <TextBlock Grid.Column="0" Grid.Row="0" Grid.ColumnSpan="2" Text="Total: $0.00" Name="CartMenuTotal" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+            <TextBlock Grid.Column="0" Grid.Row="0" Text="Total: " Width="32" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+            <TextBlock Grid.Column="0" Grid.Row="0" Grid.ColumnSpan="2" Text="$0.00" Margin="0,5" HorizontalAlignment="Center" VerticalAlignment="Center" Name="CartMenuTotal"/>
 
             <!--Checkout Button-->
-            <Button Grid.Column="3" Grid.Row="0" Margin= "13,10" Content="Checkout" Click="Open_Checkout" Background="DodgerBlue"/>
+            <Button Grid.Column="3" Grid.Row="0" Margin= "13,10" Content="Checkout" Click="Open_Checkout"/>
 
         </Grid>
+
     </Grid>
 
 </UserControl>
