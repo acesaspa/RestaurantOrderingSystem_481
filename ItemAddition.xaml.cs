@@ -64,10 +64,10 @@ namespace RestaurantOrderingSystem_481
             CartItem cartItem = new CartItem();
             cartItem.cart_item_counter = MainWindow.GlobalCounter;
             MainWindow.GlobalCounter++;
-            cartItem.ItemDescription.Text = DisplayItemDescription.Text;
             cartItem.ItemName.Text = DisplayItemName.Text;
             cartItem.ItemPrice.Text = DisplayItemPrice.Text;
             cartItem.ItemQuantity.Text = DisplayItemQuantity.Text;
+
 
             Switcher.GetCart().CartItemList.Children.Add(cartItem);
             AddToCheckout(sender, e, cartItem);
@@ -75,7 +75,7 @@ namespace RestaurantOrderingSystem_481
             float price = float.Parse(tempPrice);
             float total = price * (float.Parse(cartItem.ItemQuantity.Text));
             MainWindow.CartTotal += total;
-            Switcher.GetCart().CartMenuTotal.Text = "Total: $" + MainWindow.CartTotal.ToString();
+            Switcher.GetCart().CartMenuTotal.Text = MainWindow.CartTotal.ToString();
 
             Close_ItemAddition(sender, e);
         }
