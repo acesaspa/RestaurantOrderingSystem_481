@@ -28,6 +28,14 @@ namespace RestaurantOrderingSystem_481
         static NewMenu _newMenu = new NewMenu();
         static ItemAddition _itemAddition = new ItemAddition();
         static SuccessServer _sucessServer = new SuccessServer();
+        static ConfirmCheckout _confirmCheckout = new ConfirmCheckout();
+
+        public static ConfirmCheckout GetConfirmCheckout()
+        {
+
+            return _confirmCheckout;
+
+        }
 
         public static SuccessServer GetSuccessServer() {
 

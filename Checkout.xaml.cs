@@ -28,8 +28,17 @@ namespace RestaurantOrderingSystem_481
         }
         private void Open_Finalized(object sender, RoutedEventArgs e)
         {
+            Window window = new Window
+            {
+                Title = "Confirm Checkout",
+                Content = Switcher.GetConfirmCheckout(),
+                Height = 300,
+                Width = 300
+            };
+
+            window.ShowDialog();
+
             Confirm_Order(sender, e);
-            Switcher.Switch(Switcher.GetFinalize());
         }
 
         //Button to Review Order
