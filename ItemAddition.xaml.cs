@@ -74,8 +74,15 @@ namespace RestaurantOrderingSystem_481
             string tempPrice = cartItem.ItemPrice.Text.Substring(1);
             float price = float.Parse(tempPrice);
             float total = price * (float.Parse(cartItem.ItemQuantity.Text));
-            MainWindow.CartTotal += total;
-            Switcher.GetCart().CartMenuTotal.Text = "Total: $" + MainWindow.CartTotal.ToString();
+            MainWindow.GlobalSubtotal += total;
+
+            string test = MainWindow.GlobalSubtotal.ToString("0.00");
+
+            //Prices
+            Switcher.GetCart().CartMenuTotal.Text = "Total: $" + test;
+            Switcher.GetCheckout().Subtotal.Text = ("$" + test);
+            Switcher.GetNewMenu().MenuTotal.Text = ("$" + test);
+            Switcher.GetCheckout().GST.Text = "$" + (MainWindow.GlobalSubtotal * 0.1).ToString("0.00");
 
             Close_ItemAddition(sender, e);
         }
@@ -100,17 +107,6 @@ namespace RestaurantOrderingSystem_481
                 parent.Close();
             }
         }
-
-        //public ItemAddition(MenuItem menuItem)
-        //{
-        //    this.ia_item_name = menuItem.ItemName.Text;
-        //    this.ia_item_description = menuItem.ItemDescription.Text;
-        //    this.ia_item_price = float.Parse(menuItem.ItemPrice.Text);
-        //    ItemAddition showItem = new ItemAddition(this);
-        //    showItem.DisplayItemName.Text = this.ItemName.Text;
-        //    showItem.DisplayItemDescription.Text = this.ItemDescription.Text;
-        //    showItem.DisplayItemPrice.Text = this.ItemPrice.Text;
-        //}
 
         public ItemAddition()
         {

@@ -82,6 +82,21 @@ namespace RestaurantOrderingSystem_481
             {
                 if(child.cart_item_counter == this.checkout_item_counter)
                 {
+                    //Modify Prices
+                    float price = float.Parse(this.CheckoutItemPrice.Text.Substring(1));
+                    float priceTotal = price * float.Parse(this.CheckoutItemQuantity.Text);
+                    MainWindow.GlobalSubtotal -= priceTotal;
+                    string test = MainWindow.GlobalSubtotal.ToString("0.00");
+
+                    Switcher.GetCart().CartMenuTotal.Text = ("Total: $" + test);
+                    Switcher.GetCheckout().Subtotal.Text = ("$" + test);
+                    Switcher.GetNewMenu().MenuTotal.Text = ("$" + test);
+                    Switcher.GetCheckout().GST.Text = "$" + (MainWindow.GlobalSubtotal * 0.1).ToString("0.00");
+                    float gst = float.Parse(Switcher.GetCheckout().GST.Text.Substring(1));
+                    float subtotal = float.Parse(Switcher.GetCheckout().Subtotal.Text.Substring(1));
+                    Switcher.GetCheckout().Total.Text = "$" + (gst + subtotal).ToString("0.00");
+
+
                     Switcher.GetCart().CartItemList.Children.Remove(child);
                     Switcher.GetCheckout().CheckoutItemList.Children.Remove(this);
                     break;  //If we do not break, causes problems with enumerator since we are changing the list we are iterating over
@@ -97,6 +112,20 @@ namespace RestaurantOrderingSystem_481
             {
                 int current = Int32.Parse(this.CheckoutItemQuantity.Text);
                 this.CheckoutItemQuantity.Text = (current + 1).ToString();
+
+                float price = float.Parse(this.CheckoutItemPrice.Text.Substring(1));
+                MainWindow.GlobalSubtotal += price;
+
+                string test = MainWindow.GlobalSubtotal.ToString("0.00");
+
+                //Prices
+                Switcher.GetCart().CartMenuTotal.Text = ("Total: $" + test);
+                Switcher.GetCheckout().Subtotal.Text = ("$" + test);
+                Switcher.GetNewMenu().MenuTotal.Text = ("$" + test);
+                Switcher.GetCheckout().GST.Text = "$" + (MainWindow.GlobalSubtotal * 0.1).ToString("0.00");
+                float gst = float.Parse(Switcher.GetCheckout().GST.Text.Substring(1));
+                float subtotal = float.Parse(Switcher.GetCheckout().Subtotal.Text.Substring(1));
+                Switcher.GetCheckout().Total.Text = "$" + (gst + subtotal).ToString("0.00");
 
                 foreach (CartItem child in Switcher.GetCart().CartItemList.Children)
                 {
@@ -123,6 +152,19 @@ namespace RestaurantOrderingSystem_481
                 if(current != 1)
                 {
                     this.CheckoutItemQuantity.Text = (current - 1).ToString();
+
+                    float price = float.Parse(this.CheckoutItemPrice.Text.Substring(1));
+                    MainWindow.GlobalSubtotal -= price;
+
+                    string test = MainWindow.GlobalSubtotal.ToString("0.00");
+
+                    Switcher.GetCart().CartMenuTotal.Text = ("Total: $" + test);
+                    Switcher.GetCheckout().Subtotal.Text = ("$" + test);
+                    Switcher.GetMenu().MenuItemTotal.Text = ("$" + test);
+                    Switcher.GetCheckout().GST.Text = "$" + (MainWindow.GlobalSubtotal * 0.1).ToString("0.00");
+                    float gst = float.Parse(Switcher.GetCheckout().GST.Text.Substring(1));
+                    float subtotal = float.Parse(Switcher.GetCheckout().Subtotal.Text.Substring(1));
+                    Switcher.GetCheckout().Total.Text = "$" + (gst + subtotal).ToString("0.00");
 
                     foreach (CartItem child in Switcher.GetCart().CartItemList.Children)
                     {
