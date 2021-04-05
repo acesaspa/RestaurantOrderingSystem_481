@@ -10,112 +10,111 @@
     <Grid Background="MediumPurple">
         <Grid.ColumnDefinitions>
             <!--Margin-->
-            <ColumnDefinition Width="20" />
+            <ColumnDefinition Width="20*" />
 
             <!--Restuarant Name/Logo-->
-            <ColumnDefinition Width="20" />
+            <ColumnDefinition Width="20*" />
 
             <!--Subtext-->
-            <ColumnDefinition Width="30" />
+            <ColumnDefinition Width="30*" />
 
             <!--Boxes-->
-            <ColumnDefinition Width="30" />
+            <ColumnDefinition Width="30*" />
 
             <!--Box Split-->
-            <ColumnDefinition Width="100" />
+            <ColumnDefinition Width="100*" />
 
             <!--Fill space between content-->
-            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="36*"/>
 
             <!--Boxes-->
-            <ColumnDefinition Width="30" />
+            <ColumnDefinition Width="64*" />
 
             <!--ETA Box-->
-            <ColumnDefinition Width="30" />
+            <ColumnDefinition Width="30*" />
 
             <!--Subtext-->
-            <ColumnDefinition Width="30" />
+            <ColumnDefinition Width="30*" />
 
             <!--Restuarant Name/Logo-->
-            <ColumnDefinition Width="20" />
+            <ColumnDefinition Width="20*" />
 
             <!--Margin-->
-            <ColumnDefinition Width="20" />
+            <ColumnDefinition Width="20*" />
 
         </Grid.ColumnDefinitions>
 
         <Grid.RowDefinitions>
 
             <!--Margin-->
-            <RowDefinition Height="20" />
+            <RowDefinition Height="20*" />
 
             <!--Restuarant name/logo and ETA-->
-            <RowDefinition Height="50" />
+            <RowDefinition Height="60*" />
 
             <!--ETA Box-->
-            <RowDefinition Height="40" />
+            <RowDefinition Height="30*" />
 
             <!--Congragulations-->
-            <RowDefinition Height="60" />
+            <RowDefinition Height="60*" />
 
             <!--Subtext-->
-            <RowDefinition Height="60" />
+            <RowDefinition Height="70*" />
 
             <!--Spacing-->
-            <RowDefinition Height="20" />
+            <RowDefinition Height="10*" />
 
             <!--Box Row 1-->
-            <RowDefinition Height="40" />
+            <RowDefinition Height="100*" />
 
             <!--Box Row 2-->
-            <RowDefinition Height="40" />
+            <RowDefinition Height="100*" />
 
             <!--Box Row 3-->
-            <RowDefinition Height="40" />
+            <RowDefinition Height="40*" />
 
             <!--Fill space between content-->
-            <RowDefinition Height="*" />
+            <RowDefinition Height="90*" />
 
             <!--Margin-->
-            <RowDefinition Height="20" />
+            <RowDefinition Height="20*" />
 
         </Grid.RowDefinitions>
 
-        <!--Adding the restuarant name/logo rectangle-->
-        <Rectangle Grid.Row="1" Grid.Column="2" Grid.ColumnSpan="7" Fill="Purple" RadiusX="10" RadiusY="10" Margin="0,0,0,5"/>
-        <TextBlock Grid.Row="1" Grid.Column="2" Grid.ColumnSpan="7" HorizontalAlignment="Center" FontWeight="Bold"  VerticalAlignment="Center" Text="Restaurant Name/Logo" />
-
         <!--Adding the ETA-->
-        <Rectangle Grid.Row="2" Grid.Column="6" Grid.ColumnSpan="3" Fill="LightBlue" />
-        <TextBlock Grid.Row="2" Grid.Column="6" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="13" TextWrapping="Wrap" Text="ETA:" />
-        <TextBlock Grid.Row="2" Grid.Column="7" Grid.ColumnSpan="2" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="13" TextWrapping="Wrap" Text="20 - 30 Minutes" />
+        <Rectangle Grid.Row="1" Grid.Column="6" Grid.ColumnSpan="4" Fill="LightBlue" Margin="10"/>
+        <!--TextBlock Grid.Row="2" Grid.Column="6" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="13" TextWrapping="Wrap" Text="ETA:" />
+        <TextBlock Grid.Row="2" Grid.Column="7" Grid.ColumnSpan="2" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="13" TextWrapping="Wrap" Text="20 - 30 Minutes" /-->
+        <TextBlock Grid.Column="6" Grid.Row="1" Margin="18,0,0,0" VerticalAlignment="Center" FontSize="22" >ETA:</TextBlock>
+        <TextBlock Grid.Column="7" Grid.Row="1" Grid.ColumnSpan="3" Margin="0,0,18,0" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="20">30 min</TextBlock>
+
 
         <!--Adding congrats text-->
-        <TextBlock Grid.Row="3" Grid.Column="2" Grid.ColumnSpan="7" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="22" FontWeight="Bold" Text="Congratulations!" />
+        <TextBlock Grid.Row="3" Grid.Column="2" Grid.ColumnSpan="7" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="26" FontWeight="Bold" Text="Congratulations!" />
 
         <!--Adding subtext to congrats text-->
-        <TextBlock Grid.Row="4" Grid.Column="3" Grid.ColumnSpan="5" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="14" TextWrapping="Wrap" Text="Your order has been confirmed and the kitchen will begin preparing it shortly." />
+        <TextBlock Grid.Row="4" Grid.Column="3" Grid.ColumnSpan="5" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="16" TextWrapping="Wrap" Text="Your order has been confirmed and the kitchen will begin preparing it shortly." />
 
         <!--Adding buttons-->
 
         <!--Review Button-->
-        <Button Grid.Row="6" Grid.Column="4" Background="LightBlue" Click="ReviewOrder">
-        <TextBlock Grid.Row="6" Grid.Column="4"  HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="12" TextWrapping="Wrap" Text="Review Previous Order"/>
+        <Button Grid.Row="6" Grid.Column="3" Grid.ColumnSpan="2" Background="LightBlue" Click="ReviewOrder">
+            <TextBlock Grid.Row="6" Grid.Column="4"  HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="18" TextAlignment="Center" TextWrapping="Wrap" Text="Review Previous Order"/>
         </Button>
 
         <!--Order More button-->
-        <Button Grid.Row="6" Grid.Column="5" Grid.ColumnSpan="2" Background="LightBlue" Click="OrderMore">
-        <TextBlock Grid.Row="6" Grid.Column="5" Grid.ColumnSpan="2" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="12" TextWrapping="Wrap" Text="Order More" />
+        <Button Grid.Row="6" Grid.Column="5" Grid.ColumnSpan="3" Background="LightBlue" Click="OrderMore">
+            <TextBlock Grid.Row="6" Grid.Column="5" Grid.ColumnSpan="2" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="18" TextAlignment="Center" TextWrapping="Wrap" Text="Order More" />
         </Button>
 
         <!--Request Takeout button-->
-        <Button Grid.Row="7" Grid.Column="4" Background="LightBlue" Click="Takeout">
-            <TextBlock Grid.Row="7" Grid.Column="4" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="12" TextWrapping="Wrap" Text="Request Takeout Boxes" />
+        <Button Grid.Row="7" Grid.Column="3" Grid.ColumnSpan="2" Background="LightBlue" Click="Takeout">
+            <TextBlock Grid.Row="7" Grid.Column="4" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="18" TextWrapping="Wrap" TextAlignment="Center" Text="Request Takeout Boxes" />
         </Button>
 
         <!--Review button-->
-        <Button Grid.Row="7" Grid.Column="5" Grid.ColumnSpan="2" Background="LightBlue" Click="Review">
-            <TextBlock Grid.Row="8" Grid.Column="4" Grid.ColumnSpan="3" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="12" TextWrapping="Wrap" Text="Leave Us A Review!" />
+        <Button Grid.Row="7" Grid.Column="5" Grid.ColumnSpan="3" Background="LightBlue" Click="Review">
+            <TextBlock Grid.Row="8" Grid.Column="4" Grid.ColumnSpan="3" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="18" TextAlignment="Center" TextWrapping="Wrap" Text="Leave Us A Review!" />
         </Button>
 
 

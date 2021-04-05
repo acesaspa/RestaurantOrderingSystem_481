@@ -14,10 +14,10 @@
         </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
             <RowDefinition Height="20" />
-            <RowDefinition Height="170" />
+            <RowDefinition Height="130" />
             <RowDefinition Height="auto" />
-            <RowDefinition Height="50" />
-            <RowDefinition Height="50" />
+            <RowDefinition Height="70" />
+            <RowDefinition Height="70" />
             <RowDefinition Height="*" />
             <RowDefinition Height="auto" />
             <RowDefinition Height="auto" />
@@ -26,19 +26,23 @@
         </Grid.RowDefinitions>
 
         <TextBlock Grid.Column="1" Grid.Row="1" FontWeight="Bold"
-                   TextAlignment="Center"
+                   TextAlignment="Center" FontSize="28"
                    Text="Restaurant Name + Logo"/>
         <TextBlock Grid.Column="1" Grid.Row="2" FontWeight="DemiBold"
                    TextAlignment="Center" Margin="20"
-                   Text="Table Number:" FontSize="30"/>
+                   Text="Table Number:" FontSize="24"/>
         <TextBox Name="tableNumber" Grid.Column="1" Grid.Row="3"
-                 Width="60" Height="30" FontSize="20" TextAlignment="Center"/>
+                 FontSize="24" Text="" TextAlignment="Center" Margin="140,18"/>
         <Button Grid.Column="1" Grid.Row="4" Content="Start" Click="Open_Menu"
-                Height="40" Width="100" FontSize="20"/>
-        <Button Grid.Column="1" Grid.Row="6" Content="English" Click="Change_Language"
-                HorizontalAlignment="Left" Width="100"/>
-        <Button Grid.Column="1" Grid.Row="7" Content="Espanol" Click="Change_Language"
-                HorizontalAlignment="Left" Width="100"/>
+                FontSize="24" Margin="120,15"/>
+        <Button Grid.Column="1" Grid.Row="6" Click="Change_Language"
+                HorizontalAlignment="Left" Width="120" Height="35">
+            <TextBlock Text="English" FontSize="16"/>
+        </Button>
+        <Button Grid.Column="1" Grid.Row="7" Click="Change_Language"
+                HorizontalAlignment="Left" Width="120" Height="35">
+            <TextBlock Text="Espanol" FontSize="16"/>
+        </Button>
     </Grid>
 
 </UserControl>
