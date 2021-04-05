@@ -12,9 +12,9 @@
             <ColumnDefinition Width="20" />
             <ColumnDefinition Width="59*" />
             <ColumnDefinition Width="59*" />
-            <ColumnDefinition Width="39*" />
-            <ColumnDefinition Width="39*" />
-            <ColumnDefinition Width="39*" />
+            <ColumnDefinition Width="26*" />
+            <ColumnDefinition Width="73*" />
+            <ColumnDefinition Width="26*" />
             <ColumnDefinition Width="58*" />
             <ColumnDefinition Width="59*"/>
             <ColumnDefinition Width="20" />
@@ -22,43 +22,70 @@
         </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
             <RowDefinition Height="20" />
-            <RowDefinition Height="10" />
-            <RowDefinition Height="40" />
-            <RowDefinition Height="10" />
-            <RowDefinition Height="60" />
-            <RowDefinition Height="40" />
-            <RowDefinition Height="40" />
-            <RowDefinition Height="1*" />
-            <RowDefinition Height="20" />
-            <RowDefinition Height="60" />
-            <RowDefinition Height="20" />
+            <RowDefinition Height="10*" />
+            <RowDefinition Height="50*" />
+            <RowDefinition Height="0*" />
+            <RowDefinition Height="40*" />
+            <RowDefinition Height="40*" />
+            <RowDefinition Height="40*" />
+            <RowDefinition Height="280*" />
+            <RowDefinition Height="20*" />
+            <RowDefinition Height="60*" />
+            <RowDefinition Height="20*" />
         </Grid.RowDefinitions>
-        <!--Restaurant Name/Logo-->
-        <Rectangle Grid.Column="1" Grid.Row="1" Grid.RowSpan="2" Grid.ColumnSpan="7" Fill="Purple"
-                   RadiusX="10" RadiusY="10"/>
-        <TextBlock Grid.Column="2" Grid.Row="2" Grid.ColumnSpan="5" HorizontalAlignment="Center"> Restaurant Name/Logo</TextBlock>
-        <!--Back button -->
-        <Button Grid.Column="1" Grid.Row="4" FontSize="20" Grid.ColumnSpan="2" Click="Open_Menu">Back</Button>
-        <!--ETA -->
+
+        <!--Table Number and Previous Order-->
+        <!--Button Grid.Row="1" Grid.Column="1" Grid.RowSpan="2" Grid.ColumnSpan="3" Margin="10,10" Click="Open_ChangeTable" Background="Cyan">
+            <Grid Margin="0,0">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="75"/>
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="40"/>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition />
+                </Grid.RowDefinitions>
+                <TextBlock Grid.Column="0" Grid.Row="0" Name="DisplayTableNumber" Text="Table:" FontSize="16"  Margin="5,0" HorizontalAlignment="Left" VerticalAlignment="Center" />
+                <Image Grid.Column="2" Grid.Row="0" Source="Resources/Pencil.png" HorizontalAlignment="Right" Margin="7"/>
+            </Grid>
+        </>
+
+        <Button Grid.Row="1" Grid.Column="5" Grid.RowSpan="2" Grid.ColumnSpan="3" Margin="10,10" Click="Open_ReviewOrder" Background="Cyan">
+            <TextBlock Grid.Column="0" Grid.Row="0" Text="Previous Order" FontSize="16"  Margin="5,0" HorizontalAlignment="Center" VerticalAlignment="Center" />
+        </Button-->
+
+        <!--Back button and ETA-->
+        <!--Button Grid.Column="1" Grid.Row="4" FontSize="20" Grid.ColumnSpan="2" Click="Open_Menu">Back</Button>
+
         <Rectangle Grid.Column="6" Grid.Row="4" Grid.ColumnSpan="2" Fill="LightBlue"/>
         <TextBlock Grid.Column="6" Grid.Row="4" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="25" >ETA:</TextBlock>
-        <TextBlock Grid.Column="7" Grid.Row="4" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="12">30 Mins</TextBlock>
+        <TextBlock Grid.Column="7" Grid.Row="4" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="12">30 Mins</TextBlock-->
+
+        <!--Back button and ETA-->
+        <Button Grid.Column="1" Grid.Row="1" Grid.RowSpan="2" FontSize="20" Grid.ColumnSpan="3" Margin="10" Click="Open_Menu">Back</Button>
+        
+        <Rectangle Grid.Column="5" Grid.Row="1" Grid.RowSpan="2" Grid.ColumnSpan="3" Fill="LightBlue" Margin="10"/>
+        <TextBlock Grid.Column="5" Grid.Row="1" Grid.RowSpan="2" Grid.ColumnSpan="2" Margin="17,0,0,0" HorizontalAlignment="Left" VerticalAlignment="Center" FontSize="22" >ETA:</TextBlock>
+        <TextBlock Grid.Column="6" Grid.Row="1" Grid.RowSpan="2" Grid.ColumnSpan="2" Margin="0,0,17,0" HorizontalAlignment="Right" VerticalAlignment="Center" FontSize="20">30 min</TextBlock>
+        
         <!--Checkout-->
-        <TextBlock Grid.Column="1" Grid.Row="5" FontSize="25" HorizontalAlignment="Center" VerticalAlignment="Center" Grid.ColumnSpan="2" >Checkout:</TextBlock>
-        <TextBlock Grid.Column="3" Grid.Row="5" Grid.ColumnSpan="3" FontSize="20" VerticalAlignment="Center" HorizontalAlignment="Center" >Table 20</TextBlock>
+        <TextBlock Grid.Column="1" Grid.Row="4" FontSize="25" HorizontalAlignment="Center" VerticalAlignment="Top" Grid.ColumnSpan="2" >Checkout:</TextBlock>
+        <TextBlock Grid.Column="3" Grid.Row="4" Grid.RowSpan="1" Grid.ColumnSpan="3" FontSize="20" 
+                   VerticalAlignment="Center" HorizontalAlignment="Center" Text="Table: " 
+                   Name="DisplayTableNumber"/>
 
 
 
         <!--Checkout list-->
-        <Rectangle Grid.Column="1" Grid.Row="6" Grid.RowSpan="2" Grid.ColumnSpan="7" Fill="LightBlue"/>
-        <TextBlock Grid.Column="1" Grid.Row="6" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="20" Grid.ColumnSpan="2" >Menu Items</TextBlock>
+        <Rectangle Grid.Column="1" Grid.Row="5" Grid.RowSpan="3" Grid.ColumnSpan="7" Fill="LightBlue"/>
+        <TextBlock Grid.Column="1" Grid.Row="5" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="20" Grid.ColumnSpan="2" >Menu Items</TextBlock>
 
         <!--Quantity-->
-        <TextBlock Grid.Column="3" Grid.Row="6" HorizontalAlignment="Center" Grid.ColumnSpan="3" VerticalAlignment="Center" FontSize="20">Quantity</TextBlock>
-        <TextBlock Grid.Column="6" Grid.Row="6" Grid.ColumnSpan="2" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="20">Price</TextBlock>
+        <TextBlock Grid.Column="3" Grid.Row="5" HorizontalAlignment="Center" Grid.ColumnSpan="3" VerticalAlignment="Center" FontSize="20">Quantity</TextBlock>
+        <TextBlock Grid.Column="6" Grid.Row="5" Grid.ColumnSpan="2" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="20">Price</TextBlock>
 
         <!-- StackPanel-->
-        <ScrollViewer Grid.Row="7" Grid.Column="1" Grid.ColumnSpan="7">
+        <ScrollViewer Grid.Row="6" Grid.Column="1" Grid.RowSpan="2" Grid.ColumnSpan="7">
             <StackPanel Name="CheckoutItemList"/>
         </ScrollViewer>
         
@@ -67,12 +94,12 @@
         <TextBlock Grid.Column="2" Grid.Row="9" FontSize="15" HorizontalAlignment="Right" VerticalAlignment="Center">GST:</TextBlock>
         <TextBlock Grid.Column="2" Grid.Row="9" FontSize="15" HorizontalAlignment="Right" VerticalAlignment="Bottom">Total:</TextBlock>
 
-        <TextBlock Grid.Column="3" Grid.Row="9" FontSize="15" Grid.ColumnSpan="2"
-                   HorizontalAlignment="Center" VerticalAlignment="Top" Name="Subtotal">33.96$</TextBlock>
-        <TextBlock Grid.Column="3" Grid.Row="9" FontSize="15" Grid.ColumnSpan="2"
-                   HorizontalAlignment="Center" VerticalAlignment="Center" Name="GST">1.70$</TextBlock>
-        <TextBlock Grid.Column="3" Grid.Row="9" FontSize="15" Grid.ColumnSpan="2"
-                   HorizontalAlignment="Center" VerticalAlignment="Bottom" Name="Total">35.66$</TextBlock>
+        <TextBlock Grid.Column="4" Grid.Row="9" FontSize="15" Grid.ColumnSpan="2"
+                   HorizontalAlignment="Left" VerticalAlignment="Top" Name="Subtotal">33.96$</TextBlock>
+        <TextBlock Grid.Column="4" Grid.Row="9" FontSize="15" Grid.ColumnSpan="2"
+                   HorizontalAlignment="Left" VerticalAlignment="Center" Name="GST">1.70$</TextBlock>
+        <TextBlock Grid.Column="4" Grid.Row="9" FontSize="15" Grid.ColumnSpan="2"
+                   HorizontalAlignment="Left" VerticalAlignment="Bottom" Name="Total">35.66$</TextBlock>
         <!--Confirm Order button-->
         <Button Grid.Column="5" Grid.Row="9" Grid.ColumnSpan="3" FontSize="20" Click="Open_Finalized">Confirm Order</Button>
     </Grid>
