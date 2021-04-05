@@ -71,8 +71,8 @@ namespace RestaurantOrderingSystem_481
 
             Switcher.GetCart().CartItemList.Children.Add(cartItem);
             AddToCheckout(sender, e, cartItem);
-
-            float price = float.Parse(cartItem.ItemPrice.Text);
+            string tempPrice = cartItem.ItemPrice.Text.Substring(1);
+            float price = float.Parse(tempPrice);
             float total = price * (float.Parse(cartItem.ItemQuantity.Text));
             MainWindow.CartTotal += total;
             Switcher.GetCart().CartMenuTotal.Text = "Total: $" + MainWindow.CartTotal.ToString();
