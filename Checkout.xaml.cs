@@ -37,8 +37,6 @@ namespace RestaurantOrderingSystem_481
             };
 
             window.ShowDialog();
-
-            Confirm_Order(sender, e);
         }
 
         //Button to Review Order
@@ -60,23 +58,6 @@ namespace RestaurantOrderingSystem_481
 
             window.ShowDialog();
 
-        }
-
-        private void Confirm_Order(object sender, RoutedEventArgs e)
-        {
-            foreach (CheckoutItem child in Switcher.GetCheckout().CheckoutItemList.Children)
-            {
-                ReviewOrderItem reviewOrderItem = new ReviewOrderItem();
-                reviewOrderItem.ReviewOrderItemName.Text = child.CheckoutItemName.Text;
-                reviewOrderItem.ReviewOrderItemPrice.Text = child.CheckoutItemPrice.Text;
-                reviewOrderItem.ReviewOrderItemQuantity.Text = child.CheckoutItemQuantity.Text;
-
-                Switcher.GetReviewOrder().ReviewItemList.Children.Add(reviewOrderItem);
-            }
-
-            //Clear Checkout and Cart
-            Switcher.GetCheckout().CheckoutItemList.Children.Clear();
-            Switcher.GetCart().CartItemList.Children.Clear();
         }
 
     }
