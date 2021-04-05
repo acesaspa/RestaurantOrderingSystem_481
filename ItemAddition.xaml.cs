@@ -62,13 +62,15 @@ namespace RestaurantOrderingSystem_481
         private void AddToCart(object sender, RoutedEventArgs e)
         {
             CartItem cartItem = new CartItem();
+            cartItem.cart_item_counter = MainWindow.GlobalCounter;
+            MainWindow.GlobalCounter++;
             cartItem.ItemDescription.Text = DisplayItemDescription.Text;
             cartItem.ItemName.Text = DisplayItemName.Text;
             cartItem.ItemPrice.Text = DisplayItemPrice.Text;
             cartItem.ItemQuantity.Text = DisplayItemQuantity.Text;
 
             Switcher.GetCart().CartItemList.Children.Add(cartItem);
-            AddToCheckout(sender, e);
+            AddToCheckout(sender, e, cartItem);
 
             float price = float.Parse(cartItem.ItemPrice.Text);
             float total = price * (float.Parse(cartItem.ItemQuantity.Text));
@@ -78,12 +80,13 @@ namespace RestaurantOrderingSystem_481
             Close_ItemAddition(sender, e);
         }
 
-        private void AddToCheckout(object sender, RoutedEventArgs e)
+        private void AddToCheckout(object sender, RoutedEventArgs e, CartItem cartItem)
         {
             CheckoutItem checkoutItem = new CheckoutItem();
-            checkoutItem.CheckoutItemName.Text = DisplayItemName.Text;
-            checkoutItem.CheckoutItemQuantity.Text = DisplayItemQuantity.Text;
-            checkoutItem.CheckoutItemPrice.Text = DisplayItemPrice.Text;
+            checkoutItem.checkout_item_counter = cartItem.cart_item_counter;
+            checkoutItem.CheckoutItemName.Text = cartItem.ItemName.Text;
+            checkoutItem.CheckoutItemQuantity.Text = cartItem.ItemQuantity.Text;
+            checkoutItem.CheckoutItemPrice.Text = cartItem.ItemPrice.Text;
 
             Switcher.GetCheckout().CheckoutItemList.Children.Add(checkoutItem);
         }

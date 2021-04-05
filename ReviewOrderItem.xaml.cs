@@ -44,7 +44,7 @@ namespace RestaurantOrderingSystem_481
             set
             {
                 review_item_name = value;
-                this.ReviewOrderItemName.Content = this.review_item_name;
+                this.ReviewOrderItemName.Text = this.review_item_name;
             }
         }
 
@@ -56,7 +56,7 @@ namespace RestaurantOrderingSystem_481
             set
             {
                 review_item_quantity = value;
-                this.ReviewOrderItemQuantity.Content = this.review_item_quantity;
+                this.ReviewOrderItemQuantity.Text = this.review_item_quantity;
             }
         }
 
@@ -68,7 +68,7 @@ namespace RestaurantOrderingSystem_481
             set
             {
                 review_item_price = value;
-                this.ReviewOrderItemPrice.Content = this.review_item_price;
+                this.ReviewOrderItemPrice.Text = this.review_item_price;
             }
         }
 

@@ -28,25 +28,26 @@ namespace RestaurantOrderingSystem_481
         }
         private void Open_Finalized(object sender, RoutedEventArgs e)
         {
+            Confirm_Order(sender, e);
             Switcher.Switch(Switcher.GetFinalize());
         }
 
-        private void Update_Values(object sender, RoutedEventArgs e)
+        private void Confirm_Order(object sender, RoutedEventArgs e)
         {
-            //var subtotal = 0;
-            foreach(object child in CheckoutItemList.Children)
+            foreach (CheckoutItem child in Switcher.GetCheckout().CheckoutItemList.Children)
             {
-                string childname = null;
-                if (child is FrameworkElement)
-                {
-                    childname = (child as FrameworkElement).Name;
-                }
+                ReviewOrderItem reviewOrderItem = new ReviewOrderItem();
+                reviewOrderItem.ReviewOrderItemName.Text = child.CheckoutItemName.Text;
+                reviewOrderItem.ReviewOrderItemPrice.Text = child.CheckoutItemPrice.Text;
+                reviewOrderItem.ReviewOrderItemQuantity.Text = child.CheckoutItemQuantity.Text;
 
-                if(childname != null)
-                {
-
-                }
+                Switcher.GetReviewOrder().ReviewItemList.Children.Add(reviewOrderItem);
             }
+
+            //Clear Checkout and Cart
+            Switcher.GetCheckout().CheckoutItemList.Children.Clear();
+            Switcher.GetCart().CartItemList.Children.Clear();
         }
+
     }
 }

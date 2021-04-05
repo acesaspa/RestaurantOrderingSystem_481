@@ -15,8 +15,8 @@
             <ColumnDefinition Width="60"/>
             <ColumnDefinition Width="60"/>
         </Grid.ColumnDefinitions>
-        <Label Grid.Column="0" Name="ReviewOrderItemName" Content="name"/>
-        <Label Grid.Column="1" Name="ReviewOrderItemQuantity" Content="Quantity"/>
-        <Label Grid.Column="2" Name="ReviewOrderItemPrice" Content="Price"/>
+        <TextBlock Grid.Column="0" Name="ReviewOrderItemName" Text="name"/>
+        <TextBlock Grid.Column="1" Name="ReviewOrderItemQuantity" Text="Quantity"/>
+        <TextBlock Grid.Column="2" Name="ReviewOrderItemPrice" Text="Price"/>
     </Grid>
 </UserControl>

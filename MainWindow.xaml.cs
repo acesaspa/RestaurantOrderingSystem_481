@@ -27,20 +27,12 @@ namespace RestaurantOrderingSystem_481
 
         public static int TableNumber;
         public static float CartTotal = 0;
+        public static int GlobalCounter = 0;
 
         public MainWindow()
         {
 
             InitializeComponent();
-
-            //CategoryDivider divider = new CategoryDivider();
-            //divider.TabName.Content = "~ Appetizer ~";
-            //Switcher.GetMenu().MenuItemList.Children.Add(divider);
-
-            //All our menu items
-            //List<MenuItem> FullMenu = new List<MenuItem>();
-            //MenuItem test = new MenuItem();
-            //FullMenu.Add(test);
 
             /***************************
                 Big Data: 15 Items
@@ -103,40 +95,10 @@ namespace RestaurantOrderingSystem_481
             //Cart Items
             List<CartItem> FullCart = new List<CartItem>();
 
-            //Testing adding to checkout
-            //for (int i = 0; i < 4; i++)
-            //{
-            //    CheckoutItem checkoutItem = new CheckoutItem();
-            //    checkoutItem.CheckoutItemName.Content = "Spaghetti Rigatoni Davinci " + i.ToString();
-            //    checkoutItem.CheckoutItemQuantity.Content = "1";
-            //    checkoutItem.CheckoutItemPrice.Content = "$5.99";
-            //    Switcher.GetCheckout().CheckoutItemList.Children.Add(checkoutItem);
-            //}
-
-            //Testing adding to Cart
-            //for (int i = 0; i < 4; i++)
-            //{
-            //    CartItem cartItem = new CartItem();
-            //    cartItem.ItemName.Content = "Spaghetti Rigatoni Davinci " + i.ToString();
-            //    cartItem.ItemQuantity.Content = "1";
-            //    cartItem.ItemPrice.Content = "$5.99";
-            //    Switcher.GetCart().CartItemList.Children.Add(cartItem);
-            //}
-
             //Review Order Items
             List<ReviewOrderItem> FullReview = new List<ReviewOrderItem>();
             ReviewOrderItem testRO = new ReviewOrderItem();
             FullReview.Add(testRO);
-
-            //Testing adding to Review Order
-            for (int i = 0; i < 4; i++)
-            {
-                ReviewOrderItem reviewOrderItem = new ReviewOrderItem();
-                reviewOrderItem.ReviewOrderItemName.Content = "Spaghetti Rigatoni Davinci " + i.ToString();
-                reviewOrderItem.ReviewOrderItemQuantity.Content = "1";
-                reviewOrderItem.ReviewOrderItemPrice.Content = "$5.99";
-                Switcher.GetReviewOrder().ReviewItemList.Children.Add(reviewOrderItem);
-            }
 
             Switcher.pageSwitcher = this;
             Switcher.Switch(Switcher.GetLanding());

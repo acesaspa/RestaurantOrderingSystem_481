@@ -18,11 +18,11 @@
             <ColumnDefinition Width="30"/> <!-- + -->
             <ColumnDefinition Width="40"/>
         </Grid.ColumnDefinitions>
-        <Button Content="X" Grid.Column="0" Width="30" Height="30"/>
+        <Button Content="X" Grid.Column="0" Width="30" Height="30" Click="RemoveItemCheckout"/>
         <TextBlock Grid.Column="1" Name="CheckoutItemName" Text="CheckoutItemName"/>
-        <Button Content="-" Grid.Column="2" Width="30" Height="30"/>
+        <Button Content="-" Grid.Column="2" Width="30" Height="30" Click="DecreaseQuantityCheckout"/>
         <TextBlock Grid.Column="3" Name="CheckoutItemQuantity" Text="CheckoutItemQuantity"/>
-        <Button Content="+" Grid.Column="4" Width="30" Height="30"/>
+        <Button Content="+" Grid.Column="4" Width="30" Height="30" Click="IncreaseQuantityCheckout"/>
         <TextBlock Grid.Column="5" Name="CheckoutItemPrice" Text="CheckoutItemPrice"/>
     </Grid>
 </UserControl>

@@ -25,6 +25,8 @@ namespace RestaurantOrderingSystem_481
          
         ***************************/
 
+        public int checkout_item_counter;
+
         public string checkout_item_name;
         public string checkout_item_quantity;
         public string checkout_item_price;
@@ -72,9 +74,70 @@ namespace RestaurantOrderingSystem_481
             }
         }
 
-        public CheckoutItem(CartItem cartItem)
+        public void RemoveItemCheckout(object sender, RoutedEventArgs e)
         {
+            //var cartChildren = Switcher.GetCart().CartItemList.Children;
 
+            foreach(CartItem child in Switcher.GetCart().CartItemList.Children)
+            {
+                if(child.cart_item_counter == this.checkout_item_counter)
+                {
+                    Switcher.GetCart().CartItemList.Children.Remove(child);
+                    Switcher.GetCheckout().CheckoutItemList.Children.Remove(this);
+                    break;  //If we do not break, causes problems with enumerator since we are changing the list we are iterating over
+                }
+            }
+
+        }
+
+        //Increase Quantity
+        private void IncreaseQuantityCheckout(object sender, RoutedEventArgs e)
+        {
+            try
+            {
+                int current = Int32.Parse(this.CheckoutItemQuantity.Text);
+                this.CheckoutItemQuantity.Text = (current + 1).ToString();
+
+                foreach (CartItem child in Switcher.GetCart().CartItemList.Children)
+                {
+                    if (child.cart_item_counter == this.checkout_item_counter)
+                    {
+                        child.ItemQuantity.Text = (current + 1).ToString();
+                        break;  //If we do not break, causes problems with enumerator since we are changing the list we are iterating over
+                    }
+                }
+            }
+            catch (Exception)
+            {
+                Console.WriteLine("broken");
+            }
+        }
+
+        //Increase Quantity
+        private void DecreaseQuantityCheckout(object sender, RoutedEventArgs e)
+        {
+            try
+            {
+                int current = Int32.Parse(this.CheckoutItemQuantity.Text);
+
+                if(current != 1)
+                {
+                    this.CheckoutItemQuantity.Text = (current - 1).ToString();
+
+                    foreach (CartItem child in Switcher.GetCart().CartItemList.Children)
+                    {
+                        if (child.cart_item_counter == this.checkout_item_counter)
+                        {
+                            child.ItemQuantity.Text = (current - 1).ToString();
+                            break;  //If we do not break, causes problems with enumerator since we are changing the list we are iterating over
+                        }
+                    }
+                }
+            }
+            catch (Exception)
+            {
+                Console.WriteLine("broken");
+            }
         }
 
         public CheckoutItem()
