@@ -53,6 +53,7 @@ namespace RestaurantOrderingSystem_481
                 reviewOrderItem.ReviewOrderItemName.Text = child.CheckoutItemName.Text;
                 reviewOrderItem.ReviewOrderItemPrice.Text = child.CheckoutItemPrice.Text;
                 reviewOrderItem.ReviewOrderItemQuantity.Text = child.CheckoutItemQuantity.Text;
+                reviewOrderItem.ReviewOrderSR.Text = child.CheckoutItemSR.Text;
 
                 Switcher.GetReviewOrder().ReviewItemList.Children.Add(reviewOrderItem);
             }
@@ -60,6 +61,16 @@ namespace RestaurantOrderingSystem_481
             //Clear Checkout and Cart
             Switcher.GetCheckout().CheckoutItemList.Children.Clear();
             Switcher.GetCart().CartItemList.Children.Clear();
+
+            //Clear Pricing
+            MainWindow.GlobalSubtotal = 0;
+
+            //Prices
+            Switcher.GetCart().CartMenuTotal.Text = "$0.00";
+            Switcher.GetCheckout().Subtotal.Text = ("$0.00");
+            Switcher.GetNewMenu().MenuTotal.Text = ("$0.00");
+            Switcher.GetCheckout().GST.Text = "$0.00";
+            Switcher.GetCheckout().Total.Text = "$0.00";
         }
     }
 }

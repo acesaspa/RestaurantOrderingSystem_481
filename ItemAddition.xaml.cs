@@ -67,7 +67,7 @@ namespace RestaurantOrderingSystem_481
             cartItem.ItemName.Text = DisplayItemName.Text;
             cartItem.ItemPrice.Text = DisplayItemPrice.Text;
             cartItem.ItemQuantity.Text = DisplayItemQuantity.Text;
-
+            cartItem.CartItemSR.Text = SpecialRequest.Text;
 
             Switcher.GetCart().CartItemList.Children.Add(cartItem);
             AddToCheckout(sender, e, cartItem);
@@ -97,6 +97,7 @@ namespace RestaurantOrderingSystem_481
             checkoutItem.CheckoutItemName.Text = cartItem.ItemName.Text;
             checkoutItem.CheckoutItemQuantity.Text = cartItem.ItemQuantity.Text;
             checkoutItem.CheckoutItemPrice.Text = cartItem.ItemPrice.Text;
+            checkoutItem.CheckoutItemSR.Text = cartItem.CartItemSR.Text;
 
             Switcher.GetCheckout().CheckoutItemList.Children.Add(checkoutItem);
         }
