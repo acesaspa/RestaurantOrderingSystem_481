@@ -30,7 +30,10 @@
             <ColumnDefinition Width="20"/>
         
         </Grid.ColumnDefinitions>
-        
+
+        <!--Border at Bottom of Item-->
+        <Border Grid.Column="0" Grid.Row="3" Grid.ColumnSpan="5" BorderBrush="AntiqueWhite" BorderThickness="0,0,0,3" Margin="-4,0,0,0" Background="{x:Null}" />
+
         <!--Remove Button-->
         <Button Grid.Column="0" Grid.Row="1" Grid.RowSpan="2" Click="RemoveItemCart" Margin="10, 10">
 
@@ -63,7 +66,7 @@
         </Button>
 
         <!--Item Name-->
-        <TextBlock Grid.Column="1" Grid.Row="1" Name="ItemName" Text="Item Name" VerticalAlignment="Center" HorizontalAlignment="Left"/>
+        <TextBlock Grid.Column="1" Grid.Row="1" Name="ItemName" Text="Item Name" FontSize="16" VerticalAlignment="Center" HorizontalAlignment="Left"/>
 
         <!--Price Display-->
         <TextBlock Grid.Column="2" Grid.Row="1" Grid.ColumnSpan="3" Name="ItemPrice" Text="Item Price" VerticalAlignment="Center" HorizontalAlignment="Center" />

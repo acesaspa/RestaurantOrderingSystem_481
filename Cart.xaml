@@ -39,36 +39,38 @@
             <!--Must total to 580. 20 required for conversion from user control to window-->
 
             <!--Margin-->
-            <RowDefinition Height="20*"/>
+            <RowDefinition Height="20"/>
 
-            <!--Spacing-->
-            <RowDefinition Height="60*"/>
+            <!--Table & Previous Order Buttons-->
+            <RowDefinition Height="60"/>
 
-            <!--Menu-->
-            <RowDefinition Height="50*"/>
-            <RowDefinition Height="130*"/>
-
-            <!--Call Server-->
-            <RowDefinition Height="200*"/>
+            <!--Collapse Button-->
+            <RowDefinition Height="50"/>
+            
+            <!--Menu Stack Panel-->
+            <RowDefinition Height="130"/>
+            <RowDefinition Height="230"/>
 
             <!--Checkout-->
-            <RowDefinition Height="40*"/>
-
-            <!--Spacing-->
-            <RowDefinition Height="50*"/>
+            <RowDefinition Height="50"/>
 
             <!--Margin-->
-            <RowDefinition Height="20*"/>
+            <RowDefinition Height="20"/>
 
 
         </Grid.RowDefinitions>
+
         <!-- Rectangles for Color-->
-        <Rectangle
-            Grid.Row="2"
-            Grid.Column="1"
-            Grid.ColumnSpan="5"
-            Grid.RowSpan="4"
-            Fill="LightBlue"/>
+        <Rectangle Grid.Column="1" Grid.ColumnSpan="5" Grid.Row="2" Grid.RowSpan="4" Fill="lightblue"/>
+
+        <!--Border around Collapse Button-->
+        <Border Grid.Column="1" Grid.Row="2" Grid.ColumnSpan="5" BorderBrush="Black" BorderThickness="0,3,0,3" Background="{x:Null}" />
+
+        <!--Border on Left Side-->
+        <Border Grid.Column="0" Grid.Row="2" Grid.RowSpan="4" BorderBrush="Black" BorderThickness="0,0,3,0" Background="{x:Null}" />
+
+        <!--Border on Right Side-->
+        <Border Grid.Column="6" Grid.Row="2" Grid.RowSpan="4" BorderBrush="Black" BorderThickness="3,0,0,0" Background="{x:Null}" />
 
         <!--Previous Order-->
         <Button Grid.Row="1" Grid.Column="4" Grid.ColumnSpan="2" Margin="10,10" Click="Open_ReviewOrder" Background="Cyan">
@@ -77,6 +79,7 @@
 
         </Button>
 
+        <!--Table #-->
         <Button Grid.Row="1" Grid.Column="1" Grid.ColumnSpan="2" Margin="10,10" Click="Open_ChangeTable" Background="Cyan">
 
             <Grid Margin="0,0">
@@ -103,8 +106,6 @@
 
             </Grid>
 
-
-
         </Button>
 
         <!-- Back Thing -->
@@ -114,17 +115,16 @@
         
         
         <!-- CartItems -->
-        <ScrollViewer Grid.Column="1" Grid.Row="3" Grid.ColumnSpan="5" Grid.RowSpan="3">
+        <ScrollViewer Grid.Column="1" Grid.Row="3" Grid.ColumnSpan="5" Grid.RowSpan="2" >
         
             <StackPanel Name="CartItemList"/>
         
         </ScrollViewer>
 
         <!--ICE Border Control-->
-        <Border Grid.Column="1" Grid.Row="5" Grid.ColumnSpan="5" BorderThickness="10" BorderBrush="Black"/>
+        <Border Grid.Column="1" Grid.Row="5" Grid.ColumnSpan="5" BorderThickness="50" BorderBrush="Black"/>
         
         <!--Temporary Cart:-->
-
         <Grid Grid.Column="1" Grid.Row="5" Grid.ColumnSpan="5" Background="LightBlue">
 
             <Grid.ColumnDefinitions>
@@ -142,6 +142,9 @@
                 <ColumnDefinition Width="*"/>
 
             </Grid.ColumnDefinitions>
+
+            <!--Border around Bottom-->
+            <Border Grid.Column="0" Grid.Row="0" Grid.ColumnSpan="5" BorderBrush="Black" BorderThickness="0,3,0,3" Background="{x:Null}" />
 
             <!--Total-->
             <TextBlock Grid.Column="0" Grid.Row="0" Text="Total: " Width="32" HorizontalAlignment="Center" VerticalAlignment="Center"/>
