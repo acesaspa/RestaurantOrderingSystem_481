@@ -105,7 +105,7 @@ namespace RestaurantOrderingSystem_481
 
                     Switcher.GetCart().CartMenuTotal.Text = ("$" + test);
                     Switcher.GetCheckout().Subtotal.Text = ("$" + test);
-                    Switcher.GetMenu().MenuItemTotal.Text = ("$" + test);
+                    Switcher.GetNewMenu().MenuTotal.Text = ("$" + test);
                     Switcher.GetCheckout().GST.Text = "$" + (MainWindow.GlobalSubtotal * 0.1).ToString("0.00");
                     float gst = float.Parse(Switcher.GetCheckout().GST.Text.Substring(1));
                     float subtotal = float.Parse(Switcher.GetCheckout().Subtotal.Text.Substring(1));
