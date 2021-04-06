@@ -33,6 +33,8 @@ namespace RestaurantOrderingSystem_481
         public string checkout_item_quantity;
         public string checkout_item_price;
 
+        public bool checkout_item_alcohol;
+
 
         /***************************
 

@@ -28,6 +28,24 @@ namespace RestaurantOrderingSystem_481
         }
         private void Open_Finalized(object sender, RoutedEventArgs e)
         {
+            //Check if Order has Alcohol
+            foreach (CheckoutItem child in Switcher.GetCheckout().CheckoutItemList.Children)
+            {
+                if (child.checkout_item_alcohol == true)
+                {
+                    MainWindow.hasAlcohol = true;
+                }
+            }
+
+            if (MainWindow.hasAlcohol == true)
+            {
+                Switcher.GetConfirmCheckout().Confirm_Alcohol.Text = "Order has Alcohol!!!";
+            }
+            else
+            {
+                Switcher.GetConfirmCheckout().Confirm_Alcohol.Text = "";
+            }
+
             Window window = new Window
             {
                 Title = "Confirm Checkout",
@@ -35,6 +53,8 @@ namespace RestaurantOrderingSystem_481
                 Height = 300,
                 Width = 300
             };
+
+            MainWindow.hasAlcohol = false;
 
             window.ShowDialog();
         }

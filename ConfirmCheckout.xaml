@@ -22,9 +22,10 @@
             <RowDefinition Height="25*"/>
             <RowDefinition Height="225*"/>
             <RowDefinition Height="50*"/>
+            <RowDefinition Height="50*"/>
         </Grid.RowDefinitions>
 
-        <Rectangle Fill="LightGoldenrodYellow" Grid.ColumnSpan="6" Grid.RowSpan="4" />
+        <Rectangle Fill="LightGoldenrodYellow" Grid.ColumnSpan="6" Grid.RowSpan="5" />
 
         <TextBlock Grid.ColumnSpan="4" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="25" >
             Order Confirmation:
@@ -50,5 +51,6 @@
         <Button Grid.Column="2" Grid.ColumnSpan="2" Grid.Row="3" Click="Confirm_Order">
             Confirm Order
         </Button>
+        <TextBlock Grid.Column="2" Grid.Row="4" Grid.RowSpan="2" Name="Confirm_Alcohol"/>
     </Grid>
 </UserControl>

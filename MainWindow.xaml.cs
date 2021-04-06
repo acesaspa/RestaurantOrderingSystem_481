@@ -29,6 +29,7 @@ namespace RestaurantOrderingSystem_481
         public static float GlobalSubtotal = 0;
         public static int GlobalCounter = 0;
         public static float GST = 0.1f; //10%
+        public static bool hasAlcohol = false;
 
         public MainWindow()
         {
@@ -47,26 +48,26 @@ namespace RestaurantOrderingSystem_481
 
             // Spicy, Peanut, Gluten, Vegetarian
 
-            MenuItem crazybreadItem = new MenuItem("Crazy Bread", "Eight bread sticks with flavours of butter and garlic, then sprinkled with parmesan style cheese", 5.99f, "/Resources/crazybread.jpg", false, false, false, false);
-            MenuItem stuffedcrazybreadItem = new MenuItem("Stuffed Crazy Bread", "4 bread sticks stuffed with mozzarella cheese and topped with flavours of butter and garlic then sprinkled with parmesan style cheese", 6.99f, "/Resources/stuffedcrazybread.jpg", false, false, false, false);
+            MenuItem crazybreadItem = new MenuItem("Crazy Bread", "Eight bread sticks with flavours of butter and garlic, then sprinkled with parmesan style cheese", 5.99f, "/Resources/crazybread.jpg", false, false, false, false, true);
+            MenuItem stuffedcrazybreadItem = new MenuItem("Stuffed Crazy Bread", "4 bread sticks stuffed with mozzarella cheese and topped with flavours of butter and garlic then sprinkled with parmesan style cheese", 6.99f, "/Resources/stuffedcrazybread.jpg", false, false, false, false, false);
 
-            MenuItem hawaiianItem = new MenuItem("Hawaiian Pizza", "Round pizza with Ham and Pineapple", 11.99f, "/Resources/hawaiian.jpg", false, false, false, false);
-            MenuItem bbqChickenItem = new MenuItem("BBQ Chicken Pizza", "Round pizza with BBQ Sauce, Chicken, Red Onions and Oregano", 14.99f, "/Resources/bbqchicken.jpg", false, false, false, false);
-            MenuItem meat3Item = new MenuItem("3 Meat Pizza", "Round pizza with Pepperoni, Italian Sausage and Bacon", 14.99f, "/Resources/3meat.jpg", false, false, false, false);
-            MenuItem canadianItem = new MenuItem("Canadian Pizza", "Round pizza with Pepperoni, Bacon and Mushrooms", 13.99f, "/Resources/canadian.jpg", false, false, false, false);
-            MenuItem ultimateItem = new MenuItem("Ultimate Supreme Pizza", "Round pizza with Pepperoni, Italian Sausage, Mushrooms, Green Peppers and Onions", 199.99f, "/Resources/ultimatesupreme.jpg", false, false, false, false);
-            MenuItem veggieItem = new MenuItem("Veggie Pizza", "Round pizza with Pepperoni, Italian Sausage, Mushrooms, Green Peppers and Onions", 1.99f, "/Resources/veggie.jpg", false, false, false, true);
-            MenuItem pepperoniItem = new MenuItem("Classic Pepperoni Pizza", "Round pizza with Pepperoni.", 12.99f, "/Resources/pepperoni.jpg", false, false, false, false);
-            MenuItem cheeseItem = new MenuItem("Classic Cheese Pizza", "Round pizza with just cheese", 10.99f, " /Resources/cheese.jpg", false, false, true, true);
+            MenuItem hawaiianItem = new MenuItem("Hawaiian Pizza", "Round pizza with Ham and Pineapple", 11.99f, "/Resources/hawaiian.jpg", false, false, false, false, false);
+            MenuItem bbqChickenItem = new MenuItem("BBQ Chicken Pizza", "Round pizza with BBQ Sauce, Chicken, Red Onions and Oregano", 14.99f, "/Resources/bbqchicken.jpg", false, false, false, false, false);
+            MenuItem meat3Item = new MenuItem("3 Meat Pizza", "Round pizza with Pepperoni, Italian Sausage and Bacon", 14.99f, "/Resources/3meat.jpg", false, false, false, false, false);
+            MenuItem canadianItem = new MenuItem("Canadian Pizza", "Round pizza with Pepperoni, Bacon and Mushrooms", 13.99f, "/Resources/canadian.jpg", false, false, false, false, false);
+            MenuItem ultimateItem = new MenuItem("Ultimate Supreme Pizza", "Round pizza with Pepperoni, Italian Sausage, Mushrooms, Green Peppers and Onions", 199.99f, "/Resources/ultimatesupreme.jpg", false, false, false, false, false);
+            MenuItem veggieItem = new MenuItem("Veggie Pizza", "Round pizza with Pepperoni, Italian Sausage, Mushrooms, Green Peppers and Onions", 1.99f, "/Resources/veggie.jpg", false, false, false, true, false);
+            MenuItem pepperoniItem = new MenuItem("Classic Pepperoni Pizza", "Round pizza with Pepperoni.", 12.99f, "/Resources/pepperoni.jpg", false, false, false, false, false);
+            MenuItem cheeseItem = new MenuItem("Classic Cheese Pizza", "Round pizza with just cheese", 10.99f, " /Resources/cheese.jpg", false, false, true, true, false);
 
-            MenuItem pottedvanillacheesecakeItem = new MenuItem("Potted Vanilla Cheesecake", "Coconut sponge toffee + seed crust, raspberry compote", 9.99f, "/Resources/pottedvanillacheesecake.png", false, true, false, false);
+            MenuItem pottedvanillacheesecakeItem = new MenuItem("Potted Vanilla Cheesecake", "Coconut sponge toffee + seed crust, raspberry compote", 9.99f, "/Resources/pottedvanillacheesecake.png", false, true, false, false, false);
 
-            MenuItem waterItem = new MenuItem("Water", "Water", 0.99f, "Resources/water.jpg", false, false, false, false);
+            MenuItem waterItem = new MenuItem("Water", "Water", 0.99f, "Resources/water.jpg", false, false, false, false, false);
 
-            MenuItem spicycheddardipItem = new MenuItem("Spicy Cheddar Dip", "", 1.99f, "/Resources/spicycheddardip.jpg", true, false, false, false);
-            MenuItem bbqranchdipItem = new MenuItem("BBQ Ranch Dip", "", 1.99f, "/Resources/bbqranchdip.jpg", false, false, false, false);
-            MenuItem creamygarlicdipItem = new MenuItem("Creamy Garlic Dip", "", 1.99f, "/Resources/creamygarlicdip.jpg", false, false, false, false);
-            MenuItem ranchDipItem = new MenuItem("Ranch Dip", "", 1.99f, "/Resources/ranchdip.jpg", false, false, false, false);
+            MenuItem spicycheddardipItem = new MenuItem("Spicy Cheddar Dip", "", 1.99f, "/Resources/spicycheddardip.jpg", true, false, false, false, false);
+            MenuItem bbqranchdipItem = new MenuItem("BBQ Ranch Dip", "", 1.99f, "/Resources/bbqranchdip.jpg", false, false, false, false, false);
+            MenuItem creamygarlicdipItem = new MenuItem("Creamy Garlic Dip", "", 1.99f, "/Resources/creamygarlicdip.jpg", false, false, false, false, false);
+            MenuItem ranchDipItem = new MenuItem("Ranch Dip", "", 1.99f, "/Resources/ranchdip.jpg", false, false, false, false, false);
 
             //Working Menu
             Switcher.GetNewMenu().AppetisersList.Children.Add(crazybreadItem);

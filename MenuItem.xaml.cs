@@ -42,7 +42,7 @@ namespace RestaurantOrderingSystem_481
         public bool item_peanutfree;
         public bool item_vegetarian;
         public bool item_glutenfree;
-
+        public bool item_alcohol;
 
 
         /***************************
@@ -141,6 +141,16 @@ namespace RestaurantOrderingSystem_481
 
         }
 
+
+        public bool Item_alcohol
+        {
+
+            get { return item_alcohol; }
+
+            set { item_alcohol = false; }
+
+        }
+
         //private void ReviewOrder(object sender, RoutedEventArgs e)
         //{
         //    Window window = new Window
@@ -160,6 +170,7 @@ namespace RestaurantOrderingSystem_481
             showItem.DisplayItemName.Text = this.ItemName.Text;
             showItem.DisplayItemDescription.Text = this.ItemDescription.Text;
             showItem.DisplayItemPrice.Text = this.ItemPrice.Text;
+            showItem.ia_alcohol = this.Item_alcohol;
 
             Window window = new Window
             {
@@ -172,7 +183,7 @@ namespace RestaurantOrderingSystem_481
             window.ShowDialog();
         }
 
-        public MenuItem(string name, string desc, float price, string image, bool spicy, bool peanutFree, bool glutenFree, bool vegetarian)
+        public MenuItem(string name, string desc, float price, string image, bool spicy, bool peanutFree, bool glutenFree, bool vegetarian, bool alcohol)
         {
             item_name = name;
             item_description = desc;
@@ -182,6 +193,7 @@ namespace RestaurantOrderingSystem_481
             item_peanutfree = peanutFree;
             item_glutenfree = glutenFree;
             item_vegetarian = vegetarian;
+            item_alcohol = alcohol;
 
             InitializeComponent();
 

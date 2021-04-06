@@ -27,6 +27,9 @@ namespace RestaurantOrderingSystem_481
         // Item Price
         public float ia_item_price;
 
+        //Item Alcohol
+        public bool ia_alcohol;
+
         //Increase Quantity
         private void IncreaseQuantity(object sender, RoutedEventArgs e)
         {
@@ -68,6 +71,7 @@ namespace RestaurantOrderingSystem_481
             cartItem.ItemPrice.Text = DisplayItemPrice.Text;
             cartItem.ItemQuantity.Text = DisplayItemQuantity.Text;
             cartItem.CartItemSR.Text = SpecialRequest.Text;
+            cartItem.cart_alcohol = ia_alcohol;
 
             Switcher.GetCart().CartItemList.Children.Add(cartItem);
             AddToCheckout(sender, e, cartItem);
@@ -98,6 +102,7 @@ namespace RestaurantOrderingSystem_481
             checkoutItem.CheckoutItemQuantity.Text = cartItem.ItemQuantity.Text;
             checkoutItem.CheckoutItemPrice.Text = cartItem.ItemPrice.Text;
             checkoutItem.CheckoutItemSR.Text = cartItem.CartItemSR.Text;
+            checkoutItem.checkout_item_alcohol = cartItem.cart_alcohol;
 
             Switcher.GetCheckout().CheckoutItemList.Children.Add(checkoutItem);
         }

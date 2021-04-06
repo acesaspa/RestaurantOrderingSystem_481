@@ -56,6 +56,12 @@ namespace RestaurantOrderingSystem_481
                 reviewOrderItem.ReviewOrderSR.Text = child.CheckoutItemSR.Text;
 
                 Switcher.GetReviewOrder().ReviewItemList.Children.Add(reviewOrderItem);
+
+            }
+
+            if(MainWindow.hasAlcohol == true)
+            {
+                this.Confirm_Alcohol.Text = "Alcohol";
             }
 
             //Clear Checkout and Cart
@@ -71,6 +77,8 @@ namespace RestaurantOrderingSystem_481
             Switcher.GetNewMenu().MenuTotal.Text = ("$0.00");
             Switcher.GetCheckout().GST.Text = "$0.00";
             Switcher.GetCheckout().Total.Text = "$0.00";
+
+            
         }
     }
 }
