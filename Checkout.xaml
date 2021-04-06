@@ -94,12 +94,12 @@
         <TextBlock Grid.Column="2" Grid.Row="9" FontSize="15" HorizontalAlignment="Right" VerticalAlignment="Center">GST:</TextBlock>
         <TextBlock Grid.Column="2" Grid.Row="9" FontSize="15" HorizontalAlignment="Right" VerticalAlignment="Bottom">Total:</TextBlock>
 
-        <TextBlock Grid.Column="4" Grid.Row="9" FontSize="15" Grid.ColumnSpan="2"
-                   HorizontalAlignment="Left" VerticalAlignment="Top" Name="Subtotal">33.96$</TextBlock>
-        <TextBlock Grid.Column="4" Grid.Row="9" FontSize="15" Grid.ColumnSpan="2"
-                   HorizontalAlignment="Left" VerticalAlignment="Center" Name="GST">1.70$</TextBlock>
-        <TextBlock Grid.Column="4" Grid.Row="9" FontSize="15" Grid.ColumnSpan="2"
-                   HorizontalAlignment="Left" VerticalAlignment="Bottom" Name="Total">35.66$</TextBlock>
+        <TextBlock Grid.Column="3" Grid.Row="9" FontSize="15" Grid.ColumnSpan="2"
+                   HorizontalAlignment="Center" VerticalAlignment="Top" Name="Subtotal"></TextBlock>
+        <TextBlock Grid.Column="3" Grid.Row="9" FontSize="15" Grid.ColumnSpan="2"
+                   HorizontalAlignment="Center" VerticalAlignment="Center" Name="GST"></TextBlock>
+        <TextBlock Grid.Column="3" Grid.Row="9" FontSize="15" Grid.ColumnSpan="2"
+                   HorizontalAlignment="Center" VerticalAlignment="Bottom" Name="Total"></TextBlock>
         <!--Confirm Order button-->
         <Button Grid.Column="5" Grid.Row="9" Grid.ColumnSpan="3" FontSize="20" Click="Open_Finalized">Confirm Order</Button>
     </Grid>

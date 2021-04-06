@@ -34,7 +34,7 @@ namespace RestaurantOrderingSystem_481
                     MainWindow.GlobalSubtotal -= priceTotal;
                     string test = MainWindow.GlobalSubtotal.ToString("0.00");
 
-                    Switcher.GetCart().CartMenuTotal.Text = ("Total: $" + test);
+                    Switcher.GetCart().CartMenuTotal.Text = ("$" + test);
                     Switcher.GetCheckout().Subtotal.Text = ("$" + test);
                     Switcher.GetNewMenu().MenuTotal.Text = ("$" + test);
                     Switcher.GetCheckout().GST.Text = "$" + (MainWindow.GlobalSubtotal * 0.1).ToString("0.00");
@@ -65,7 +65,7 @@ namespace RestaurantOrderingSystem_481
                 string test = MainWindow.GlobalSubtotal.ToString("0.00");
 
                 //Prices
-                Switcher.GetCart().CartMenuTotal.Text = ("Total: $" + test);
+                Switcher.GetCart().CartMenuTotal.Text = ("$" + test);
                 Switcher.GetCheckout().Subtotal.Text = ("$" + test);
                 Switcher.GetNewMenu().MenuTotal.Text = ("$" + test);
                 Switcher.GetCheckout().GST.Text = "$" + (MainWindow.GlobalSubtotal * 0.1).ToString("0.00");
@@ -103,7 +103,7 @@ namespace RestaurantOrderingSystem_481
 
                     string test = MainWindow.GlobalSubtotal.ToString("0.00");
 
-                    Switcher.GetCart().CartMenuTotal.Text = ("Total: $" + test);
+                    Switcher.GetCart().CartMenuTotal.Text = ("$" + test);
                     Switcher.GetCheckout().Subtotal.Text = ("$" + test);
                     Switcher.GetMenu().MenuItemTotal.Text = ("$" + test);
                     Switcher.GetCheckout().GST.Text = "$" + (MainWindow.GlobalSubtotal * 0.1).ToString("0.00");
