@@ -74,8 +74,15 @@ namespace RestaurantOrderingSystem_481
             string tempPrice = cartItem.ItemPrice.Text.Substring(1);
             float price = float.Parse(tempPrice);
             float total = price * (float.Parse(cartItem.ItemQuantity.Text));
-            MainWindow.CartTotal += total;
-            Switcher.GetCart().CartMenuTotal.Text = MainWindow.CartTotal.ToString();
+            MainWindow.GlobalSubtotal += total;
+
+            string test = MainWindow.GlobalSubtotal.ToString("0.00");
+
+            //Prices
+            Switcher.GetCart().CartMenuTotal.Text = "$" + test;
+            Switcher.GetCheckout().Subtotal.Text = ("$" + test);
+            Switcher.GetNewMenu().MenuTotal.Text = ("$" + test);
+            Switcher.GetCheckout().GST.Text = "$" + (MainWindow.GlobalSubtotal * 0.1).ToString("0.00");
 
             Close_ItemAddition(sender, e);
         }
