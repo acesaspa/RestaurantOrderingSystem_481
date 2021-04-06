@@ -1,0 +1,54 @@
+﻿<UserControl x:Class="RestaurantOrderingSystem_481.ConfirmCheckout"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:RestaurantOrderingSystem_481"
+             mc:Ignorable="d" 
+             d:DesignHeight="300" d:DesignWidth="300">
+    <Grid>
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="25*"/>
+            <ColumnDefinition Width="25*"/>
+            <ColumnDefinition Width="100*"/>
+            <ColumnDefinition Width="100*"/>
+            <ColumnDefinition Width="25*"/>
+            <ColumnDefinition Width="25*"/>
+        </Grid.ColumnDefinitions>
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="50*"/>
+            <RowDefinition Height="25*"/>
+            <RowDefinition Height="225*"/>
+            <RowDefinition Height="50*"/>
+        </Grid.RowDefinitions>
+
+        <Rectangle Fill="LightGoldenrodYellow" Grid.ColumnSpan="6" Grid.RowSpan="4" />
+
+        <TextBlock Grid.ColumnSpan="4" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="25" >
+            Order Confirmation:
+        </TextBlock>
+
+        <Button Grid.Column="4" Grid.ColumnSpan="2" FontSize="25" Click="Close_Confirmation" >
+            X
+        </Button>
+
+        <TextBlock Grid.Row="2" Grid.Column="1" Grid.ColumnSpan="4" TextWrapping="Wrap" HorizontalAlignment="Center" VerticalAlignment="Top" >
+            <LineBreak/>
+            Make sure that
+            <Run FontWeight="Bold">
+                every order for your table is confirmed at the same time
+            </Run>
+            for the best restaurant experience.
+            <LineBreak/>
+            <LineBreak/>
+            <LineBreak/>
+            If you're sure you've got your order just the way you like it and you're all ready to eat, then confirm your order one last time! Otherwise, use the x in the top right to return to checkout.
+        </TextBlock>
+
+        <Button Grid.Column="2" Grid.ColumnSpan="2" Grid.Row="3" Click="Confirm_Order">
+            Confirm Order
+        </Button>
+    </Grid>
+</UserControl>

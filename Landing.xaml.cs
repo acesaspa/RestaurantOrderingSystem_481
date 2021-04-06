@@ -40,6 +40,7 @@ namespace RestaurantOrderingSystem_481
                         MainWindow.TableNumber = result;
                         Switcher.GetNewMenu().DisplayTableNumber.Text = "Table: " + result.ToString();
                         Switcher.GetCart().DisplayTableNumber.Text = "Table: " + result.ToString();
+                        Switcher.GetCheckout().DisplayTableNumber.Text = "Table " + result.ToString();
                         Switcher.Switch(Switcher.GetNewMenu());
                     }
                 }
