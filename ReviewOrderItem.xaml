@@ -9,6 +9,7 @@
     <Grid Background="AliceBlue">
         <Grid.RowDefinitions>
             <RowDefinition/>
+            <RowDefinition Height="auto"/>
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="*"/>
@@ -18,5 +19,6 @@
         <TextBlock Grid.Column="0" Name="ReviewOrderItemName" Text="name"/>
         <TextBlock Grid.Column="1" Name="ReviewOrderItemQuantity" Text="Quantity"/>
         <TextBlock Grid.Column="2" Name="ReviewOrderItemPrice" Text="Price"/>
+        <TextBlock Grid.Column="0" Grid.Row="1" Name="ReviewOrderSR"/>
     </Grid>
 </UserControl>

@@ -20,6 +20,8 @@ namespace RestaurantOrderingSystem_481
     {
         public int cart_item_counter;
 
+        public string cart_special_request;
+
         public void RemoveItemCart(object sender, RoutedEventArgs e)
         {
             //var cartChildren = Switcher.GetCart().CartItemList.Children;

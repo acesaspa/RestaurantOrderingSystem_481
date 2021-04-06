@@ -12,10 +12,9 @@
 
             <!--Spacing-->
             <RowDefinition Height="5" />
-
             <RowDefinition Height="30"/>
-            <RowDefinition Height="20"/>
-            
+            <RowDefinition Height="auto"/>
+
             <!--Spacing-->
             <RowDefinition Height="5" />
 
@@ -32,7 +31,7 @@
         </Grid.ColumnDefinitions>
 
         <!--Border at Bottom of Item-->
-        <Border Grid.Column="0" Grid.Row="3" Grid.ColumnSpan="5" BorderBrush="AntiqueWhite" BorderThickness="0,0,0,3" Margin="-4,0,0,0" Background="{x:Null}" />
+        <Border Grid.Column="0" Grid.Row="4" Grid.ColumnSpan="5" BorderBrush="AntiqueWhite" BorderThickness="0,0,0,3" Margin="-4,0,0,0" Background="{x:Null}" />
 
         <!--Remove Button-->
         <Button Grid.Column="0" Grid.Row="1" Grid.RowSpan="2" Click="RemoveItemCart" Margin="10, 10">
@@ -79,8 +78,9 @@
 
         <!--Increase Button-->
         <Button Grid.Row="2" Grid.Column="4" Content="+" Height="20" Click="IncreaseQuantityCart" />
-    
-    
+
+        <TextBlock Grid.Column="1" Grid.Row="2" Name="CartItemSR"/>
+
     </Grid>
 
 

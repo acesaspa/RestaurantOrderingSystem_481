@@ -27,6 +27,8 @@ namespace RestaurantOrderingSystem_481
 
         public int checkout_item_counter;
 
+        public string checkout_special_request;
+
         public string checkout_item_name;
         public string checkout_item_quantity;
         public string checkout_item_price;
