@@ -50,10 +50,13 @@
         </ScrollViewer>
         
         
-        <!--Sum-->
-        <TextBlock Grid.Column="2" Grid.Row="5" VerticalAlignment="Top" HorizontalAlignment="Center">$33.96</TextBlock>
-        <TextBlock Grid.Column="2" Grid.Row="5" VerticalAlignment="Center" HorizontalAlignment="Center">$1.70</TextBlock>
-        <TextBlock Grid.Column="2" Grid.Row="5" VerticalAlignment="Bottom" HorizontalAlignment="Center">$35.66</TextBlock>
+        <!--Prices-->
+        <TextBlock Grid.Column="2" Grid.Row="5" VerticalAlignment="Top" Name="ReviewOrderSubtotal"
+                   HorizontalAlignment="Center" Text="$0.00"></TextBlock>
+        <TextBlock Grid.Column="2" Grid.Row="5" VerticalAlignment="Center" Name="ReviewOrderGST"
+                   HorizontalAlignment="Center" Text="$0.00"></TextBlock>
+        <TextBlock Grid.Column="2" Grid.Row="5" VerticalAlignment="Bottom" Name="ReviewOrderTotal"
+                   HorizontalAlignment="Center" Text="$0.00"></TextBlock>
 
     </Grid>
 </UserControl>

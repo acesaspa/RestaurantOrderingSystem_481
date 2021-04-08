@@ -39,7 +39,7 @@ namespace RestaurantOrderingSystem_481
 
             if (MainWindow.hasAlcohol == true)
             {
-                Switcher.GetConfirmCheckout().Confirm_Alcohol.Text = "Order has Alcohol!!!";
+                Switcher.GetConfirmCheckout().Confirm_Alcohol.Text = "Order has Alcohol xd";
             }
             else
             {
