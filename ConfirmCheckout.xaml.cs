@@ -47,6 +47,11 @@ namespace RestaurantOrderingSystem_481
 
         private void Confirm_Order2(object sender, RoutedEventArgs e)
         {
+            float addReviewOrderSubtotal = 0.00f;
+
+            //Clear Checkout UC Children
+            Switcher.GetReviewOrder().ReviewItemList.Children.Clear();
+
             foreach (CheckoutItem child in Switcher.GetCheckout().CheckoutItemList.Children)
             {
                 ReviewOrderItem reviewOrderItem = new ReviewOrderItem();
@@ -57,9 +62,25 @@ namespace RestaurantOrderingSystem_481
 
                 Switcher.GetReviewOrder().ReviewItemList.Children.Add(reviewOrderItem);
 
+
+                //Adding Prices for Review Page
+                string temp = reviewOrderItem.ReviewOrderItemPrice.Text.Substring(1);
+                float itemPrice = float.Parse(temp);
+                float totalItemPrice = itemPrice * (float.Parse(reviewOrderItem.ReviewOrderItemQuantity.Text));
+
+                addReviewOrderSubtotal += totalItemPrice;
             }
 
-            if(MainWindow.hasAlcohol == true)
+            //Last Calculation for Prices
+            float addReviewOrderGST = addReviewOrderSubtotal * MainWindow.GST;
+            float addReviewOrderTotal = addReviewOrderSubtotal + addReviewOrderGST;
+
+            //Set Calculation Prices on ReviewOrder
+            Switcher.GetReviewOrder().ReviewOrderSubtotal.Text = "$" + addReviewOrderSubtotal.ToString("0.00");
+            Switcher.GetReviewOrder().ReviewOrderGST.Text = "$" + addReviewOrderGST.ToString("0.00");
+            Switcher.GetReviewOrder().ReviewOrderTotal.Text = "$" + addReviewOrderTotal.ToString("0.00");
+
+            if (MainWindow.hasAlcohol == true)
             {
                 this.Confirm_Alcohol.Text = "Alcohol";
             }
@@ -77,6 +98,8 @@ namespace RestaurantOrderingSystem_481
             Switcher.GetNewMenu().MenuTotal.Text = ("$0.00");
             Switcher.GetCheckout().GST.Text = "$0.00";
             Switcher.GetCheckout().Total.Text = "$0.00";
+
+
 
             
         }
