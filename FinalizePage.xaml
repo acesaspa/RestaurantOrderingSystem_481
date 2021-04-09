@@ -65,16 +65,16 @@
             <RowDefinition Height="10*" />
 
             <!--Box Row 1-->
-            <RowDefinition Height="100*" />
+            <RowDefinition Height="85*" />
 
             <!--Box Row 2-->
-            <RowDefinition Height="100*" />
+            <RowDefinition Height="85*" />
 
             <!--Box Row 3-->
-            <RowDefinition Height="40*" />
+            <RowDefinition Height="75*" />
 
             <!--Fill space between content-->
-            <RowDefinition Height="90*" />
+            <RowDefinition Height="85*" />
 
             <!--Margin-->
             <RowDefinition Height="20*" />
@@ -83,11 +83,8 @@
 
         <!--Adding the ETA-->
         <Rectangle Grid.Row="1" Grid.Column="6" Grid.ColumnSpan="4" Fill="LightBlue" Margin="10"/>
-        <!--TextBlock Grid.Row="2" Grid.Column="6" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="13" TextWrapping="Wrap" Text="ETA:" />
-        <TextBlock Grid.Row="2" Grid.Column="7" Grid.ColumnSpan="2" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="13" TextWrapping="Wrap" Text="20 - 30 Minutes" /-->
         <TextBlock Grid.Column="6" Grid.Row="1" Margin="18,0,0,0" VerticalAlignment="Center" FontSize="22" >ETA:</TextBlock>
-        <TextBlock Grid.Column="7" Grid.Row="1" Grid.ColumnSpan="3" Margin="0,0,18,0" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="20">30 min</TextBlock>
-
+        <TextBlock Grid.Column="7" Grid.Row="1" Grid.ColumnSpan="3" Margin="0,0,18,0" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="20" Text="30 min">30 min</TextBlock>
 
         <!--Adding congrats text-->
         <TextBlock Grid.Row="3" Grid.Column="2" Grid.ColumnSpan="7" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="26" FontWeight="Bold" Text="Congratulations!" />
@@ -97,8 +94,38 @@
 
         <!--Adding buttons-->
 
-        <!--Review Button-->
-        <Button Grid.Row="6" Grid.Column="3" Grid.ColumnSpan="2" Background="LightBlue" Click="ReviewOrder">
+        <Grid Grid.Row="6" Grid.Column="3" Grid.ColumnSpan="5" Grid.RowSpan="3">
+
+
+            <Grid.ColumnDefinitions>
+
+                <ColumnDefinition />
+
+                <ColumnDefinition />
+            
+            </Grid.ColumnDefinitions>
+
+
+            <Grid.RowDefinitions>
+
+                <RowDefinition />
+                
+                <RowDefinition />
+                
+                <RowDefinition />
+
+            </Grid.RowDefinitions>
+
+            
+            
+            
+            
+            
+        </Grid>
+        
+        
+        <!--ReviewOrder Button-->
+        <Button Grid.Row="7" Grid.Column="5" Grid.ColumnSpan="3" Background="LightBlue" Click="ReviewOrder">
             <TextBlock Grid.Row="6" Grid.Column="4"  HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="18" TextAlignment="Center" TextWrapping="Wrap" Text="Review Previous Order"/>
         </Button>
 
@@ -112,11 +139,21 @@
             <TextBlock Grid.Row="7" Grid.Column="4" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="18" TextWrapping="Wrap" TextAlignment="Center" Text="Request Takeout Boxes" />
         </Button>
 
-        <!--Review button-->
-        <Button Grid.Row="7" Grid.Column="5" Grid.ColumnSpan="3" Background="LightBlue" Click="Review">
+        <!--Call Server button-->
+        <Button Grid.Row="6" Grid.Column="3" Grid.ColumnSpan="2" Background="LightBlue" Click="Server">
+            <TextBlock Grid.Row="8" Grid.Column="4" Grid.ColumnSpan="3" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="18" TextAlignment="Center" TextWrapping="Wrap" Text="Call Server" />
+        </Button>
+
+
+        <!--Leave Review button-->
+        <Button Grid.Row="8" Grid.Column="3" Grid.ColumnSpan="5" Background="LightBlue" Click="Review">
             <TextBlock Grid.Row="8" Grid.Column="4" Grid.ColumnSpan="3" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="18" TextAlignment="Center" TextWrapping="Wrap" Text="Leave Us A Review!" />
         </Button>
 
+        
+        
+        
+        
 
     </Grid>
 </UserControl>

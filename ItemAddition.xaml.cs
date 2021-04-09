@@ -30,6 +30,19 @@ namespace RestaurantOrderingSystem_481
         //Item Alcohol
         public bool ia_alcohol;
 
+        private void changedSpecialRequest(object sender, TextChangedEventArgs e)
+        {
+            if (SpecialRequest.Text.Length > 0)
+            {
+                userSpecialRequest.Visibility = Visibility.Collapsed;
+            }
+
+            else
+            {
+                userSpecialRequest.Visibility = Visibility.Visible;
+            }
+        }
+
         //Increase Quantity
         private void IncreaseQuantity(object sender, RoutedEventArgs e)
         {

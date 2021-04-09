@@ -5,43 +5,165 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
         xmlns:local="clr-namespace:RestaurantOrderingSystem_481"
         mc:Ignorable="d"
-        d:DesignHeight="350" d:DesignWidth="300">
-    <Grid>
+        d:DesignHeight="550" d:DesignWidth="300">
+    <Grid Background="LightYellow">
+        
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="20*"/>
-            <ColumnDefinition Width="60*"/>
-            <ColumnDefinition Width="60*"/>
-            <ColumnDefinition Width="60*"/>
-            <ColumnDefinition Width="60*"/>
-            <ColumnDefinition Width="40*"/>
-            <ColumnDefinition Width="20*"/>
+        
+            <!--Margin-->
+            <ColumnDefinition Width="20"/>
+
+            <!--Filler-->
+            <ColumnDefinition Width="70"/>
+
+            <!--Decrease Button-->
+            <ColumnDefinition Width="30"/>
+
+            <!--Spacing-->
+            <ColumnDefinition Width="*"/>
+
+            <!--Quantity-->
+            <ColumnDefinition Width="30"/>
+
+            <!--Spacing-->
+            <ColumnDefinition Width="*"/>
+
+            <!--Increase Button-->
+            <ColumnDefinition Width="30"/>
+
+            <!--Filler-->
+            <ColumnDefinition Width="30"/>
+
+            <!--Price-->
+            <ColumnDefinition Width="10"/>
+
+            <!--X Button-->
+            <ColumnDefinition Width="30"/>
+
+            <!--Margin-->
+            <ColumnDefinition Width="20"/>
+        
         </Grid.ColumnDefinitions>
+
         <Grid.RowDefinitions>
 
-            <RowDefinition Height="45*"/>
-            <RowDefinition Height="25*"/>
-            <RowDefinition Height="41*"/>
-            <RowDefinition Height="38*"/>
-            <RowDefinition Height="39*"/>
-            <RowDefinition Height="55*"/>
-            <RowDefinition Height="64*"/>
+            <!-- 0: Margin-->
+            <RowDefinition Height="20"/>
+
+            <!-- 1: Item Name & X Button-->
+            <RowDefinition Height="30"/>
+
+            <!-- Extra name-space-->
+            <RowDefinition Height="auto"/>
+
+            <!-- 2: Item Icons-->
+            <RowDefinition Height="25"/>
+
+            <!-- 3: Spacing-->
+            <RowDefinition Height="auto"/>
+
+            <!-- 4: Item Description-->
+            <RowDefinition Height="25"/>
+
+            <!-- 5: Spacing-->
+            <RowDefinition Height="40"/>
+
+            <!-- 6: Special Requests-->
+            <RowDefinition Height="15"/>
+
+            <!-- 7: Spacing-->
+            <RowDefinition Height="30"/>
+
+            <!-- 8: Quantity & Buttons-->
+            <RowDefinition Height="15"/>
+
+            <!-- 9: Spacing-->
+            <RowDefinition Height="30"/>
+
+            <!-- 12: Margin-->
+            <RowDefinition Height="*"/>
+
+            <!-- 12: Margin-->
+            <RowDefinition Height="20"/>
+
         </Grid.RowDefinitions>
-        <Rectangle Grid.RowSpan="7" Grid.ColumnSpan="7" Fill="LightYellow"/>
-        <Button Grid.Column="1" Grid.Row="6" Grid.ColumnSpan="5" FontSize="20" Click="AddToCart">Add to Cart</Button>
-        <Button Grid.Column="5" Grid.ColumnSpan="2" FontSize="20" Click="Close_ItemAddition">X</Button>
 
-        <TextBlock  Grid.ColumnSpan="5" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="25"
-                   Name="DisplayItemName" TextWrapping="Wrap">Spring Rolls 2pc</TextBlock>
-        <TextBlock Grid.RowSpan="2" Grid.Column="1" Grid.Row="1" Grid.ColumnSpan="4" Text="Item Descriptionnnn!"
-                   Name="DisplayItemDescription" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="10" TextWrapping="Wrap"/>
+        <!--Coloring--><!--
+        <Rectangle Grid.RowSpan="8" Grid.ColumnSpan="8" Fill="LightYellow"/>-->
 
-        <TextBlock Grid.Column="5" Grid.ColumnSpan="2" Grid.Row="2" Name="DisplayItemPrice"/>
+        <!--Close Button-->
+        <Button Grid.Column="9" Grid.Row="1" FontSize="18" Click="Close_ItemAddition" MaxHeight="30">
 
-        <TextBox Name="SpecialRequest" Grid.Column="1" Grid.Row="3" Grid.RowSpan="2" Grid.ColumnSpan="5" FontSize="20" Text="Special Requests?"></TextBox>
-        <Button Grid.Column="4" Grid.Row="5" FontSize="25" Click="IncreaseQuantity">+</Button>
-        <Button Grid.Column="2" Grid.Row="5" FontSize="25" Click="DecreaseQuantity">-</Button>
-        <TextBlock Grid.Column="3" Grid.Row="5" HorizontalAlignment="Center"
-                   Name="DisplayItemQuantity" VerticalAlignment="Center" FontSize="25" Text="1" Height="33" Width="14"></TextBlock>
+            <TextBlock HorizontalAlignment="Center" VerticalAlignment="Center" Text="X"/>
+
+        </Button>
+
+        <!--Item Name-->
+        <TextBlock Grid.Column="1" Grid.Row="1" Grid.RowSpan="2" Grid.ColumnSpan="8" HorizontalAlignment="Left" VerticalAlignment="Center" FontSize="25" Name="DisplayItemName" Text="Spring Rolls 2pc" TextWrapping="Wrap"/>
+
+        <!--Icon Stack Panel-->
+        <StackPanel Grid.Column="1" Grid.Row="3" Grid.ColumnSpan="6" Orientation="Horizontal" Name="FilterIcons">
+
+            <!--Spicy Source="Resources/PepperIcon.png"-->
+            <Image HorizontalAlignment="Left" VerticalAlignment="Center" MaxHeight="20" Name="SpicyImage"/>
+
+            <!--Peanut Source="Resources/Peanut.png"-->
+            <Image HorizontalAlignment="Left" VerticalAlignment="Center" MaxHeight="20" Name="PeanutImage"/>
+
+            <!--Gluten Source="Resources/gluten.png"-->
+            <Image HorizontalAlignment="Left" VerticalAlignment="Center" MaxHeight="20" Name="GlutenImage"/>
+
+            <!--Vegetarian Source="Resources/CarrotIcon.png"-->
+            <Image HorizontalAlignment="Left" VerticalAlignment="Center" MaxHeight="20" Name="VegetarianImage"/>
+
+        </StackPanel>
+
+        <!--Item Description-->
+        <TextBlock Grid.Column="1" Grid.Row="4" Grid.ColumnSpan="7" Text="Item Descriptionnnn!" Name="DisplayItemDescription" HorizontalAlignment="Left" VerticalAlignment="Center" FontSize="12" TextWrapping="Wrap"/>
+
+        <!--Item Price-->
+        <TextBlock Grid.Column="8" Grid.Row="4" Grid.ColumnSpan="2" Text="$13.99" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="14"  Name="DisplayItemPrice" />
+
+        <!--Special Requests: TextBox-->
+        <TextBox Grid.Column="1" Grid.Row="6" Grid.ColumnSpan="9" FontSize="16" Text="" TextAlignment="Center" Name="SpecialRequest" TextChanged="changedSpecialRequest"
+                 
+         ScrollViewer.HorizontalScrollBarVisibility="Hidden"
+         ScrollViewer.VerticalScrollBarVisibility="Hidden"
+                 
+         TextWrapping="Wrap"        
+                 
+        />
+
+
+        <!--Special Requests: TextBlock-->
+        <TextBlock Grid.Column="1" Grid.Row="6" Grid.ColumnSpan="9" Name="userSpecialRequest" Text="Special Requests?" Foreground="Gray" IsHitTestVisible="False" VerticalAlignment="Center" TextAlignment="Center"/>
+        
+        
+        <!--Decrease Quantity Button-->
+        <Button Grid.Column="2" Grid.Row="8" FontSize="25" Click="DecreaseQuantity" HorizontalContentAlignment="Center" VerticalContentAlignment="Center">
+
+            <TextBlock Text="-" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+
+        </Button>
+
+        <!--Quantity Display-->
+        <TextBlock Grid.Column="4" Grid.Row="8" HorizontalAlignment="Center" Name="DisplayItemQuantity" VerticalAlignment="Center" FontSize="25" Text="1"/>
+
+        <!--Increase Quantity Button-->
+        <Button Grid.Column="6" Grid.Row="8" FontSize="25" Click="IncreaseQuantity" HorizontalContentAlignment="Center" VerticalContentAlignment="Center">
+
+            <TextBlock Text="+" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+
+        </Button>
+
+        <!--Add-to-Cart Button-->
+        <Button Grid.Column="1" Grid.Row="10" Grid.ColumnSpan="9" FontSize="20" Click="AddToCart" Margin="20,0">
+
+            <TextBlock Text="Add to Cart" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+
+        </Button>
+
+
     </Grid>
 
 </UserControl>
