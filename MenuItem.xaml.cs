@@ -176,7 +176,7 @@ namespace RestaurantOrderingSystem_481
             {
                 Title = "Item Select",
                 Content = showItem,
-                Height = 350,
+                Height = 400,
                 Width = 300
             };
 

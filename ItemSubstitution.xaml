@@ -19,6 +19,7 @@
             <ColumnDefinition Width="1*"/>
             <ColumnDefinition Width="1*"/>
         </Grid.ColumnDefinitions>
+        
         <Grid.RowDefinitions>
             <RowDefinition Height="100"/>
             <RowDefinition Height="1*"/>
@@ -35,6 +36,8 @@
             <RowDefinition Height="1*"/>
             <RowDefinition Height="20"/>
         </Grid.RowDefinitions>
+        
+        
         <Rectangle Grid.Column="1" Grid.Row="1" Grid.ColumnSpan="8" Grid.RowSpan="11" Fill="LightYellow"></Rectangle>
         <TextBlock Grid.Column="1" Grid.Row="1" HorizontalAlignment="Left" VerticalAlignment="Center" Grid.ColumnSpan="7" FontSize="25">Cowboy Burger</TextBlock>
         <Button Grid.Column="8" Grid.Row="1">X</Button>

@@ -9,6 +9,8 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using System.Threading.Tasks;
+using System.Threading;
 
 namespace RestaurantOrderingSystem_481
 {
@@ -17,10 +19,35 @@ namespace RestaurantOrderingSystem_481
     /// </summary>
     public partial class FinalizePage : UserControl
     {
-        public FinalizePage()
+
+        // Button to call server
+        async public void Server(object sender, RoutedEventArgs e)
         {
-            InitializeComponent();
+
+            Window window = new Window
+            {
+                Title = "Call Server",
+                Content = Switcher.GetSuccessServer(),
+                Height = 200,
+                Width = 200
+            };
+
+            //this.IsEnabled = false;
+
+            window.Show();
+
+            await Task.Run(() =>
+            {
+
+                Thread.Sleep(4000);
+
+            });
+
+            window.Close();
+            //this.IsEnabled = true;
+
         }
+
 
         private void ReviewOrder(object sender, RoutedEventArgs e)
         {
@@ -32,11 +59,6 @@ namespace RestaurantOrderingSystem_481
                 Width = 300
             };
             window.ShowDialog();
-        }
-
-        private void Server(object sender, RoutedEventArgs e)
-        {
-
         }
 
         private void OrderMore(object sender, RoutedEventArgs e)
@@ -70,5 +92,11 @@ namespace RestaurantOrderingSystem_481
 
             window.ShowDialog();
         }
+
+        public FinalizePage()
+        {
+            InitializeComponent();
+        }
+
     }
 }

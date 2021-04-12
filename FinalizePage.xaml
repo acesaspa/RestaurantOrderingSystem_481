@@ -84,7 +84,7 @@
         <!--Adding the ETA-->
         <Rectangle Grid.Row="1" Grid.Column="6" Grid.ColumnSpan="4" Fill="LightBlue" Margin="10"/>
         <TextBlock Grid.Column="6" Grid.Row="1" Margin="18,0,0,0" VerticalAlignment="Center" FontSize="22" >ETA:</TextBlock>
-        <TextBlock Grid.Column="7" Grid.Row="1" Grid.ColumnSpan="3" Margin="0,0,18,0" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="20" Text="30 min">30 min</TextBlock>
+        <TextBlock Grid.Column="7" Grid.Row="1" Grid.ColumnSpan="3" Margin="0,0,18,0" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="20">30 min</TextBlock>
 
         <!--Adding congrats text-->
         <TextBlock Grid.Row="3" Grid.Column="2" Grid.ColumnSpan="7" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="26" FontWeight="Bold" Text="Congratulations!" />
@@ -94,66 +94,265 @@
 
         <!--Adding buttons-->
 
-        <Grid Grid.Row="6" Grid.Column="3" Grid.ColumnSpan="5" Grid.RowSpan="3">
+        <Grid Grid.Row="6" Grid.Column="2" Grid.ColumnSpan="7" Grid.RowSpan="3">
 
 
             <Grid.ColumnDefinitions>
 
-                <ColumnDefinition />
+                <ColumnDefinition Width="160" />
 
-                <ColumnDefinition />
-            
+                <ColumnDefinition Width="160" />
+
             </Grid.ColumnDefinitions>
 
 
             <Grid.RowDefinitions>
 
-                <RowDefinition />
-                
-                <RowDefinition />
-                
-                <RowDefinition />
+                <RowDefinition Height="81.667" />
+
+                <RowDefinition Height="81.666" />
+
+                <RowDefinition Height="81.667" />
 
             </Grid.RowDefinitions>
 
-            
-            
-            
-            
-            
+            <!--Call Server button-->
+            <Button Grid.Row="0" Grid.Column="0" Margin="0,13" Background="LightBlue" Click="Server">
+
+                <Grid>
+
+                    <Grid.ColumnDefinitions>
+
+                        <ColumnDefinition Width="40"/>
+
+                        <ColumnDefinition Width="10"/>
+
+                        <ColumnDefinition Width="100"/>
+
+                    </Grid.ColumnDefinitions>
+
+                    <Grid.RowDefinitions>
+
+                        <RowDefinition />
+
+                    </Grid.RowDefinitions>
+
+
+                    <TextBlock Grid.Column="2" Grid.Row="0" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="18" TextAlignment="Center" TextWrapping="Wrap" Text="Call Server" />
+
+
+                    <Ellipse Grid.Column="0" Grid.Row="0" Width="40" Height="40" Stroke="Black" StrokeThickness="1">
+
+                        <Ellipse.Fill>
+
+                            <ImageBrush ImageSource="Resources/waiter.png" Stretch="Fill"/>
+
+                        </Ellipse.Fill>
+
+                    </Ellipse>
+
+                            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+
+                </Grid>
+
+            </Button>
+
+            <!--Order More button--><!--
+            <Button Grid.Row="0" Grid.Column="1" Background="LightBlue" Click="OrderMore">
+                <TextBlock  HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="18" TextAlignment="Center" TextWrapping="Wrap" Text="Order More" />
+            </Button>-->
+
+            <!--Order More button-->
+            <Button Grid.Row="0" Grid.Column="1" Margin="0,13" Background="LightBlue" Click="OrderMore">
+
+                <Grid>
+
+                    <Grid.ColumnDefinitions>
+
+                        <ColumnDefinition Width="40"/>
+
+                        <ColumnDefinition Width="10"/>
+
+                        <ColumnDefinition Width="100"/>
+
+                    </Grid.ColumnDefinitions>
+
+                    <Grid.RowDefinitions>
+
+                        <RowDefinition />
+
+                    </Grid.RowDefinitions>
+
+
+                    <TextBlock Grid.Column="2" Grid.Row="0" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="18" TextAlignment="Center" TextWrapping="Wrap" Text="Order More" />
+
+
+                    <Ellipse Grid.Column="0" Grid.Row="0" Width="40" Height="40" Stroke="Black" StrokeThickness="1">
+
+                        <!--<Ellipse.Fill>
+
+                            <ImageBrush ImageSource="Resources/OrderMore.png" Stretch="Fill"/>
+
+                        </Ellipse.Fill>-->
+
+                    </Ellipse>
+
+                    <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+
+                </Grid>
+
+            </Button>
+
+
+            <!--Order More button-->
+            <Button Grid.Row="1" Grid.Column="1" Margin="0,13" Background="LightBlue" Click="ReviewOrder">
+
+                <Grid>
+
+                    <Grid.ColumnDefinitions>
+
+                        <ColumnDefinition Width="40"/>
+
+                        <ColumnDefinition Width="0"/>
+
+                        <ColumnDefinition Width="110"/>
+
+                    </Grid.ColumnDefinitions>
+
+                    <Grid.RowDefinitions>
+
+                        <RowDefinition />
+
+                    </Grid.RowDefinitions>
+
+
+                    <TextBlock Grid.Column="2" Grid.Row="0" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="18" TextAlignment="Center" TextWrapping="Wrap" Text="Review Order" />
+
+
+                    <Ellipse Grid.Column="0" Grid.Row="0" Width="40" Height="40" Stroke="Black" StrokeThickness="1">
+
+                        <!--<Ellipse.Fill>
+
+                            <ImageBrush ImageSource="Resources/ReviewOrder.png" Stretch="Fill"/>
+
+                        </Ellipse.Fill>-->
+
+                    </Ellipse>
+
+                    <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+
+                </Grid>
+
+            </Button>
+
+            <!--ReviewOrder Button--><!--
+            <Button Grid.Row="1" Grid.Column="1" Background="LightBlue" Click="ReviewOrder">
+                <TextBlock HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="18" TextAlignment="Center" TextWrapping="Wrap" Text="Review Previous Order"/>
+            </Button>-->
+
+            <!--Request Takeout button-->
+            <Button Grid.Row="1" Grid.Column="0" Margin="0,13" Background="LightBlue" Click="Takeout">
+
+                <Grid>
+
+                    <Grid.ColumnDefinitions>
+
+                        <ColumnDefinition Width="40"/>
+
+                        <ColumnDefinition Width="5"/>
+
+                        <ColumnDefinition Width="115"/>
+
+                    </Grid.ColumnDefinitions>
+
+                    <Grid.RowDefinitions>
+
+                        <RowDefinition />
+
+                    </Grid.RowDefinitions>
+
+
+                    <TextBlock Grid.Column="2" Grid.Row="0" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="18" TextAlignment="Center" TextWrapping="Wrap" Text="Request Takeout Boxes" />
+
+
+                    <Ellipse Grid.Column="0" Grid.Row="0" Width="40" Height="40" Stroke="Black" StrokeThickness="1">
+
+                        <!--<Ellipse.Fill>
+
+                            <ImageBrush ImageSource="Resources/takeaway.png" Stretch="Fill"/>
+
+                        </Ellipse.Fill>-->
+
+                    </Ellipse>
+
+                    <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+
+                </Grid>
+
+            </Button>
+
+
+            <!--Request Takeout button--><!--
+            <Button Grid.Row="1" Grid.Column="0" Background="LightBlue" Click="Takeout">
+                <TextBlock HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="18" TextWrapping="Wrap" TextAlignment="Center" Text="Request Takeout Boxes" />
+            </Button>-->
+
+            <!--Order More button-->
+            <Button Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="2" Margin="0,13" Background="LightBlue" Click="Review">
+
+                <Grid>
+
+                    <Grid.ColumnDefinitions>
+
+                        <ColumnDefinition Width="40"/>
+
+                        <ColumnDefinition Width="5"/>
+
+                        <ColumnDefinition Width="160"/>
+
+                    </Grid.ColumnDefinitions>
+
+                    <Grid.RowDefinitions>
+
+                        <RowDefinition />
+
+                    </Grid.RowDefinitions>
+
+
+                    <TextBlock Grid.Column="2" Grid.Row="0" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="18" TextAlignment="Center" TextWrapping="Wrap" Text="Leave Us A Review!" />
+
+
+                    <Ellipse Grid.Column="0" Grid.Row="0" Width="40" Height="40" Stroke="Black" StrokeThickness="1">
+
+                        <!--<Ellipse.Fill>
+
+                            <ImageBrush ImageSource="Resources/Review.png" Stretch="Fill"/>
+
+                        </Ellipse.Fill>-->
+
+                    </Ellipse>
+
+                    <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+
+                </Grid>
+
+            </Button>
+
+
+            <!--Leave Review button--><!--
+            <Button Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="2" Background="LightBlue" Click="Review">
+                <TextBlock HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="18" TextAlignment="Center" TextWrapping="Wrap" Text="Leave Us A Review!" />
+            </Button>-->
+
+
         </Grid>
-        
-        
-        <!--ReviewOrder Button-->
-        <Button Grid.Row="7" Grid.Column="5" Grid.ColumnSpan="3" Background="LightBlue" Click="ReviewOrder">
-            <TextBlock Grid.Row="6" Grid.Column="4"  HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="18" TextAlignment="Center" TextWrapping="Wrap" Text="Review Previous Order"/>
-        </Button>
-
-        <!--Order More button-->
-        <Button Grid.Row="6" Grid.Column="5" Grid.ColumnSpan="3" Background="LightBlue" Click="OrderMore">
-            <TextBlock Grid.Row="6" Grid.Column="5" Grid.ColumnSpan="2" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="18" TextAlignment="Center" TextWrapping="Wrap" Text="Order More" />
-        </Button>
-
-        <!--Request Takeout button-->
-        <Button Grid.Row="7" Grid.Column="3" Grid.ColumnSpan="2" Background="LightBlue" Click="Takeout">
-            <TextBlock Grid.Row="7" Grid.Column="4" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="18" TextWrapping="Wrap" TextAlignment="Center" Text="Request Takeout Boxes" />
-        </Button>
-
-        <!--Call Server button-->
-        <Button Grid.Row="6" Grid.Column="3" Grid.ColumnSpan="2" Background="LightBlue" Click="Server">
-            <TextBlock Grid.Row="8" Grid.Column="4" Grid.ColumnSpan="3" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="18" TextAlignment="Center" TextWrapping="Wrap" Text="Call Server" />
-        </Button>
 
 
-        <!--Leave Review button-->
-        <Button Grid.Row="8" Grid.Column="3" Grid.ColumnSpan="5" Background="LightBlue" Click="Review">
-            <TextBlock Grid.Row="8" Grid.Column="4" Grid.ColumnSpan="3" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="18" TextAlignment="Center" TextWrapping="Wrap" Text="Leave Us A Review!" />
-        </Button>
 
-        
-        
-        
-        
+
+
+
 
     </Grid>
+
 </UserControl>
