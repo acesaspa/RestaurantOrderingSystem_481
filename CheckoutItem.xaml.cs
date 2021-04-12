@@ -115,7 +115,14 @@ namespace RestaurantOrderingSystem_481
             try
             {
                 int current = Int32.Parse(this.CheckoutItemQuantity.Text);
-                this.CheckoutItemQuantity.Text = (current + 1).ToString();
+
+                current += 1;
+                if (current > 1)
+                {
+                    DecreaseButton.Opacity = 100;
+                }
+
+                this.CheckoutItemQuantity.Text = (current).ToString();
 
                 float price = float.Parse(this.CheckoutItemPrice.Text.Substring(1));
                 MainWindow.GlobalSubtotal += price;
@@ -135,7 +142,7 @@ namespace RestaurantOrderingSystem_481
                 {
                     if (child.cart_item_counter == this.checkout_item_counter)
                     {
-                        child.ItemQuantity.Text = (current + 1).ToString();
+                        child.ItemQuantity.Text = (current).ToString();
                         break;  //If we do not break, causes problems with enumerator since we are changing the list we are iterating over
                     }
                 }
@@ -152,10 +159,10 @@ namespace RestaurantOrderingSystem_481
             try
             {
                 int current = Int32.Parse(this.CheckoutItemQuantity.Text);
-
-                if(current != 1)
+                if (current != 1)
                 {
-                    this.CheckoutItemQuantity.Text = (current - 1).ToString();
+                    current -= 1;
+                    this.CheckoutItemQuantity.Text = (current).ToString();
 
                     float price = float.Parse(this.CheckoutItemPrice.Text.Substring(1));
                     MainWindow.GlobalSubtotal -= price;
@@ -174,10 +181,18 @@ namespace RestaurantOrderingSystem_481
                     {
                         if (child.cart_item_counter == this.checkout_item_counter)
                         {
-                            child.ItemQuantity.Text = (current - 1).ToString();
+                            child.ItemQuantity.Text = (current).ToString();
                             break;  //If we do not break, causes problems with enumerator since we are changing the list we are iterating over
                         }
                     }
+                }
+                else
+                {
+                    current = 1;
+                }
+                if (current == 1)
+                {
+                    DecreaseButton.Opacity = 0;
                 }
             }
             catch (Exception)

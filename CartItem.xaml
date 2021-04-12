@@ -71,13 +71,13 @@
         <TextBlock Grid.Column="2" Grid.Row="1" Grid.ColumnSpan="3" Name="ItemPrice" Text="Item Price" VerticalAlignment="Center" HorizontalAlignment="Center" />
         
         <!--Decrease Button-->
-        <Button Grid.Column="2" Grid.Row="2" Content="-" Height="20" Click="DecreaseQuantityCart" />
+        <Button Grid.Column="2" Grid.Row="2" Content="-" Height="20" Click="DecreaseQuantityCart" Name="DecreaseButton" Opacity="0"/>
         
         <!--Quantity-->
         <TextBlock Grid.Column="3" Grid.Row="2" Name="ItemQuantity" VerticalAlignment="Center" HorizontalAlignment="Center" />
 
         <!--Increase Button-->
-        <Button Grid.Row="2" Grid.Column="4" Content="+" Height="20" Click="IncreaseQuantityCart" />
+        <Button Grid.Row="2" Grid.Column="4" Content="+" Height="20" Click="IncreaseQuantityCart" Name="IncreaseButton" />
 
         <TextBlock Grid.Column="1" Grid.Row="2" Name="CartItemSR"/>
 

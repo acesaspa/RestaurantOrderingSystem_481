@@ -21,9 +21,9 @@
         </Grid.ColumnDefinitions>
         <Button Content="X" Grid.Column="0" Width="30" Height="30" Click="RemoveItemCheckout"/>
         <TextBlock Grid.Column="1" Name="CheckoutItemName" Text="CheckoutItemName"/>
-        <Button Content="-" Grid.Column="2" Width="30" Height="30" Click="DecreaseQuantityCheckout"/>
+        <Button Content="-" Grid.Column="2" Width="30" Height="30" Click="DecreaseQuantityCheckout" Name="DecreaseButton"/>
         <TextBlock Grid.Column="3" Name="CheckoutItemQuantity" Text="CheckoutItemQuantity"/>
-        <Button Content="+" Grid.Column="4" Width="30" Height="30" Click="IncreaseQuantityCheckout"/>
+        <Button Content="+" Grid.Column="4" Width="30" Height="30" Click="IncreaseQuantityCheckout" Name="IncreaseButton"/>
         <TextBlock Grid.Column="5" Name="CheckoutItemPrice" Text="CheckoutItemPrice"/>
         <TextBlock Grid.Column="1" Grid.Row="1" Name="CheckoutItemSR"/>
     </Grid>

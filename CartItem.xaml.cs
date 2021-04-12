@@ -61,7 +61,12 @@ namespace RestaurantOrderingSystem_481
             try
             {
                 int current = Int32.Parse(this.ItemQuantity.Text);
-                this.ItemQuantity.Text = (current + 1).ToString();
+                current += 1;
+                if (current > 1)
+                {
+                    DecreaseButton.Opacity = 100;
+                }
+                this.ItemQuantity.Text = (current).ToString();
                 
                 float price = float.Parse(this.ItemPrice.Text.Substring(1));
                 MainWindow.GlobalSubtotal += price;
@@ -81,8 +86,8 @@ namespace RestaurantOrderingSystem_481
                 {
                     if (child.checkout_item_counter == this.cart_item_counter)
                     {
-                        child.checkout_item_quantity = (current + 1).ToString();
-                        child.CheckoutItemQuantity.Text = (current + 1).ToString();
+                        child.checkout_item_quantity = (current).ToString();
+                        child.CheckoutItemQuantity.Text = (current).ToString();
                         break;  //If we do not break, causes problems with enumerator since we are changing the list we are iterating over
                     }
                 }
@@ -98,9 +103,13 @@ namespace RestaurantOrderingSystem_481
             try
             {
                 int current = Int32.Parse(this.ItemQuantity.Text);
-                if(current != 1)
+
+                if (current != 1)
                 {
-                    this.ItemQuantity.Text = (current - 1).ToString();
+
+                    current -= 1;
+
+                    this.ItemQuantity.Text = (current).ToString();
 
                     float price = float.Parse(this.ItemPrice.Text.Substring(1));
                     MainWindow.GlobalSubtotal -= price;
@@ -119,11 +128,20 @@ namespace RestaurantOrderingSystem_481
                     {
                         if (child.checkout_item_counter == this.cart_item_counter)
                         {
-                            child.checkout_item_quantity = (current - 1).ToString();
-                            child.CheckoutItemQuantity.Text = (current - 1).ToString();
+                            child.checkout_item_quantity = (current).ToString();
+                            child.CheckoutItemQuantity.Text = (current).ToString();
                             break;  //If we do not break, causes problems with enumerator since we are changing the list we are iterating over
                         }
                     }
+                }
+                else
+                {
+                    current = 1;
+                }
+
+                if (current == 1)
+                {
+                    DecreaseButton.Opacity = 0;
                 }
 
             }

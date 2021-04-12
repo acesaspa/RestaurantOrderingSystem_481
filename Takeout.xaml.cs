@@ -32,7 +32,7 @@ namespace RestaurantOrderingSystem_481
             {
                 int current = Int32.Parse(DisplayQuantity.Text);
                 current += 1;
-                if (current > 0)
+                if (current > 1)
                 {
                     DecreaseButton.Opacity = 100;
                 }
@@ -50,16 +50,16 @@ namespace RestaurantOrderingSystem_481
             {
                 int current = Int32.Parse(DisplayQuantity.Text);
 
-                if (current > 0)
+                if (current > 1)
                 {
                     current -= 1;
                 }
                 else
                 {
-                    current = 0;
+                    current = 1;
                 }
 
-                if (current == 0) 
+                if (current == 1) 
                 {
                     DecreaseButton.Opacity = 0;
                 }
