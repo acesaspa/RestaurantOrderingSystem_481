@@ -81,8 +81,7 @@ namespace RestaurantOrderingSystem_481
         public void RemoveItemCheckout(object sender, RoutedEventArgs e)
         {
             //var cartChildren = Switcher.GetCart().CartItemList.Children;
-
-            foreach(CartItem child in Switcher.GetCart().CartItemList.Children)
+            foreach (CartItem child in Switcher.GetCart().CartItemList.Children)
             {
                 if(child.cart_item_counter == this.checkout_item_counter)
                 {
@@ -106,6 +105,7 @@ namespace RestaurantOrderingSystem_481
                     break;  //If we do not break, causes problems with enumerator since we are changing the list we are iterating over
                 }
             }
+
 
         }
 
@@ -146,6 +146,7 @@ namespace RestaurantOrderingSystem_481
                         break;  //If we do not break, causes problems with enumerator since we are changing the list we are iterating over
                     }
                 }
+                
             }
             catch (Exception)
             {

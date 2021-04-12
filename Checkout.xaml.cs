@@ -28,35 +28,40 @@ namespace RestaurantOrderingSystem_481
         }
         private void Open_Finalized(object sender, RoutedEventArgs e)
         {
-            //Check if Order has Alcohol
-            foreach (CheckoutItem child in Switcher.GetCheckout().CheckoutItemList.Children)
-            {
-                if (child.checkout_item_alcohol == true)
+            if (MainWindow.GlobalSubtotal != 0) {
+                //Check if Order has Alcohol
+                foreach (CheckoutItem child in Switcher.GetCheckout().CheckoutItemList.Children)
                 {
-                    MainWindow.hasAlcohol = true;
+                    if (child.checkout_item_alcohol == true)
+                    {
+                        MainWindow.hasAlcohol = true;
+                    }
                 }
+
+                if (MainWindow.hasAlcohol == true)
+                {
+                    Switcher.GetConfirmCheckout().Confirm_Alcohol.Text = "Order has Alcohol xd";
+                }
+                else
+                {
+                    Switcher.GetConfirmCheckout().Confirm_Alcohol.Text = "";
+                }
+
+                Window window = new Window
+                {
+                    Title = "Confirm Checkout",
+                    Content = Switcher.GetConfirmCheckout(),
+                    Height = 300,
+                    Width = 300
+                };
+
+                MainWindow.hasAlcohol = false;
+
+                window.ShowDialog();
+            } else {
+                MessageBox.Show("Please order select our food items!");
             }
-
-            if (MainWindow.hasAlcohol == true)
-            {
-                Switcher.GetConfirmCheckout().Confirm_Alcohol.Text = "Order has Alcohol xd";
-            }
-            else
-            {
-                Switcher.GetConfirmCheckout().Confirm_Alcohol.Text = "";
-            }
-
-            Window window = new Window
-            {
-                Title = "Confirm Checkout",
-                Content = Switcher.GetConfirmCheckout(),
-                Height = 300,
-                Width = 300
-            };
-
-            MainWindow.hasAlcohol = false;
-
-            window.ShowDialog();
+            
         }
 
         //Button to Review Order
