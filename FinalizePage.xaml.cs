@@ -63,6 +63,8 @@ namespace RestaurantOrderingSystem_481
 
         private void OrderMore(object sender, RoutedEventArgs e)
         {
+            Switcher.GetNewMenu().PreviousOrderButton.Opacity = 1;
+            Switcher.GetNewMenu().PreviousOrderButton.IsEnabled = true;
             Switcher.Switch(Switcher.GetNewMenu());
         }
 
