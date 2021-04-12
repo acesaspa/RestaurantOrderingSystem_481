@@ -35,6 +35,7 @@
     <None Remove="Resources\Koshur.jpg" />
     <None Remove="Resources\MagnifyingGlassIcon.png" />
     <None Remove="Resources\NoNuts.png" />
+    <None Remove="Resources\OrderMore.png" />
     <None Remove="Resources\ovenroastedwings.jpg" />
     <None Remove="Resources\Peanut.png" />
     <None Remove="Resources\Pencil.png" />
@@ -44,11 +45,14 @@
     <None Remove="Resources\PrawnGyoza.png" />
     <None Remove="Resources\QuinoaAvocadoPowerbowl.png" />
     <None Remove="Resources\ranchdip.jpg" />
+    <None Remove="Resources\Review.png" />
+    <None Remove="Resources\ReviewOrder.png" />
     <None Remove="Resources\SalmonFetaCaperAioli.png" />
     <None Remove="Resources\spicycheddardip.jpg" />
     <None Remove="Resources\StickyToffeeChocolatePudding.png" />
     <None Remove="Resources\stockSalad.jpg" />
     <None Remove="Resources\stuffedcrazybread.jpg" />
+    <None Remove="Resources\takeout.png" />
     <None Remove="Resources\trash.png" />
     <None Remove="Resources\triangle.png" />
     <None Remove="Resources\ultimatesupreme.jpg" />
@@ -143,6 +147,9 @@
     <Resource Include="Resources\NoNuts.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Resource>
+    <Resource Include="Resources\OrderMore.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
     <Resource Include="Resources\ovenroastedwings.jpg">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Resource>
@@ -170,6 +177,12 @@
     <Resource Include="Resources\ranchdip.jpg">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Resource>
+    <Resource Include="Resources\Review.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Resources\ReviewOrder.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
     <Resource Include="Resources\SalmonFetaCaperAioli.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Resource>
@@ -184,6 +197,9 @@
     </Resource>
     <Resource Include="Resources\stuffedcrazybread.jpg">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Resources\takeout.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Resource>
     <Resource Include="Resources\trash.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>

@@ -38,14 +38,14 @@ namespace RestaurantOrderingSystem_481
                     }
                 }
 
-                if (MainWindow.hasAlcohol == true)
-                {
-                    Switcher.GetConfirmCheckout().Confirm_Alcohol.Text = "Order has Alcohol xd";
-                }
-                else
-                {
-                    Switcher.GetConfirmCheckout().Confirm_Alcohol.Text = "";
-                }
+            if (MainWindow.hasAlcohol == true)
+            {
+                Switcher.GetConfirmCheckout().Confirm_Alcohol.Text = "Order has Alcohol xd";
+            }
+            else
+            {
+                Switcher.GetConfirmCheckout().Confirm_Alcohol.Text = "";
+            }
 
                 Window window = new Window
                 {
