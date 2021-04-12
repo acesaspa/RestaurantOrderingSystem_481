@@ -28,7 +28,8 @@ namespace RestaurantOrderingSystem_481
         }
         private void Open_Finalized(object sender, RoutedEventArgs e)
         {
-            if (MainWindow.GlobalSubtotal != 0) {
+            if (MainWindow.GlobalSubtotal != 0)
+            {
                 //Check if Order has Alcohol
                 foreach (CheckoutItem child in Switcher.GetCheckout().CheckoutItemList.Children)
                 {
@@ -38,14 +39,21 @@ namespace RestaurantOrderingSystem_481
                     }
                 }
 
-            if (MainWindow.hasAlcohol == true)
-            {
-                Switcher.GetConfirmCheckout().Confirm_Alcohol.Text = "Order has Alcohol xd";
-            }
-            else
-            {
-                Switcher.GetConfirmCheckout().Confirm_Alcohol.Text = "";
-            }
+                //Order has Alcohol
+                if (MainWindow.hasAlcohol == true)
+                {
+                    Switcher.GetConfirmCheckout().OrderConfirmVerify.Text = "Enter Verification No. :";
+                    Switcher.GetConfirmCheckout().VerifyNo.Visibility = Visibility.Visible;
+                    Switcher.GetConfirmCheckout().VerifyBorder.Visibility = Visibility.Visible;
+                    Switcher.GetConfirmCheckout().VerifyNo.Text = "";
+                }
+                else
+                {
+                    Switcher.GetConfirmCheckout().OrderConfirmVerify.Text = "";
+                    Switcher.GetConfirmCheckout().VerifyNo.Visibility = Visibility.Hidden;
+                    Switcher.GetConfirmCheckout().VerifyBorder.Visibility = Visibility.Hidden;
+                    Switcher.GetConfirmCheckout().VerifyNo.Text = "1234";
+                }
 
                 Window window = new Window
                 {
@@ -58,10 +66,11 @@ namespace RestaurantOrderingSystem_481
                 MainWindow.hasAlcohol = false;
 
                 window.ShowDialog();
-            } else {
+            }
+            else {
                 MessageBox.Show("Please order select our food items!");
             }
-            
+
         }
 
         //Button to Review Order
