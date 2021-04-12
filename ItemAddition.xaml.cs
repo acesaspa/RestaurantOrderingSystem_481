@@ -49,7 +49,9 @@ namespace RestaurantOrderingSystem_481
             try
             {
                 int current = Int32.Parse(DisplayItemQuantity.Text);
-                DisplayItemQuantity.Text = (current + 1).ToString();
+                current += 1;
+                DecreaseButton.Opacity = 1;
+                DisplayItemQuantity.Text = (current).ToString();
             }
             catch (Exception)
             {
@@ -64,9 +66,21 @@ namespace RestaurantOrderingSystem_481
             {
 
                 int current = Int32.Parse(DisplayItemQuantity.Text);
-                if(current != 1)
+
+                if(current > 1)
                 {
-                    DisplayItemQuantity.Text = (current - 1).ToString();
+                    current -= 1;
+                    DisplayItemQuantity.Text = (current).ToString();
+                }
+                else
+                {
+                    current = 1;
+                    DisplayItemQuantity.Text = (current).ToString();
+                }
+                
+                if(current == 1)
+                {
+                    DecreaseButton.Opacity = 0;
                 }
             }
             catch (Exception)
@@ -85,6 +99,14 @@ namespace RestaurantOrderingSystem_481
             cartItem.ItemQuantity.Text = DisplayItemQuantity.Text;
             cartItem.CartItemSR.Text = SpecialRequest.Text;
             cartItem.cart_alcohol = ia_alcohol;
+            if(cartItem.ItemQuantity.Text == "1")
+            {
+                cartItem.DecreaseButton.Opacity = 0;
+            }
+            else
+            {
+                cartItem.DecreaseButton.Opacity = 1;
+            }
 
             Switcher.GetCart().CartItemList.Children.Add(cartItem);
             AddToCheckout(sender, e, cartItem);
@@ -116,6 +138,14 @@ namespace RestaurantOrderingSystem_481
             checkoutItem.CheckoutItemPrice.Text = cartItem.ItemPrice.Text;
             checkoutItem.CheckoutItemSR.Text = cartItem.CartItemSR.Text;
             checkoutItem.checkout_item_alcohol = cartItem.cart_alcohol;
+            if (checkoutItem.CheckoutItemQuantity.Text == "1")
+            {
+                checkoutItem.DecreaseButton.Opacity = 0;
+            }
+            else
+            {
+                checkoutItem.DecreaseButton.Opacity = 1;
+            }
 
             Switcher.GetCheckout().CheckoutItemList.Children.Add(checkoutItem);
         }

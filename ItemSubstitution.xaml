@@ -193,7 +193,7 @@
 
 
             <!--Decrease Quantity Button-->
-            <Button Grid.Column="1" Grid.Row="2" FontSize="25" HorizontalContentAlignment="Center" VerticalContentAlignment="Center">
+            <Button Grid.Column="1" Grid.Row="2" FontSize="25" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Name="DecreaseButton" Opacity="1">
 
                 <TextBlock Text="-" HorizontalAlignment="Center" VerticalAlignment="Center"/>
 

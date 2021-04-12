@@ -88,6 +88,14 @@ namespace RestaurantOrderingSystem_481
                     {
                         child.checkout_item_quantity = (current).ToString();
                         child.CheckoutItemQuantity.Text = (current).ToString();
+                        if (child.CheckoutItemQuantity.Text == "1")
+                        {
+                            child.DecreaseButton.Opacity = 0;
+                        }
+                        else
+                        {
+                            child.DecreaseButton.Opacity = 1;
+                        }
                         break;  //If we do not break, causes problems with enumerator since we are changing the list we are iterating over
                     }
                 }
@@ -130,6 +138,14 @@ namespace RestaurantOrderingSystem_481
                         {
                             child.checkout_item_quantity = (current).ToString();
                             child.CheckoutItemQuantity.Text = (current).ToString();
+                            if (child.CheckoutItemQuantity.Text == "1")
+                            {
+                                child.DecreaseButton.Opacity = 0;
+                            }
+                            else
+                            {
+                                child.DecreaseButton.Opacity = 1;
+                            }
                             break;  //If we do not break, causes problems with enumerator since we are changing the list we are iterating over
                         }
                     }
