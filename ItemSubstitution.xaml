@@ -72,7 +72,7 @@
         </Button>
 
         <!--Item Price-->
-        <TextBlock Grid.Column="3" Grid.Row="3" Grid.ColumnSpan="2"  Text="$13.99" HorizontalAlignment="Right" VerticalAlignment="Center" FontSize="14"  Name="DisplayItemPrice" />
+        <TextBlock Grid.Column="3" Grid.Row="3" Grid.ColumnSpan="2"  Text="$13.99" HorizontalAlignment="Right" VerticalAlignment="Center" FontSize="14" />
 
 
         <!--Item Description-->
@@ -178,7 +178,7 @@
             </Grid.RowDefinitions>
             
             <!--Special Requests: TextBox-->
-            <TextBox Grid.Column="0" Grid.Row="0" Grid.ColumnSpan="5" FontSize="16" Text="" TextAlignment="Center" Name="SpecialRequest" TextChanged="changedSpecialRequest"
+            <TextBox Grid.Column="0" Grid.Row="0" Grid.ColumnSpan="5" FontSize="16" Text="" TextAlignment="Center"
                  
                 ScrollViewer.HorizontalScrollBarVisibility="Hidden"
                 ScrollViewer.VerticalScrollBarVisibility="Hidden"
@@ -189,28 +189,28 @@
 
 
             <!--Special Requests: TextBlock-->
-            <TextBlock Grid.Column="0" Grid.Row="0" Grid.ColumnSpan="5" Name="userSpecialRequest" Text="Special Requests?" Foreground="Gray" IsHitTestVisible="False" VerticalAlignment="Center" TextAlignment="Center"/>
+            <TextBlock Grid.Column="0" Grid.Row="0" Grid.ColumnSpan="5" Text="Special Requests?" Foreground="Gray" IsHitTestVisible="False" VerticalAlignment="Center" TextAlignment="Center"/>
 
 
             <!--Decrease Quantity Button-->
-            <Button Grid.Column="1" Grid.Row="2" FontSize="25" Click="DecreaseQuantity" HorizontalContentAlignment="Center" VerticalContentAlignment="Center">
+            <Button Grid.Column="1" Grid.Row="2" FontSize="25" HorizontalContentAlignment="Center" VerticalContentAlignment="Center">
 
                 <TextBlock Text="-" HorizontalAlignment="Center" VerticalAlignment="Center"/>
 
             </Button>
 
             <!--Quantity Display-->
-            <TextBlock Grid.Column="2" Grid.Row="2" HorizontalAlignment="Center" Name="DisplayItemQuantity" VerticalAlignment="Center" FontSize="25" Text="1"/>
+            <TextBlock Grid.Column="2" Grid.Row="2" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="25" Text="1"/>
 
             <!--Increase Quantity Button-->
-            <Button Grid.Column="3" Grid.Row="2" FontSize="25" Click="IncreaseQuantity" HorizontalContentAlignment="Center" VerticalContentAlignment="Center">
+            <Button Grid.Column="3" Grid.Row="2" FontSize="25" HorizontalContentAlignment="Center" VerticalContentAlignment="Center">
 
                 <TextBlock Text="+" HorizontalAlignment="Center" VerticalAlignment="Center"/>
 
             </Button>
 
             <!--Add-to-Cart Button-->
-            <Button Grid.Column="0" Grid.Row="5" Grid.ColumnSpan="9" FontSize="20" Click="AddToCart" Margin="20,0">
+            <Button Grid.Column="0" Grid.Row="5" Grid.ColumnSpan="9" FontSize="20" Margin="20,0">
 
                 <TextBlock Text="Add to Cart" HorizontalAlignment="Center" VerticalAlignment="Center"/>
 
