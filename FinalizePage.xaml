@@ -90,7 +90,7 @@
         <TextBlock Grid.Row="3" Grid.Column="2" Grid.ColumnSpan="7" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="26" FontWeight="Bold" Text="Congratulations!" />
 
         <!--Adding subtext to congrats text-->
-        <TextBlock Grid.Row="4" Grid.Column="3" Grid.ColumnSpan="5" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="16" TextWrapping="Wrap" Text="Your order has been confirmed and the kitchen will begin preparing it shortly." />
+        <TextBlock Grid.Row="4" Grid.Column="3" Grid.ColumnSpan="5" HorizontalAlignment="Center" VerticalAlignment="Center" TextAlignment="Center" FontSize="16" TextWrapping="Wrap" Text="Your order has been confirmed and the kitchen will begin preparing it shortly." />
 
         <!--Adding buttons-->
 

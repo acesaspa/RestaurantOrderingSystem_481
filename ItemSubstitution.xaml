@@ -5,63 +5,222 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:RestaurantOrderingSystem_481"
              mc:Ignorable="d" 
-             Height="600" Width="400" Background="MediumPurple">
+             Height="550" Width="300" Background="LightYellow">
     <Grid>
+
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="1*"/>
-            <ColumnDefinition Width="1*"/>
-            <ColumnDefinition Width="1*"/>
-            <ColumnDefinition Width="1*"/>
-            <ColumnDefinition Width="1*"/>
-            <ColumnDefinition Width="1*"/>
-            <ColumnDefinition Width="1*"/>
-            <ColumnDefinition Width="1*"/>
-            <ColumnDefinition Width="1*"/>
-            <ColumnDefinition Width="1*"/>
+
+            <!--Margin-->
+            <ColumnDefinition Width="20"/>
+
+            <!--Filler-->
+            <ColumnDefinition Width="70"/>
+
+            <ColumnDefinition Width="*"/>
+
+            <!--X Button-->
+            <ColumnDefinition Width="10"/>
+
+            <!--X Button-->
+            <ColumnDefinition Width="30"/>
+
+            <!--Margin-->
+            <ColumnDefinition Width="20"/>
+
         </Grid.ColumnDefinitions>
-        
+
+
         <Grid.RowDefinitions>
-            <RowDefinition Height="100"/>
-            <RowDefinition Height="1*"/>
-            <RowDefinition Height="1*"/>
-            <RowDefinition Height="1*"/>
-            <RowDefinition Height="1*"/>
-            <RowDefinition Height="1*"/>
-            <RowDefinition Height="1*"/>
-            <RowDefinition Height="1*"/>
-            <RowDefinition Height="1*"/>
-            <RowDefinition Height="1*"/>
-            <RowDefinition Height="1*"/>
-            <RowDefinition Height="1*"/>
-            <RowDefinition Height="1*"/>
+
+            <!--Margin-->
             <RowDefinition Height="20"/>
+
+            <!--Item Name & X Button-->
+            <RowDefinition Height="35"/>
+
+            <!--Spacing-->
+            <RowDefinition Height="25"/>
+
+            <!-- 2: Description-->
+            <RowDefinition Height="40"/>
+
+            <!--Sides-->
+            <RowDefinition Height="180"/>
+
+            <!--Spacing-->
+            <RowDefinition Height="25"/>
+
+            <!--Filler-->
+            <RowDefinition Height="140"/>
+
+            <!--Margin-->
+            <RowDefinition Height="20"/>
+
         </Grid.RowDefinitions>
+
+        <!--Item Name-->
+        <TextBlock Grid.Column="1" Grid.Row="1" Grid.ColumnSpan="2" HorizontalAlignment="Left" VerticalAlignment="Center" FontSize="25" Text="Cowboy Burger" TextWrapping="Wrap"/>
+
+        <!--Example Icon-->
+        <Image Grid.Column="1" Grid.Row="2" Source="Resources/PepperIcon.png" Margin="0,3,25,3"/>
+
+        <!--Close Button-->
+        <Button Grid.Column="4" Grid.Row="1" FontSize="18" Click="Close" MaxHeight="30">
+
+            <TextBlock HorizontalAlignment="Center" VerticalAlignment="Center" Text="X"/>
+
+        </Button>
+
+        <!--Item Price-->
+        <TextBlock Grid.Column="3" Grid.Row="3" Grid.ColumnSpan="2"  Text="$13.99" HorizontalAlignment="Right" VerticalAlignment="Center" FontSize="14"  Name="DisplayItemPrice" />
+
+
+        <!--Item Description-->
+        <TextBlock Grid.Column="1" Grid.Row="3" Grid.ColumnSpan="2" TextAlignment="Left" TextWrapping="Wrap" Text="Two buns, meat patty, bacon lettuce and some god damned chipotle sauce."/>
+
         
-        
-        <Rectangle Grid.Column="1" Grid.Row="1" Grid.ColumnSpan="8" Grid.RowSpan="11" Fill="LightYellow"></Rectangle>
-        <TextBlock Grid.Column="1" Grid.Row="1" HorizontalAlignment="Left" VerticalAlignment="Center" Grid.ColumnSpan="7" FontSize="25">Cowboy Burger</TextBlock>
-        <Button Grid.Column="8" Grid.Row="1">X</Button>
-        <TextBlock Grid.Column="2" Grid.Row="2" Grid.ColumnSpan="6">Two buns, meat patty, bacon lettuce and <LineBreak/> some god damned chipotle sauce.</TextBlock>
-        <TextBlock Grid.Column="1" Grid.Row="3" Grid.ColumnSpan="4" >Please choose your side:</TextBlock>
-        <TextBlock Grid.Column="1" Grid.Row="4" Grid.ColumnSpan="4" HorizontalAlignment="Center" VerticalAlignment="Top">Sweet potato fries (2.99$):</TextBlock>
-        <TextBlock Grid.Column="1" Grid.Row="5" Grid.ColumnSpan="4" HorizontalAlignment="Center" VerticalAlignment="Top">Crinkle Cut Fries:</TextBlock>
-        <TextBlock Grid.Column="1" Grid.Row="6" Grid.ColumnSpan="4" HorizontalAlignment="Center" VerticalAlignment="Top">Mixed Green Salad:</TextBlock>
-        <TextBlock Grid.Column="1" Grid.Row="7" Grid.ColumnSpan="4" HorizontalAlignment="Center" VerticalAlignment="Top">Coleslaw:</TextBlock>
+        <!--Sides Grid-->
+        <Grid Grid.Column="1" Grid.Row="4" Grid.ColumnSpan="4" >
 
-        <TextBlock Grid.Column="1" Grid.Row="8" Grid.ColumnSpan="4" HorizontalAlignment="Left" VerticalAlignment="Center">Optional:</TextBlock>
-        <TextBlock Grid.Column="1" Grid.Row="9" Grid.ColumnSpan="4" HorizontalAlignment="Center" VerticalAlignment="Top">Halal meat (4.99$):</TextBlock>
+            <Grid.ColumnDefinitions>
 
-        <Button Grid.Column="2" Grid.Row="10" Grid.ColumnSpan="6">Special Requests?</Button>
-        <Button Grid.Column="6" Grid.Row="11" FontSize="20">+</Button>
-        <Button Grid.Column="3" Grid.Row="11" FontSize="20">-</Button>
-        <TextBlock Grid.Column="4" Grid.Row="11" Grid.ColumnSpan="2" HorizontalAlignment="Center" FontSize="25" >2</TextBlock>
+                <!--Titles:-->
+                <ColumnDefinition Width="15"/>
 
-        <RadioButton Grid.Column="7" HorizontalAlignment="Center" Grid.Row="4" VerticalAlignment="Center"/>
-        <RadioButton Grid.Column="7" HorizontalAlignment="Center" Grid.Row="5" VerticalAlignment="Center"/>
-        <RadioButton Grid.Column="7" HorizontalAlignment="Center" Grid.Row="6" VerticalAlignment="Center"/>
-        <RadioButton Grid.Column="7" HorizontalAlignment="Center" Grid.Row="7" VerticalAlignment="Center"/>
+                <!--Options:-->
+                <ColumnDefinition Width="*"/>
 
-        <RadioButton Grid.Column="7" HorizontalAlignment="Center" Grid.Row="9" VerticalAlignment="Center"/>
+                <!--Buttons-->
+                <ColumnDefinition Width="30"/>
+
+            </Grid.ColumnDefinitions>
+
+            <Grid.RowDefinitions>
+
+                <!--Choose your Side:-->
+                <RowDefinition Height="30"/>
+
+                <!--Sweet Potatoe:-->
+                <RowDefinition Height="20"/>
+
+                <!--Crinkle Cut Fries:-->
+                <RowDefinition Height="20"/>
+
+                <!--Mixed Green Salad-->
+                <RowDefinition Height="20"/>
+
+                <!--Coleslaw-->
+                <RowDefinition Height="20"/>
+
+                <!--Extras-->
+                <RowDefinition Height="30"/>
+
+                <!--Double Patty:-->
+                <RowDefinition Height="20"/>
+
+                <!--Veggie Patty-->
+                <RowDefinition Height="20"/>
+
+            </Grid.RowDefinitions>
+
+            <!--Choose your side text-->
+            <TextBlock Grid.Column="0" Grid.Row="0" Grid.ColumnSpan="2" Text="Choose your side:" FontSize="14" FontWeight="Medium" />
+
+            <TextBlock Grid.Column="1" Grid.Row="1" HorizontalAlignment="Left" VerticalAlignment="Center" Text="- Crinkle Cut Fries:"/>
+            <TextBlock Grid.Column="1" Grid.Row="3" HorizontalAlignment="Left" VerticalAlignment="Center" Text="- Mixed Green Salad:"/>
+            <TextBlock Grid.Column="1" Grid.Row="4" HorizontalAlignment="Left" VerticalAlignment="Center" Text="- Coleslaw:"/>
+            <TextBlock Grid.Column="1" Grid.Row="2" HorizontalAlignment="Left" VerticalAlignment="Center" Text="- Sweet potato fries (2.99$):"/>
+
+            <TextBlock Grid.Column="0" Grid.Row="5" HorizontalAlignment="Left" Grid.ColumnSpan="2" VerticalAlignment="Center" Text="Extras:" FontWeight="Medium" FontSize="14" />
+            <TextBlock Grid.Column="1" Grid.Row="6" HorizontalAlignment="Left" VerticalAlignment="Center" Text="- Double Patty (2.99$):"/>
+            <TextBlock Grid.Column="1" Grid.Row="7" HorizontalAlignment="Left" VerticalAlignment="Center" Text="- Veggie Patty (4.99$):"/>
+
+
+            <RadioButton Grid.Column="2" Grid.Row="1" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+            <RadioButton Grid.Column="2" Grid.Row="2" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+            <RadioButton Grid.Column="2" Grid.Row="3" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+            <RadioButton Grid.Column="2" Grid.Row="4" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+
+            <RadioButton Grid.Column="2" Grid.Row="6" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+            <RadioButton Grid.Column="2" Grid.Row="7" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+
+        </Grid>
+
+        <Grid Grid.Column="1" Grid.Row="6" Grid.ColumnSpan="4">
+
+            <Grid.ColumnDefinitions>
+
+                <ColumnDefinition Width="70"/>
+
+                <ColumnDefinition Width="30"/>
+
+                <ColumnDefinition Width="*"/>
+
+                <ColumnDefinition Width="30"/>
+
+                <ColumnDefinition Width="70"/>
+
+            </Grid.ColumnDefinitions>
+
+
+            <Grid.RowDefinitions>
+
+                <RowDefinition Height="40" />
+
+                <RowDefinition Height="15" />
+
+                <RowDefinition Height="30" />
+
+                <RowDefinition Height="15" />
+
+                <RowDefinition Height="30"/>
+
+            </Grid.RowDefinitions>
+            
+            <!--Special Requests: TextBox-->
+            <TextBox Grid.Column="0" Grid.Row="0" Grid.ColumnSpan="5" FontSize="16" Text="" TextAlignment="Center" Name="SpecialRequest" TextChanged="changedSpecialRequest"
+                 
+                ScrollViewer.HorizontalScrollBarVisibility="Hidden"
+                ScrollViewer.VerticalScrollBarVisibility="Hidden"
+                 
+                TextWrapping="Wrap"        
+                 
+            />
+
+
+            <!--Special Requests: TextBlock-->
+            <TextBlock Grid.Column="0" Grid.Row="0" Grid.ColumnSpan="5" Name="userSpecialRequest" Text="Special Requests?" Foreground="Gray" IsHitTestVisible="False" VerticalAlignment="Center" TextAlignment="Center"/>
+
+
+            <!--Decrease Quantity Button-->
+            <Button Grid.Column="1" Grid.Row="2" FontSize="25" Click="DecreaseQuantity" HorizontalContentAlignment="Center" VerticalContentAlignment="Center">
+
+                <TextBlock Text="-" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+
+            </Button>
+
+            <!--Quantity Display-->
+            <TextBlock Grid.Column="2" Grid.Row="2" HorizontalAlignment="Center" Name="DisplayItemQuantity" VerticalAlignment="Center" FontSize="25" Text="1"/>
+
+            <!--Increase Quantity Button-->
+            <Button Grid.Column="3" Grid.Row="2" FontSize="25" Click="IncreaseQuantity" HorizontalContentAlignment="Center" VerticalContentAlignment="Center">
+
+                <TextBlock Text="+" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+
+            </Button>
+
+            <!--Add-to-Cart Button-->
+            <Button Grid.Column="0" Grid.Row="5" Grid.ColumnSpan="9" FontSize="20" Click="AddToCart" Margin="20,0">
+
+                <TextBlock Text="Add to Cart" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+
+            </Button>
+
+        </Grid>
 
     </Grid>
+    
+    
+    
+    
 </UserControl>
