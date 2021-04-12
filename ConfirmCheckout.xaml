@@ -20,18 +20,20 @@
         <Grid.RowDefinitions>
             <RowDefinition Height="50*"/>
             <RowDefinition Height="25*"/>
-            <RowDefinition Height="225*"/>
+            <RowDefinition Height="275*"/>
+            <RowDefinition Height="50*"/>
+            <RowDefinition Height="70*"/>
             <RowDefinition Height="50*"/>
             <RowDefinition Height="50*"/>
         </Grid.RowDefinitions>
 
-        <Rectangle Fill="LightGoldenrodYellow" Grid.ColumnSpan="6" Grid.RowSpan="5" />
+        <Rectangle Fill="LightGoldenrodYellow" Grid.ColumnSpan="6" Grid.RowSpan="7" />
 
         <TextBlock Grid.ColumnSpan="4" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="25" >
             Order Confirmation:
         </TextBlock>
 
-        <Button Grid.Column="4" Grid.ColumnSpan="2" FontSize="25" Click="Close_Confirmation" >
+        <Button Grid.Column="4" Grid.ColumnSpan="2" Grid.RowSpan="2" FontSize="25" Click="Close_Confirmation" >
             X
         </Button>
 
@@ -44,11 +46,19 @@
             for the best restaurant experience.
             <LineBreak/>
             <LineBreak/>
-            <LineBreak/>
             If you're sure you've got your order just the way you like it and you're all ready to eat, then confirm your order one last time! Otherwise, use the x in the top right to return to checkout.
         </TextBlock>
 
-        <Button Grid.Column="2" Grid.ColumnSpan="2" Grid.Row="3" Click="Confirm_Order">
+        <Border Grid.Row="3" Grid.Column="2" Grid.ColumnSpan="2" Name="VerifyBorder"
+                BorderBrush="Red" BorderThickness="1" CornerRadius="8" Background="#f0a6a1" Margin="10,1,10,1">
+            <TextBlock TextAlignment="Center" Name="OrderConfirmVerify"/>
+        </Border>
+        
+
+
+        <TextBox Grid.Row="4" Grid.Column="2" Grid.ColumnSpan="2" Name="VerifyNo" Margin="0,2,0,2"/>
+
+        <Button Grid.Column="2" Grid.ColumnSpan="2" Grid.Row="5" Click="Confirm_Order">
             Confirm Order
         </Button>
         <TextBlock Grid.Column="2" Grid.Row="4" Grid.RowSpan="2" Name="Confirm_Alcohol"/>

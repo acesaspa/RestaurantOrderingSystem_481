@@ -53,9 +53,14 @@ namespace RestaurantOrderingSystem_481
         }
 
         //Change Language
-        private void Change_Language(object sender, RoutedEventArgs e)
+        private void Change_Language_EN(object sender, RoutedEventArgs e)
         {
             MessageBox.Show("You changed your Language!");
+        }
+
+        private void Change_Language_ES(object sender, RoutedEventArgs e)
+        {
+            MessageBox.Show("¡Cambiaste tu idioma!");
         }
     }
 }
