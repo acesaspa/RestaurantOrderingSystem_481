@@ -35,6 +35,16 @@ namespace RestaurantOrderingSystem_481
 
         private void Confirm_Order(object sender, RoutedEventArgs e)
         {
+
+            if(Switcher.GetConfirmCheckout().VerifyNo.Text == "1234")
+            {
+                Run_Confirm_Order(sender, e);
+            }
+
+        }
+
+        private void Run_Confirm_Order(object sender, RoutedEventArgs e)
+        {
             Confirm_Order2(sender, e);
             var parent = this.Parent as Window;
             if (parent != null)

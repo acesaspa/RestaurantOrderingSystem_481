@@ -37,13 +37,20 @@ namespace RestaurantOrderingSystem_481
                 }
             }
 
+            //Order has Alcohol
             if (MainWindow.hasAlcohol == true)
             {
-                Switcher.GetConfirmCheckout().Confirm_Alcohol.Text = "Order has Alcohol xd";
+                Switcher.GetConfirmCheckout().OrderConfirmVerify.Text = "Enter Verification No. :";
+                Switcher.GetConfirmCheckout().VerifyNo.Visibility = Visibility.Visible;
+                Switcher.GetConfirmCheckout().VerifyBorder.Visibility = Visibility.Visible;
+                Switcher.GetConfirmCheckout().VerifyNo.Text = "";
             }
             else
             {
-                Switcher.GetConfirmCheckout().Confirm_Alcohol.Text = "";
+                Switcher.GetConfirmCheckout().OrderConfirmVerify.Text = "";
+                Switcher.GetConfirmCheckout().VerifyNo.Visibility = Visibility.Hidden;
+                Switcher.GetConfirmCheckout().VerifyBorder.Visibility = Visibility.Hidden;
+                Switcher.GetConfirmCheckout().VerifyNo.Text = "1234";
             }
 
             Window window = new Window
