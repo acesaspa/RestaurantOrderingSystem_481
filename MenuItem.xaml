@@ -71,7 +71,7 @@
 
                 <!--Item Name-->
                 <TextBlock Grid.Column="1" Grid.Row="0" Grid.RowSpan="2" Grid.ColumnSpan="5" Text="Item Name"  FontFamily="Bahnschrift" FontSize="14"
-                           VerticalAlignment="Top" TextAlignment="Center" Name="ItemName" TextWrapping="Wrap"/>
+                           VerticalAlignment="Top" TextAlignment="Left" Name="ItemName" TextWrapping="Wrap"/>
 
                 <!--Item Desciption-->
                 <TextBlock Grid.Column="3" Grid.Row="3" Grid.RowSpan="2" Grid.ColumnSpan="4" Text="Item Description" HorizontalAlignment="Left" VerticalAlignment="Top" TextWrapping="Wrap" Name="ItemDescription"/>

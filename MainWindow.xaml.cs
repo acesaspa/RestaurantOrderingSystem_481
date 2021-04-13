@@ -48,11 +48,11 @@ namespace RestaurantOrderingSystem_481
              * https://earls.ca/locations/16th-ave/menu/
              */
 
-            // Spicy, Peanut, Gluten, Vegetarian
+            // Spicy, Peanut, Gluten, Vegetarian, Alcoholic
             //MenuItem cowboyBurgerItem = new MenuItem("", "", 17.99f, "", false, false, false, false, false); spice, peanut, gluten, veggie, alcohol
 
             MenuItem prawnGyozaItem = new MenuItem("Prawn Gyoza", "Tender prawns, spring onion, ginger, citrus soy", 17.99f, "/Resources/PrawnGyoza.png", false, false, true, false, false);
-            MenuItem crazybreadItem = new MenuItem("Crazy Bread", "Eight bread sticks with flavours of butter and garlic, then sprinkled with parmesan style cheese", 5.99f, "/Resources/crazybread.jpg", false, false, false, false, true);
+            MenuItem crazybreadItem = new MenuItem("Crazy Bread", "Eight bread sticks with flavours of butter and garlic, then sprinkled with parmesan style cheese", 5.99f, "/Resources/crazybread.jpg", false, false, false, false, false);
             MenuItem stuffedcrazybreadItem = new MenuItem("Stuffed Crazy Bread", "4 bread sticks stuffed with mozzarella cheese and topped with flavours of butter and garlic then sprinkled with parmesan style cheese", 6.99f, "/Resources/stuffedcrazybread.jpg", false, false, false, false, false);
 
             MenuItem canadianPrimeSirloinItem = new MenuItem("Canadian Prime Sirloin", "Served with buttery garlic mashed potatoes and seasonal vegetables", 30.99f, "/Resources/CanadianPrimeSirloin.png", false, true, true, false, false);
