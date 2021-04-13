@@ -4,7 +4,7 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:RestaurantOrderingSystem_481"
-             mc:Ignorable="d" 
+             mc:Ignorable="d"  FontFamily="Yu Gothic Light"
              d:DesignHeight="300" d:DesignWidth="300">
     <Grid>
 
@@ -20,7 +20,7 @@
         <Grid.RowDefinitions>
             <RowDefinition Height="50*"/>
             <RowDefinition Height="25*"/>
-            <RowDefinition Height="275*"/>
+            <RowDefinition Height="400*"/>
             <RowDefinition Height="50*"/>
             <RowDefinition Height="70*"/>
             <RowDefinition Height="50*"/>
@@ -29,7 +29,7 @@
 
         <Rectangle Fill="LightGoldenrodYellow" Grid.ColumnSpan="6" Grid.RowSpan="7" />
 
-        <TextBlock Grid.ColumnSpan="4" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="25" >
+        <TextBlock Grid.ColumnSpan="4" Grid.RowSpan="2" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="25" >
             Order Confirmation:
         </TextBlock>
 
@@ -40,13 +40,18 @@
         <TextBlock Grid.Row="2" Grid.Column="1" Grid.ColumnSpan="4" TextWrapping="Wrap" HorizontalAlignment="Center" VerticalAlignment="Top" >
             <LineBreak/>
             Make sure that
-            <Run FontWeight="Bold">
+            <Run FontFamily="Yu Gothic UI Semibold">
                 every order for your table is confirmed at the same time
             </Run>
             for the best restaurant experience.
             <LineBreak/>
             <LineBreak/>
-            If you're sure you've got your order just the way you like it and you're all ready to eat, then confirm your order one last time! Otherwise, use the x in the top right to return to checkout.
+            If you're sure you've got your order just the way you like it and you're all ready to eat, then confirm your order one last time! Otherwise, use the
+
+            <Run FontFamily="Yu Gothic UI Semibold">
+                'x'
+            </Run>
+            in the top right to return to checkout.
         </TextBlock>
 
         <Border Grid.Row="3" Grid.Column="2" Grid.ColumnSpan="2" Name="VerifyBorder"

@@ -4,7 +4,7 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:RestaurantOrderingSystem_481"
-             mc:Ignorable="d" 
+             mc:Ignorable="d"  FontFamily="Yu Gothic Light"
              d:DesignHeight="350" d:DesignWidth="300">
     <Grid>
         <Grid.RowDefinitions>
@@ -31,7 +31,7 @@
         <Rectangle Grid.Column="0" Grid.Row="0" Grid.ColumnSpan="7" Grid.RowSpan="8" Fill="Orange" RadiusX="10" RadiusY="10"/>
 
         <!--We'd love to hear from you!-->
-        <TextBlock Grid.ColumnSpan="4" FontSize="15" VerticalAlignment="Center" HorizontalAlignment="Center" TextWrapping="Wrap" >We'd love to hear from you!</TextBlock>
+        <TextBlock Grid.ColumnSpan="5" Grid.Row="1" FontSize="15" VerticalAlignment="Top" HorizontalAlignment="Center" TextWrapping="Wrap" >We'd love to hear from you!</TextBlock>
         <Button Grid.Column="5" Grid.ColumnSpan="2" FontSize="25" Click="Exit_Review">X</Button>
 
         <!--How did we do?-->
@@ -55,7 +55,7 @@
         <TextBlock Grid.Row="3" Grid.ColumnSpan="3" HorizontalAlignment="Center" VerticalAlignment="Bottom" >Extra thoughts?</TextBlock>
         <TextBox Grid.Row="4" Grid.Column="1" Grid.ColumnSpan="5" Grid.RowSpan="2"/>
 
-        <TextBlock Grid.Row="6" Grid.Column="1" Grid.ColumnSpan="5" TextWrapping="Wrap" VerticalAlignment="Center">Thank You! Your feedback helps us grow and lets us serve you better.</TextBlock>
+        <TextBlock Grid.Row="6" Grid.Column="1" Grid.ColumnSpan="5" TextWrapping="Wrap" VerticalAlignment="Center" TextAlignment="Center">Thank You! Your feedback helps us grow and lets us serve you better.</TextBlock>
         <Button Grid.Row="7" Grid.Column="2" Grid.ColumnSpan="3" Click="Submit">Submit</Button>
     </Grid>
     

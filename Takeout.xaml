@@ -4,7 +4,7 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:RestaurantOrderingSystem_481"
-             mc:Ignorable="d" 
+             mc:Ignorable="d"  FontFamily="Yu Gothic Light"
              d:DesignHeight="300" d:DesignWidth="300">
     <Grid>
         <Grid.RowDefinitions>
@@ -29,7 +29,8 @@
 
         <Rectangle Fill="Orange" Grid.ColumnSpan="7" Grid.RowSpan="7" RadiusX="10" RadiusY="10"/>
 
-        <TextBlock Grid.ColumnSpan="5" VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="15" TextWrapping="Wrap">How many takeout boxes would you like?</TextBlock>
+        <TextBlock Grid.ColumnSpan="7" Grid.Row="1" TextAlignment="Center"
+                   VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="15" TextWrapping="Wrap">How many takeout boxes would you like?</TextBlock>
         <Button Grid.Column="5" Grid.ColumnSpan="2" FontSize="25" Click="CloseTakeout" >X</Button>
         
         <Button Grid.Row="3" Grid.Column="2" FontSize="35" Click="Decrease" Name="DecreaseButton" Opacity="0">
@@ -44,6 +45,6 @@
 
         <TextBlock Grid.Row="3" Grid.Column="3" VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="35" Name="DisplayQuantity" Text="1"/>
 
-        <Button Grid.Row="6" Grid.Column="1" Grid.ColumnSpan="5" FontSize="20" Click="SuccessNotification" >Submit</Button>
+        <Button Grid.Row="6" Grid.Column="1" Grid.ColumnSpan="5" FontSize="20" Click="SuccessNotification" Margin="30, 15">Submit</Button>
     </Grid>
 </UserControl>

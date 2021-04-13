@@ -4,9 +4,9 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
         xmlns:local="clr-namespace:RestaurantOrderingSystem_481"
-        mc:Ignorable="d"
+        mc:Ignorable="d"  FontFamily="Yu Gothic Light"
         d:DesignHeight="600" d:DesignWidth="400">
-    <Grid Background="IndianRed">
+    <Grid Background="#e8e9ff">
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="20"/>
             <ColumnDefinition Width="*"/>
@@ -30,10 +30,10 @@
                    Text="Restaurant Name + Logo"/>
         <TextBlock Grid.Column="1" Grid.Row="2" FontWeight="DemiBold"
                    TextAlignment="Center" Margin="20"
-                   Text="Table Number:" FontSize="24"/>
+                   Text="Enter Your Table Number:" FontSize="24"/>
         <TextBox Name="tableNumber" Grid.Column="1" Grid.Row="3"
                  FontSize="24" Text="" TextAlignment="Center" Margin="140,18"/>
-        <Button Grid.Column="1" Grid.Row="4" Content="Start" Click="Open_Menu"
+        <Button Grid.Column="1" Grid.Row="4" Content="OK" Click="Open_Menu"
                 FontSize="24" Margin="120,15"/>
         <Button Grid.Column="1" Grid.Row="6" Click="Change_Language_EN"
                 HorizontalAlignment="Left" Width="120" Height="35">

@@ -4,8 +4,8 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:RestaurantOrderingSystem_481"
-             mc:Ignorable="d" 
-             d:DesignHeight="400" d:DesignWidth="300" Background="Orange">
+             mc:Ignorable="d"   FontFamily="Yu Gothic Light"
+             d:DesignHeight="400" d:DesignWidth="300" Background="#f5f5f5">
     <Grid>
         <!--6 columns-->
         <Grid.ColumnDefinitions>

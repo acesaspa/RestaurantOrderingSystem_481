@@ -4,7 +4,7 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:RestaurantOrderingSystem_481"
-             mc:Ignorable="d" 
+             mc:Ignorable="d"   FontFamily="Yu Gothic Light"
              d:DesignHeight="200" d:DesignWidth="400">
     <Grid Background="#dfed9f">
         <Grid.RowDefinitions>
@@ -20,7 +20,7 @@
             <ColumnDefinition Width="20"/>
         </Grid.ColumnDefinitions>
         <TextBlock Grid.Column="1" Grid.Row="1" TextWrapping="Wrap"
-                   TextAlignment="Center"
+                   TextAlignment="Center" VerticalAlignment="Center"
                    Text="Are you sure you want to delete 'Spring Rolls 2pc?'"/>
         <Button Grid.Column="2" Grid.Row="1" Width="30" Height="30"
                 VerticalAlignment="Top" Content="X"/>

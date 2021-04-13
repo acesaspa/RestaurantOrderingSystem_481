@@ -4,21 +4,23 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:RestaurantOrderingSystem_481"
-             mc:Ignorable="d" 
+             mc:Ignorable="d" FontFamily="Bahnschrift Light"
              d:DesignHeight="450" d:DesignWidth="800">
-    <Grid Background="AliceBlue">
+    <Grid Background="#F6C4C5">
         <Grid.RowDefinitions>
-            <RowDefinition/>
+            <RowDefinition Height="auto"/>
             <RowDefinition Height="auto"/>
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="*"/>
-            <ColumnDefinition Width="60"/>
-            <ColumnDefinition Width="60"/>
+            <ColumnDefinition Width="20"/>
+            <ColumnDefinition Width="40"/>
         </Grid.ColumnDefinitions>
-        <TextBlock Grid.Column="0" Name="ReviewOrderItemName" Text="name"/>
+        <TextBlock Grid.Column="0" Name="ReviewOrderItemName" TextWrapping="Wrap"
+                   FontFamily="Bahnschrift" TextAlignment="Center" Text="name"/>
         <TextBlock Grid.Column="1" Name="ReviewOrderItemQuantity" Text="Quantity"/>
         <TextBlock Grid.Column="2" Name="ReviewOrderItemPrice" Text="Price"/>
-        <TextBlock Grid.Column="0" Grid.Row="1" Name="ReviewOrderSR"/>
+        <TextBlock Grid.Column="0" Grid.Row="1" Name="ReviewOrderSR" 
+                   TextAlignment="Justify" TextWrapping="Wrap"/>
     </Grid>
 </UserControl>

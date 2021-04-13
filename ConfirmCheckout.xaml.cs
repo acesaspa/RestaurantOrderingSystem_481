@@ -40,6 +40,10 @@ namespace RestaurantOrderingSystem_481
             {
                 Run_Confirm_Order(sender, e);
             }
+            else
+            {
+                MessageBox.Show("Wrong Verification Number Input!");
+            }
 
         }
 

@@ -4,27 +4,32 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:RestaurantOrderingSystem_481"
-             mc:Ignorable="d" 
+             mc:Ignorable="d" FontFamily="Bahnschrift Light"
              d:DesignHeight="450" d:DesignWidth="800">
-    <Grid Background="#dfed9f">
+    <Grid Background="#F6C4C5">
         <Grid.RowDefinitions>
-            <RowDefinition/>
+            <RowDefinition Height="auto"/>
             <RowDefinition Height="auto"/>
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="30"/> <!-- X -->
+            <ColumnDefinition Width="32"/> <!-- X -->
             <ColumnDefinition Width="*"/>
             <ColumnDefinition Width="30"/> <!-- - -->
-            <ColumnDefinition Width="20"/> <!-- Quantity -->
+            <ColumnDefinition Width="15"/> <!-- Quantity -->
             <ColumnDefinition Width="30"/> <!-- + -->
             <ColumnDefinition Width="40"/>
         </Grid.ColumnDefinitions>
-        <Button Content="X" Grid.Column="0" Width="30" Height="30" Click="RemoveItemCheckout"/>
-        <TextBlock Grid.Column="1" Name="CheckoutItemName" Text="CheckoutItemName"/>
-        <Button Content="-" Grid.Column="2" Width="30" Height="30" Click="DecreaseQuantityCheckout" Name="DecreaseButton"/>
-        <TextBlock Grid.Column="3" Name="CheckoutItemQuantity" Text="CheckoutItemQuantity"/>
-        <Button Content="+" Grid.Column="4" Width="30" Height="30" Click="IncreaseQuantityCheckout" Name="IncreaseButton"/>
-        <TextBlock Grid.Column="5" Name="CheckoutItemPrice" Text="CheckoutItemPrice"/>
+
+        <Border Grid.Column="0" Grid.Row="0" Grid.ColumnSpan="6" Grid.RowSpan="2"  BorderBrush="Gray" BorderThickness="2" Background="{x:Null}" />
+
+
+        <Button Content="X" Grid.Column="0" Width="30" Height="30" Margin="2" Click="RemoveItemCheckout"/>
+        <TextBlock Grid.Column="1" Name="CheckoutItemName" Text="CheckoutItemName" TextWrapping="Wrap"
+                   FontFamily="Bahnschrift" TextAlignment="Center" FontSize="16"/>
+        <Button Content="-" Grid.Column="2" Width="20" Height="20" Click="DecreaseQuantityCheckout" Name="DecreaseButton"/>
+        <TextBlock Grid.Column="3" Name="CheckoutItemQuantity" TextAlignment="Center" Text="CheckoutItemQuantity" VerticalAlignment="Center"/>
+        <Button Content="+" Grid.Column="4" Width="20" Height="20" Click="IncreaseQuantityCheckout" Name="IncreaseButton"/>
+        <TextBlock Grid.Column="5" Name="CheckoutItemPrice" Text="CheckoutItemPrice" VerticalAlignment="Center"/>
         <TextBlock Grid.Column="1" Grid.Row="1" Name="CheckoutItemSR"/>
     </Grid>
 </UserControl>

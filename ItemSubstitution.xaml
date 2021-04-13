@@ -4,7 +4,7 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:RestaurantOrderingSystem_481"
-             mc:Ignorable="d" 
+             mc:Ignorable="d"   FontFamily="Yu Gothic Light"
              Height="475" Width="300" Background="LightYellow">
     <Grid>
 
@@ -59,7 +59,8 @@
         </Grid.RowDefinitions>
 
         <!--Item Name-->
-        <TextBlock Grid.Column="1" Grid.Row="1" Grid.ColumnSpan="2" HorizontalAlignment="Left" VerticalAlignment="Center" FontSize="25" Text="Cowboy Burger" TextWrapping="Wrap"/>
+        <TextBlock Grid.Column="1" Grid.Row="1" Grid.ColumnSpan="2" HorizontalAlignment="Left" VerticalAlignment="Center"
+                   FontFamily="Yu Gothic UI Semibold" FontSize="25" Text="Cowboy Burger" TextWrapping="Wrap"/>
 
         <!--Example Icon-->
         <Image Grid.Column="1" Grid.Row="2" Source="Resources/PepperIcon.png" Margin="0,3,25,3"/>
@@ -210,7 +211,7 @@
             </Button>
 
             <!--Add-to-Cart Button-->
-            <Button Grid.Column="0" Grid.Row="5" Grid.ColumnSpan="9" FontSize="20" Margin="20,0">
+            <Button Grid.Column="0" Grid.Row="5" Grid.ColumnSpan="9" FontSize="20" Margin="20,0" Width="125">
 
                 <TextBlock Text="Add to Cart" HorizontalAlignment="Center" VerticalAlignment="Center"/>
 

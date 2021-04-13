@@ -4,8 +4,8 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:RestaurantOrderingSystem_481"
-             mc:Ignorable="d" 
-             d:DesignHeight="600" d:DesignWidth="400" Background="MediumPurple">
+             mc:Ignorable="d" FontFamily="Yu Gothic Light"
+             d:DesignHeight="600" d:DesignWidth="400" Background="#f5f5f5">
 
 
     <Grid>
@@ -83,7 +83,7 @@
         </Grid.RowDefinitions>
 
         <!--Table Number-->
-        <Button Grid.Row="1" Grid.Column="1" Grid.ColumnSpan="2" Margin="10,10" Click="Open_ChangeTable" Background="Cyan">
+        <Button Grid.Row="1" Grid.Column="1" Grid.ColumnSpan="2" Margin="10,10" Click="Open_ChangeTable" Background="#bfbfbf">
 
             <Grid Margin="0,0">
 
@@ -112,7 +112,7 @@
         </Button>
 
         <!--Previous Order-->
-        <Button Grid.Row="1" Grid.Column="4" Grid.ColumnSpan="2" Margin="10,10" Click="Open_ReviewOrder" Background="Cyan" Opacity="0" Name="PreviousOrderButton" IsEnabled="False">
+        <Button Grid.Row="1" Grid.Column="4" Grid.ColumnSpan="2" Margin="10,10" Click="Open_ReviewOrder" Background="#bfbfbf" Opacity="0" Name="PreviousOrderButton" IsEnabled="False">
 
             <TextBlock Grid.Column="0" Grid.Row="0" Text="Previous Order" FontSize="16"  Margin="5,0" HorizontalAlignment="Center" VerticalAlignment="Center" />
 
@@ -125,7 +125,7 @@
             <!--Appetisers Tab-->
             <TabItem Header="Appetisers" Width="70" Height="30" FontSize="12" VerticalAlignment="Center" HorizontalAlignment="Center" Background="LightBlue">
 
-                <ScrollViewer>
+                <ScrollViewer Background="lightblue">
 
                     <StackPanel Name="AppetisersList"/>
 
@@ -220,7 +220,7 @@
 
         <!--Temporary Cart:-->
 
-        <Grid Grid.Column="1" Grid.Row="10" Grid.ColumnSpan="5" Background="LightBlue">
+        <Grid Grid.Column="1" Grid.Row="10" Grid.ColumnSpan="5" Background="#e0e0e0">
 
             <Grid.ColumnDefinitions>
 
@@ -239,12 +239,12 @@
             </Grid.ColumnDefinitions>
 
             <!--Total-->
-            <TextBlock Grid.Column="0" Grid.Row="0" Text="Total: " Width="32" HorizontalAlignment="Center" VerticalAlignment="Center"/>
-            <TextBlock Grid.Column="0" Grid.Row="0" Grid.ColumnSpan="2" Text="$0.00" Margin="0,5"
+            <TextBlock Grid.Column="0" Grid.Row="0" Text="Total: " Width="35" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="16"/>
+            <TextBlock Grid.Column="0" Grid.Row="0" Grid.ColumnSpan="2" Text="$0.00" Margin="10,5,0,5" FontSize="16"
                        Name="MenuTotal" HorizontalAlignment="Center" VerticalAlignment="Center"/>
 
             <!--Cart-->
-            <Button Grid.Column="0" Grid.Row="0" Grid.ColumnSpan="4" Margin="130,10" Click="Open_Cart" >
+            <Button Grid.Column="0" Grid.Row="0" Background="#bfbfbf" Grid.ColumnSpan="4" Margin="130,10" Click="Open_Cart" >
 
                 <Grid>
 
@@ -255,7 +255,7 @@
             </Button>
 
             <!--Checkout Button-->
-            <Button Grid.Column="3" Grid.Row="0" Margin= "13,10" Content="Checkout" Click="Open_Checkout"/>
+            <Button Grid.Column="3" Grid.Row="0" Margin= "0,10,10,10" Background="#bfbfbf" Content="Checkout" Click="Open_Checkout" FontSize="16"/>
 
         </Grid>
 
