@@ -65,6 +65,8 @@ namespace RestaurantOrderingSystem_481
         {
             Switcher.GetNewMenu().PreviousOrderButton.Opacity = 1;
             Switcher.GetNewMenu().PreviousOrderButton.IsEnabled = true;
+            Switcher.GetCart().PreviousOrderButton.Opacity = 1;
+            Switcher.GetCart().PreviousOrderButton.IsEnabled = true;
             Switcher.Switch(Switcher.GetNewMenu());
         }
 
