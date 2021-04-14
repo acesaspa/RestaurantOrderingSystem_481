@@ -79,7 +79,7 @@ namespace RestaurantOrderingSystem_481
             {
                 Title = "Success",
                 Content = Switcher.GetSuccessNotification(),
-                Height = 100,
+                Height = 200,
                 Width = 200
             };
             window.Show();

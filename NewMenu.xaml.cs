@@ -74,7 +74,7 @@ namespace RestaurantOrderingSystem_481
             await Task.Run(() =>
             {
 
-                Thread.Sleep(4000);
+                Thread.Sleep(2000);
 
             });
 

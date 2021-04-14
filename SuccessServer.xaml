@@ -5,12 +5,19 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:RestaurantOrderingSystem_481"
              mc:Ignorable="d"   FontFamily="Yu Gothic Light"
-             d:DesignHeight="100" d:DesignWidth="300">
-    <Grid Background="LightGreen">
+             d:DesignHeight="100" d:DesignWidth="150">
+
+    <Grid>
         
         <Grid.ColumnDefinitions>
 
+
             <ColumnDefinition Width="*" />
+
+            <ColumnDefinition Width="*" />
+
+            <ColumnDefinition Width="*" />
+
 
         </Grid.ColumnDefinitions>
 
@@ -20,12 +27,13 @@
 
             <RowDefinition Height="*" />
 
-
         </Grid.RowDefinitions>
 
-        <TextBlock Grid.Column="1" Grid.Row="0" VerticalAlignment="Center" TextAlignment="Center" FontSize="20"   FontFamily="Yu Gothic UI Semibold" Text="Success!"/>
+        <Border Grid.Column="0" Grid.Row="0" Grid.ColumnSpan="3" Grid.RowSpan="2" BorderThickness="2" BorderBrush="Black" CornerRadius="20" Background="LightGreen"/>
 
-        <TextBlock Grid.Column="1" Grid.Row="1" VerticalAlignment="Center" TextAlignment="Center" FontSize="14" TextWrapping="Wrap" Text="Your server will be with you shortly." />
+        <TextBlock Grid.Column="0" Grid.Row="0" Grid.ColumnSpan="3" VerticalAlignment="Center" TextAlignment="Center" FontSize="20" FontFamily="Yu Gothic UI Semibold" Text="Success!"/>
+
+        <TextBlock Grid.Column="0" Grid.Row="1" Grid.ColumnSpan="3" VerticalAlignment="Center" TextAlignment="Center" FontSize="14" FontFamily="Yu Gothic Light" TextWrapping="Wrap" Text="A server will be with you shortly." Margin="10,0,10,10" />
 
     </Grid>
     

@@ -28,7 +28,7 @@ namespace RestaurantOrderingSystem_481
         public static int TableNumber;
         public static float GlobalSubtotal = 0;
         public static int GlobalCounter = 0;
-        public static float GST = 0.1f; //10%
+        public static float GST = 0.05f; //10%
         public static bool hasAlcohol = false;
         public static bool checkoutEmpty = true;
 
