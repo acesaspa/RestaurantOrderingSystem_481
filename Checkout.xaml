@@ -63,7 +63,6 @@
 
         <!--Back button and ETA-->
         <Button Grid.Column="1" Grid.Row="1" Grid.RowSpan="2" FontSize="20" Grid.ColumnSpan="3" Margin="10" Click="Open_Menu">Back</Button>
-        
         <Rectangle Grid.Column="5" Grid.Row="1" Grid.RowSpan="2" Grid.ColumnSpan="3" Fill="LightBlue" Margin="10"/>
         <TextBlock Grid.Column="5" Grid.Row="1" Grid.RowSpan="2" Grid.ColumnSpan="2" Margin="17,0,0,0" HorizontalAlignment="Left" VerticalAlignment="Center" FontSize="22" >ETA:</TextBlock>
         <TextBlock Grid.Column="6" Grid.Row="1" Grid.RowSpan="2" Grid.ColumnSpan="2" Margin="0,0,17,0" HorizontalAlignment="Right" VerticalAlignment="Center" FontSize="20">30 min</TextBlock>
@@ -74,15 +73,59 @@
                    VerticalAlignment="Center" HorizontalAlignment="Center" Text="Table: " 
                    Name="DisplayTableNumber"/>
 
-
-
-        <!--Checkout list-->
+        
         <Rectangle Grid.Column="1" Grid.Row="5" Grid.RowSpan="3" Grid.ColumnSpan="7" Fill="LightBlue"/>
-        <TextBlock Grid.Column="1" Grid.Row="5" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="20" Grid.ColumnSpan="2" >Menu Items</TextBlock>
 
-        <!--Quantity-->
-        <TextBlock Grid.Column="3" Grid.Row="5" HorizontalAlignment="Center" Grid.ColumnSpan="3" VerticalAlignment="Center" FontSize="20">Quantity</TextBlock>
-        <TextBlock Grid.Column="6" Grid.Row="5" Grid.ColumnSpan="2" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="20">Price</TextBlock>
+
+        <Grid Grid.Column="1" Grid.Row="5" Grid.ColumnSpan="7">
+
+            <Grid.ColumnDefinitions>
+
+                <!--Menu Item Name-->
+                <ColumnDefinition Width="*" />
+
+                <!--Spacing-->
+                <ColumnDefinition Width="22" />
+
+                <!--Decrease Button-->
+                <ColumnDefinition Width="26" />
+
+                <!--Quantity-->
+                <ColumnDefinition Width="20" />
+
+                <!--Increase Button-->
+                <ColumnDefinition Width="26" />
+
+                <!--Spacing-->
+                <ColumnDefinition Width="22" />
+
+                <!--Price-->
+                <ColumnDefinition Width="40" />
+
+                <!--Margin-->
+                <ColumnDefinition Width="18" />
+
+            </Grid.ColumnDefinitions>
+
+
+            <Grid.RowDefinitions>
+
+
+
+            </Grid.RowDefinitions>
+
+            <!--Menu Item Names-->
+            <TextBlock Grid.Column="0" HorizontalAlignment="Left" VerticalAlignment="Center" FontSize="20" Text="Menu Items:" Margin="10,0,0,0" />
+
+            <!--Quantity-->
+            <TextBlock Grid.Column="2" Grid.ColumnSpan="3" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="20" Text="Quantity" />
+
+            <!--Price-->
+            <TextBlock Grid.Column="6" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="20" Text="Price" />
+
+
+
+        </Grid>
 
         <!-- StackPanel-->
         <ScrollViewer Grid.Row="6" Grid.Column="1" Grid.RowSpan="2" Grid.ColumnSpan="7">
@@ -102,5 +145,7 @@
                    HorizontalAlignment="Center" VerticalAlignment="Bottom" Name="Total"></TextBlock>
         <!--Confirm Order button-->
         <Button Grid.Column="5" Grid.Row="9" Grid.ColumnSpan="3" FontSize="20" Click="Open_Finalized">Confirm Order</Button>
+
     </Grid>
+
 </UserControl>

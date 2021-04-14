@@ -24,6 +24,8 @@ namespace RestaurantOrderingSystem_481
 
         public bool cart_alcohol;
 
+        public bool SRLabel;
+
         public void RemoveItemCart(object sender, RoutedEventArgs e)
         {
             //var cartChildren = Switcher.GetCart().CartItemList.Children;

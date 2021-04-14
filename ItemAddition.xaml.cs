@@ -99,6 +99,7 @@ namespace RestaurantOrderingSystem_481
             cartItem.ItemQuantity.Text = DisplayItemQuantity.Text;
             cartItem.CartItemSR.Text = SpecialRequest.Text;
             cartItem.cart_alcohol = ia_alcohol;
+            
             if(cartItem.ItemQuantity.Text == "1")
             {
                 cartItem.DecreaseButton.Opacity = 0;
@@ -138,6 +139,7 @@ namespace RestaurantOrderingSystem_481
             checkoutItem.CheckoutItemPrice.Text = cartItem.ItemPrice.Text;
             checkoutItem.CheckoutItemSR.Text = cartItem.CartItemSR.Text;
             checkoutItem.checkout_item_alcohol = cartItem.cart_alcohol;
+            
             if (checkoutItem.CheckoutItemQuantity.Text == "1")
             {
                 checkoutItem.DecreaseButton.Opacity = 0;
@@ -146,6 +148,12 @@ namespace RestaurantOrderingSystem_481
             {
                 checkoutItem.DecreaseButton.Opacity = 1;
             }
+
+            if(checkoutItem.CheckoutItemSR.Text == "")
+            {
+                checkoutItem.SRLabel.Text = "";
+            }
+
 
             Switcher.GetCheckout().CheckoutItemList.Children.Add(checkoutItem);
         }
