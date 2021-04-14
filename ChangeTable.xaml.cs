@@ -41,7 +41,7 @@ namespace RestaurantOrderingSystem_481
                     int result = Int32.Parse(changedNumber);
                     if(result < 0 || result > 100)
                     {
-
+                        MessageBox.Show("Invalid Input");
                     }
                     else
                     {
@@ -49,7 +49,7 @@ namespace RestaurantOrderingSystem_481
                         Switcher.GetCart().DisplayTableNumber.Text = "Table: " + result.ToString();
                         Switcher.GetNewMenu().DisplayTableNumber.Text = "Table: " + result.ToString();
                         Switcher.GetCheckout().DisplayTableNumber.Text = "Table " + result.ToString();
-
+                        Close_ChangeTable(sender, e);
                     }
                 }
                 catch (FormatException)
@@ -58,7 +58,7 @@ namespace RestaurantOrderingSystem_481
                 }
             }
 
-            Close_ChangeTable(sender, e);
+            
         }
 
         public ChangeTable()
