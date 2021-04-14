@@ -96,11 +96,11 @@
 
             <Grid.ColumnDefinitions>
 
-                <ColumnDefinition Width="180" />
+                <ColumnDefinition Width="165" />
 
                 <ColumnDefinition Width="10" />
 
-                <ColumnDefinition Width="180" />
+                <ColumnDefinition Width="165" />
 
             </Grid.ColumnDefinitions>
 
@@ -116,7 +116,7 @@
             </Grid.RowDefinitions>
 
             <!--Call Server button-->
-            <Button Grid.Row="0" Grid.Column="0" Margin="0,13" Background="LightBlue" Click="Server">
+            <Button Grid.Row="0" Grid.Column="0" Margin="0,13,0,13" Background="LightBlue" Click="Server">
 
                 <Grid>
 
@@ -204,7 +204,7 @@
             </Button>
 
 
-            <!--Order More button-->
+            <!--Review Order button-->
             <Button Grid.Row="1" Grid.Column="2" Margin="0,13" Background="LightBlue" Click="ReviewOrder">
 
                 <Grid>
