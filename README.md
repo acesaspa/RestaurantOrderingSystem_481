@@ -1,6 +1,6 @@
 # Resturant Ordering System  
 
-Created by: Mehrad Faridan, Ronan Rank-Nemish, Ace Saspa, and Jesse Zheng
+Created by: Mehrad Faridan, Ronan Rank-Nemish, Ace Saspa, and Jesse Zheng.
 
 ## Running program
 
