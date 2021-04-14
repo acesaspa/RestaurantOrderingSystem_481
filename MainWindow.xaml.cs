@@ -51,6 +51,8 @@ namespace RestaurantOrderingSystem_481
             // Spicy, Peanut, Gluten, Vegetarian, Alcoholic
             //MenuItem cowboyBurgerItem = new MenuItem("", "", 17.99f, "", false, false, false, false, false); spice, peanut, gluten, veggie, alcohol
 
+            MenuItem caesarSaladItem = new MenuItem("Caesar Salad", "Lettuce, dry bread, and caesar sause", 5.99f, "/Resources/CaesarSalad.jpg", false, true, true, true, false);
+            MenuItem greekSaladItem = new MenuItem("Greek Salad", "Tomatoes, cucumbers, olives, kalamata", 6.99f, "/Resources/GreekSalad.jpg", false, true, true, true, false);
             MenuItem prawnGyozaItem = new MenuItem("Prawn Gyoza", "Tender prawns, spring onion, ginger, citrus soy", 17.99f, "/Resources/PrawnGyoza.png", false, false, true, false, false);
             MenuItem crazybreadItem = new MenuItem("Crazy Bread", "Eight bread sticks with flavours of butter and garlic, then sprinkled with parmesan style cheese", 5.99f, "/Resources/crazybread.jpg", false, false, false, false, false);
             MenuItem stuffedcrazybreadItem = new MenuItem("Stuffed Crazy Bread", "4 bread sticks stuffed with mozzarella cheese and topped with flavours of butter and garlic then sprinkled with parmesan style cheese", 6.99f, "/Resources/stuffedcrazybread.jpg", false, false, false, false, false);
@@ -83,6 +85,8 @@ namespace RestaurantOrderingSystem_481
             MenuItem ranchDipItem = new MenuItem("Ranch Dip", "", 1.99f, "/Resources/ranchdip.jpg", false, false, false, false, false);
 
             //Working Menu
+            Switcher.GetNewMenu().AppetisersList.Children.Add(caesarSaladItem);
+            Switcher.GetNewMenu().AppetisersList.Children.Add(greekSaladItem);
             Switcher.GetNewMenu().AppetisersList.Children.Add(prawnGyozaItem);
             Switcher.GetNewMenu().AppetisersList.Children.Add(crazybreadItem);
             Switcher.GetNewMenu().AppetisersList.Children.Add(stuffedcrazybreadItem);

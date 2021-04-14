@@ -59,7 +59,7 @@ namespace RestaurantOrderingSystem_481
                 {
                     Title = "Confirm Checkout",
                     Content = Switcher.GetConfirmCheckout(),
-                    Height = 300,
+                    Height = 400,
                     Width = 300
                 };
 
