@@ -24,22 +24,6 @@ Some of these functionalities are mentioned in the instructions for using the sy
 
 - Entering or changing the table number will change the number for anywhere it appears.
 
-
-
-
-- The 'Previous Order' button does not appear on the Menu page until after an order has been made.
-
-- Tapping through the food categories (Appetisers, Entrees, etc.) will change what items appear on the menu.
-
-- There is a scroll bar at the right of the screen if the items in the menu go off the screen.
-
-- Tapping anywhere inside the rectange for each item will bring up the pop-up to add it to cart.
-
-- Pressing the cart icon button simulates the cart pulling out from the bottom of the screen.
-
-- The current total cost (without tax) appears at the bottom left of the screen and changes dynamically based on what items (and their quantity) are in the cart.
-
-
 ## Using the system
 
 1. Landing page
@@ -84,7 +68,17 @@ Some of these functionalities are mentioned in the instructions for using the sy
 
     Functionality:
 
-    
+    - The 'Previous Order' button does not appear on the Menu page until after an order has been made.
+
+    - Tapping through the food categories (Appetisers, Entrees, etc.) will change what items appear on the menu.
+
+    - There is a scroll bar at the right of the screen if the items in the menu go off the screen.
+
+    - Tapping anywhere inside the rectange for each item will bring up the pop-up to add it to cart.
+
+    - Pressing the cart icon button simulates the cart pulling out from the bottom of the screen.
+
+    - The current total cost (without tax) appears at the bottom left of the screen and changes dynamically based on what items (and their quantity) are in the cart.
 
 3. Cart page
 
