@@ -55,6 +55,7 @@ namespace RestaurantOrderingSystem_481
                 catch (FormatException)
                 {
                     Console.WriteLine($"Cannot Parse, not a number!");
+                    MessageBox.Show("Invald input!");
                 }
             }
 
