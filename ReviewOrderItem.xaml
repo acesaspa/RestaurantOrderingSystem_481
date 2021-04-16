@@ -17,7 +17,7 @@
             <ColumnDefinition Width="40"/>
         </Grid.ColumnDefinitions>
         <TextBlock Grid.Column="0" Name="ReviewOrderItemName" TextWrapping="Wrap"
-                   FontFamily="Bahnschrift" TextAlignment="Center" Text="name"/>
+                   FontFamily="Bahnschrift" TextAlignment="Left" Text="name" HorizontalAlignment="Left"/>
         <TextBlock Grid.Column="1" Name="ReviewOrderItemQuantity" Text="Quantity"/>
         <TextBlock Grid.Column="2" Name="ReviewOrderItemPrice" Text="Price"/>
         <TextBlock Grid.Column="0" Grid.Row="1" Name="ReviewOrderSR" 
