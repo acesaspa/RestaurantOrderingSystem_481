@@ -26,6 +26,8 @@ Functions not mentioned here are mentioned under the "Using the system" heading.
 
     - Adding/removing/changing quantity of items in the cart will update everywhere it's needed (Cart page and Checkout page).
 
+    - The Cowboy burger selection screen (as seen in the video at 2:44) was only hard-coded and not implemented with the system. Inside the Visual Studio it is saved as "ItemSubstitution.xaml" and "ItemSubstitution.xaml.cs" 
+
 ## Using the system
 
 For each page, the instructions for what everything on the page does is explained; then any functions not explained in the instructions or the above heading (Functionality implemented) are explained.
@@ -157,3 +159,128 @@ For each page, the instructions for what everything on the page does is explaine
             - The text box below the radio buttons is for any comments about the review.
 
             - The 'Submit' button closes the pop-up.
+
+## Walkthrough
+
+This walkthrough will go through the basic process to order a few items. It assumes the system is currently running. To see how to do this, refer to the "Running program" heading.
+
+1. Enter a number between 1 and 100 below where it says 'Enter Your Table Number:'.
+
+2. Press 'OK'. 
+    
+    - This will bring you to the Menu page. To see a list of all the features and functions on this page, take a look at the "Using the system" heading above.
+
+3. Press the pink box with the heading 'Caesar Salad'.
+
+    - This brings up a pop-up.
+
+4. Press the '+' button once to increase the quantity to 2.
+
+5. Press the 'Add to Cart' button to add the dish to cart.
+
+6. Select the 'Entrees' tab on the left of the screen to look at entrees.
+
+7. Press the pink box with the heading 'Canadian Prime Sirloin'.
+
+    - This brings up a pop-up.
+
+8. Type in the text box "Extra Mashed Potatos" to request extra mashed potatos.
+
+9. Press 'Add to Cart' to add the dish to cart.
+
+10. Press the button with the cart icon at the bottom of the screen to view cart.
+
+    - This will bring you to the Cart page. To see a list of all the features and functions on this page, take a look at the "Using the system" heading above.
+
+11. Press the 'Checkout' button at the bottom right of the screen to verify your cart.
+
+    - This will bring you to the CHeckout page. To see a list of all the features and functions on this page, take a look at the "Using the system" heading above.
+
+12. Press the '+' button next to 'Canadian Prime Sirloin' to increase the quanitity once.
+
+13. Press 'Confirm Order' to send it to the kitchen.
+
+    - A pop-up will appear to notify the customer to order at the same time if they are with other people for the best restaurant experience.
+
+14. Press 'Confirm Order' on the pop-up. The order is then sent to the kitchen.
+
+15. Press 'Order More' to order more food. Repeat steps 3-14.
+
+    - *Now you've finished eating.*
+
+16. Press 'Request Takeout Boxes' to request takeout boxes.
+
+    - This brings up a pop-up.
+
+17. Press '+' once to increase quantity to 2.
+
+18. Press 'Submit' to send the request to the staff.
+
+    - A pop-up will appear to notify the request was sent. It will close shortly.
+
+19. Press 'Leave Us A Review!' to leave a review.
+
+    - A pop-up will appear.
+
+20. Press the radio button under '5'.
+
+21. Type in "Excellent!" in the text box.
+
+22. Press 'Submit' to send the review.
+
+23. Press 'Call Server' to request the bill.
+
+    - A pop-up will appear notifying the request has been sent. It will close shortly.
+
+24. You are done! :D
+
+
+## Video summary
+
+The benefits of the system are mentioned, followed by 2 user stories that walk through the system. The timestamps for noteworthy events and features are included below.
+
+- 0:00 Introduction
+
+- 0:22 Benefits of the system
+
+- 0:54 User story (Jessica, single vegetarian mom)
+
+- 1:04 Table number entered
+
+- 1:17 Filter icons explained
+
+- 1:29 Special request made
+
+- 1:33 Browsing cart
+
+- 1:40 Quantity increased from within cart
+
+- 1:45 ETA explained
+
+- 1:57 Server called to get bill
+
+- 2:10 End of user story (Jessica)
+
+- 2:15 User story (Barry, banker, fine diner)
+
+- 2:21 Languages mentioned
+
+- 2:30 Wrong table number entered
+
+- 2:37 Wrong characters entered
+
+- 2:44 Cowboy burger selection
+
+- 2:47 Server called to ask question
+
+- 3:14 Takeout box requested
+
+- 3:17 More food ordered
+
+- 3:20 Alcohol ordered
+
+- 3:25 Alcohol age verification
+
+- 3:40 Left review
+
+- 4:03 End of user story (Barry)
